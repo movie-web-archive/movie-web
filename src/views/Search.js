@@ -137,7 +137,6 @@ export function SearchView() {
             </Helmet>
 
             <Card>
-                <DiscordBanner />
                 {errorStatus ? <ErrorBanner>{errorStatus}</ErrorBanner> : ''}
                 <Title accent="Because watching content legally is boring">
                     What do you wanna watch?
