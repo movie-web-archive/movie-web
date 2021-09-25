@@ -4,7 +4,7 @@ import JSON5 from 'json5'
 const BASE_URL = `${process.env.REACT_APP_CORS_PROXY_URL}https://lookmovie.vip`;
 
 async function findContent(searchTerm, type) {
-    const searchUrl = `${BASE_URL}/${type}s/search/?q=${encodeURIComponent(searchTerm)}`;
+    const searchUrl = `${BASE_URL}/?s=${encodeURIComponent(searchTerm)}`;
     const searchRes = await fetch(searchUrl).then((d) => d.text());
 
     // Parse DOM to find search results on full search page
