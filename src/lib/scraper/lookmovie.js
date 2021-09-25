@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js'
 import JSON5 from 'json5'
 
-const BASE_URL = `${process.env.REACT_APP_CORS_PROXY_URL}https://lookmovie.io`;
+const BASE_URL = `${process.env.REACT_APP_CORS_PROXY_URL}https://lookmovie.vip`;
 
 async function findContent(searchTerm, type) {
     const searchUrl = `${BASE_URL}/${type}s/search/?q=${encodeURIComponent(searchTerm)}`;
