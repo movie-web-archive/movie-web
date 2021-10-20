@@ -34,8 +34,8 @@ export function MovieView(props) {
     }
 
     React.useEffect(() => {
-        if (streamData.type === "show" && !showRouteMatch) history.replace(`${baseRouteMatch.url}/season/1/episode/1`);
-    }, [streamData.type, showRouteMatch, history, baseRouteMatch.url]);
+        if (streamData.type === "show" && !showRouteMatch) history.replace(`${baseRouteMatch?.url}/season/1/episode/1`);
+    }, [streamData.type, showRouteMatch, history, baseRouteMatch?.url]);
 
     React.useEffect(() => {
         if (streamData.type === "show" && showRouteMatch) setSelectedSeason(showRouteMatch.params.season.toString());
