@@ -12,10 +12,12 @@ import { TypeSelector } from '../components/TypeSelector';
 import { useMovie } from '../hooks/useMovie';
 import { findContent, getEpisodes, getStreamUrl } from '../lib/index';
 import { VideoProgressStore } from '../lib/storage/VideoProgress'
+import { useTranslation } from 'react-i18next';
 
 import './Search.css';
 
 export function SearchView() {
+    const { t } = useTranslation();
     const { navigate, setStreamUrl, setStreamData } = useMovie();
 
     const history = useHistory();
@@ -44,7 +46,7 @@ export function SearchView() {
 
         try {
             setProgress(2);
-            setText(`Getting stream for "${title}"`);
+            setText(t(`Getting stream for`) + " " + title);
 
             let seasons = [];
             let episodes = [];
@@ -61,7 +63,7 @@ export function SearchView() {
                 const { url, subtitles: subs } = await getStreamUrl(slug, type, source);
 
                 if (url === '') {
-                    return fail(`Not found: ${title}`)
+                    return fail(t(`Not found:`) + " " + title)
                 }
 
                 realUrl = url;
@@ -80,17 +82,17 @@ export function SearchView() {
                 year,
                 subtitles
             })
-            setText(`Streaming...`)
+            setText(t("Streaming..."))
             navigate("movie")
         } catch (err) {
             console.error(err);
-            fail("Failed to get stream")
+            fail(t("Failed to get stream"))
         }
     }
 
     async function searchMovie(query, contentType) {
         setFailed(false);
-        setText(`Searching for ${contentType} "${query}"`);
+        setText(t(`Searching for ${contentType}`) + ` "${query}"`);
         setProgress(1)
         setShowingOptions(false)
 
@@ -98,10 +100,10 @@ export function SearchView() {
             const { options } = await findContent(query, contentType);
 
             if (options.length === 0) {
-                return fail(`Could not find that ${contentType}`)
+                return fail(t(`Could not find that ${contentType}`))
             } else if (options.length > 1) {
                 setProgress(2);
-                setText(`Choose your ${contentType}`);
+                setText(t(`Choose your ${contentType}`));
                 setOptions(options);
                 setShowingOptions(true);
                 return;
@@ -112,7 +114,7 @@ export function SearchView() {
             getStream(title, slug, type, source, year);
         } catch (err) {
             console.error(err);
-            fail(`Failed to watch ${contentType}`)
+            fail(t(`Failed to watch ${contentType}`))
         }
     }
 
@@ -120,16 +122,16 @@ export function SearchView() {
         async function fetchHealth() {
             await fetch(process.env.REACT_APP_CORS_PROXY_URL).catch(() => {
                 // Request failed; source likely offline
-                setErrorStatus(`Our content provider is currently offline, apologies.`)
+                setErrorStatus(t("Our content provider is currently offline, apologies."))
             })
         }
         fetchHealth()
-    }, []);
+    }, [t]);
 
     React.useEffect(() => {
         if (streamRouteMatch) {
             if (streamRouteMatch?.params.type === 'movie' || streamRouteMatch.params.type === 'show') getStream(streamRouteMatch.params.title, streamRouteMatch.params.slug, streamRouteMatch.params.type, streamRouteMatch.params.source);
-            else return setErrorStatus("Failed to find movie. Please try searching below.");
+            else return setErrorStatus(t("Failed to find movie. Please try searching below."));
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -210,14 +212,14 @@ export function SearchView() {
     return (
         <div className="cardView">
             <Helmet>
-                <title>{type === 'movie' ? 'movies' : 'shows'} | movie-web</title>
+                <title>{type === 'movie' ? t("movies") : t("shows")} | movie-web</title>
             </Helmet>
 
             {/* Nav */}
             <nav>
-                <span className={page === 'search' ? 'selected-link' : ''} onClick={() => setPage('search')}>Search</span>
+                <span className={page === 'search' ? 'selected-link' : ''} onClick={() => setPage('search')}>{t("Search")}</span>
                 {continueWatching.length > 0 ?
-                    <span className={page === 'watching' ? 'selected-link' : ''} onClick={() => setPage('watching')}>Continue watching</span>
+                    <span className={page === 'watching' ? 'selected-link' : ''} onClick={() => setPage('watching')}>{t("Continue watching")}</span>
                     : ''}
             </nav>
 
@@ -226,25 +228,25 @@ export function SearchView() {
                 <React.Fragment>
                     <Card>
                         {errorStatus ? <ErrorBanner>{errorStatus}</ErrorBanner> : ''}
-                        <Title accent="Because watching content legally is boring">
-                            What do you wanna watch?
+                        <Title accent={t("Because watching content legally is boring")}>
+                            {t('What do you wanna watch?')}
                         </Title>
                         <TypeSelector
                             setType={(type) => history.push(`/${type}`)}
                             choices={[
-                                { label: "Movie", value: "movie" },
-                                { label: "TV Show", value: "show" }
+                                { label: t("Movie"), value: "movie" },
+                                { label: t("TV Show"), value: "show" }
                             ]}
                             noWrap={true}
                             selected={type}
                         />
-                        <InputBox placeholder={type === "movie" ? "Hamilton" : "Atypical"} onSubmit={(str) => searchMovie(str, type)} />
+                        <InputBox placeholder={type === "movie" ? "Interstellar" : "Mr.Robot"} onSubmit={(str) => searchMovie(str, type)} />
                         <Progress show={progress > 0} failed={failed} progress={progress} steps={maxSteps} text={text} />
                     </Card>
 
                     <Card show={showingOptions} doTransition>
                         <Title size="medium">
-                            Whoops, there are a few {type}s like that
+                            {t(`Whoops, there are a few ${type}s like that`)}
                         </Title>
                         {Object.entries(options.reduce((a, v) => {
                             if (!a[v.source]) a[v.source] = []
@@ -267,7 +269,7 @@ export function SearchView() {
 
             {/* Continue watching */}
             {continueWatching.length > 0 && page === 'watching' ? <Card>
-                <Title>Continue watching</Title>
+                <Title>{t("Continue watching")}</Title>
                 <Progress show={progress > 0} failed={failed} progress={progress} steps={maxSteps} text={text} />
                 {continueWatching?.map((v, i) => (
                     <MovieRow key={i} title={v.data.meta.title} slug={v.data.meta.slug} type={v.type} year={v.data.meta.year} source={v.source} place={v.data.show} percentage={v.percentageDone} deletable onClick={() => {
@@ -284,9 +286,9 @@ export function SearchView() {
             </Card> : <React.Fragment></React.Fragment>}
 
             <div className="topRightCredits">
-                <a href="https://github.com/JamesHawkinss/movie-web" target="_blank" rel="noreferrer">Check it out on GitHub <Arrow /></a>
+                <a href="https://github.com/JamesHawkinss/movie-web" target="_blank" rel="noreferrer">{t("Check it out on GitHub")} <Arrow /></a>
                 <br />
-                <a href="https://discord.gg/vXsRvye8BS" target="_blank" rel="noreferrer">Join the Discord <Arrow /></a>
+                <a href="https://discord.gg/vXsRvye8BS" target="_blank" rel="noreferrer">{t("Join the Discord")} <Arrow /></a>
             </div>
         </div>
     )

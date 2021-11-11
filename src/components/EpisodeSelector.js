@@ -5,8 +5,10 @@ import { VideoProgressStore } from '../lib/storage/VideoProgress'
 import { SelectBox } from '../components/SelectBox';
 import './EpisodeSelector.css'
 import { useWindowSize } from '../hooks/useWindowSize';
+import { useTranslation } from 'react-i18next';
 
 export function EpisodeSelector({ setSelectedSeason, selectedSeason, setEpisode, seasons, episodes, currentSeason, currentEpisode, streamData }) {
+    const { t } = useTranslation();
     const choices = episodes ? episodes.map(v => {
         const progressData = VideoProgressStore.get();
         
@@ -40,7 +42,7 @@ export function EpisodeSelector({ setSelectedSeason, selectedSeason, setEpisode,
                 )
                 :
                 (
-                    <TypeSelector setType={setSelectedSeason} selected={selectedSeason} choices={seasons.map(v=>({ value: v.toString(), label: `Season ${v}`}))} />
+                    <TypeSelector setType={setSelectedSeason} selected={selectedSeason} choices={seasons.map(v=>({ value: v.toString(), label: t("Season") + ` ${v}`}))} />
                 )
             }
             <br></br>

@@ -8,6 +8,7 @@ import { VideoElement } from '../components/VideoElement'
 import { EpisodeSelector } from '../components/EpisodeSelector'
 import { getStreamUrl } from '../lib/index'
 import { VideoProgressStore } from '../lib/storage/VideoProgress'
+import { useTranslation } from 'react-i18next'
 
 import './Movie.css'
 
@@ -15,7 +16,8 @@ export function MovieView(props) {
     const baseRouteMatch = useRouteMatch('/:type/:source/:title/:slug');
     const showRouteMatch = useRouteMatch('/:type/:source/:title/:slug/season/:season/episode/:episode');
     const history = useHistory();
-
+    
+    const { t } = useTranslation();
     const { streamUrl, streamData, setStreamUrl } = useMovie();
     const [ seasonList, setSeasonList ] = React.useState([]);
     const [ episodeLists, setEpisodeList ] = React.useState([]);
@@ -125,11 +127,11 @@ export function MovieView(props) {
             </Helmet>
 
             <Card fullWidth>
-                <Title accent="Return to home" accentLink="search">
+                <Title accent={t("Return to home")} accentLink="search">
                     {streamData.title}
                 </Title>
                 {streamData.type === "show" ? <Title size="small">
-                    Season {season}: Episode {episode}
+                    {t("Season")} {season}: {t("Episode")} {episode}
                 </Title> : undefined}
 
                 <VideoElement streamUrl={streamUrl} loading={loading} setProgress={setProgress} videoRef={videoRef} startTime={startTime} streamData={streamData} />

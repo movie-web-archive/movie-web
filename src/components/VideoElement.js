@@ -1,6 +1,7 @@
 import React from 'react'
 import Hls from 'hls.js'
 import { VideoPlaceholder } from './VideoPlaceholder'
+import { useTranslation } from 'react-i18next';
 
 import './VideoElement.css'
 
@@ -10,6 +11,7 @@ import './VideoElement.css'
 // videoRef: useRef
 // startTime: number
 export function VideoElement({ streamUrl, loading, setProgress, videoRef, startTime, streamData }) {
+    const { t } = useTranslation();
     const [error, setError] = React.useState(false);
 
     function onLoad() {
@@ -41,7 +43,7 @@ export function VideoElement({ streamUrl, loading, setProgress, videoRef, startT
         return (<VideoPlaceholder>Your browser is not supported</VideoPlaceholder>)
 
     if (loading)
-        return <VideoPlaceholder>Loading episode...</VideoPlaceholder>
+        return <VideoPlaceholder>{t("Loading episode...")}</VideoPlaceholder>
     
     if (!streamUrl || streamUrl.length === 0)
         return <VideoPlaceholder>No video selected</VideoPlaceholder>

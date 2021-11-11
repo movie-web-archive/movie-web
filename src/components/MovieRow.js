@@ -2,11 +2,13 @@ import React from 'react'
 import { Arrow } from './Arrow'
 import { PercentageOverlay } from './PercentageOverlay'
 import { VideoProgressStore } from '../lib/storage/VideoProgress'
+import { useTranslation } from 'react-i18next';
 import './MovieRow.css'
 
 // title: string
 // onClick: () => void
 export function MovieRow(props) {
+    const { t } = useTranslation();
     const progressData = VideoProgressStore.get();
     let progress;
     let percentage = null;
@@ -43,7 +45,7 @@ export function MovieRow(props) {
             </div>
 
             <div className="watch">
-                <p>Watch {props.type}</p>
+                <p>{t(`Watch ${props.type}`)}</p>
                 <Arrow/>
             </div>
             
