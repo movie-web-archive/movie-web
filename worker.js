@@ -26,6 +26,10 @@ async function handleRequest(request, destinationUrl, iteration = 0) {
 	if (request.headers.get('PHPSESSID')) {
 		request.headers.set('Cookie', `PHPSESSID=${request.headers.get('PHPSESSID')};`);
 	}
+	// Set theflix.ipiid cookie
+	if (request.headers.get('ipiid')) {
+		request.headers.set('Cookie', `theflix.ipiid=${request.headers.get('ipiid')};`);
+	}
 
 	// Set User Agent
 	request.headers.set('User-Agent', ' Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0');
@@ -51,12 +55,17 @@ async function handleRequest(request, destinationUrl, iteration = 0) {
 	response.headers.set("Access-Control-Allow-Origin", '*');
 	response.headers.set('Access-Control-Expose-Headers', '*');
 
-	// Get and set PHPSESSID cookie
+	// Get and set cookies
 	const cookies = response.headers.get('Set-Cookie');
 	if (cookies && cookies.includes('PHPSESSID') && cookies.includes(';')) {
 		let phpsessid = cookies.slice(cookies.search('PHPSESSID') + 10);
 		phpsessid = phpsessid.slice(0, phpsessid.search(';'));
 		response.headers.set('PHPSESSID', phpsessid);
+	}
+	if (cookies && cookies.includes('theflix.ipiid') && cookies.includes(';')) {
+		let ipiid = cookies.slice(cookies.search('theflix.ipiid') + 14);
+		ipiid = ipiid.slice(0, ipiid.search(';'));
+		response.headers.set('ipiid', ipiid);
 	}
 
 	// Append to/Add Vary header so browser will cache response correctly
@@ -90,13 +99,30 @@ function handleOptions(request) {
   	}
 }
 
+async function handleRequestWrapper(request, destinationUrl, prefetchUrl) {
+	const destinationRequest = new Request(destinationUrl, request);
+
+	if (prefetchUrl) {
+		const prefetchRequest = new Request(prefetchUrl, {
+			method: 'POST'
+		});
+
+		const response = await handleRequest(prefetchRequest, prefetchUrl);
+		if (response.headers.get('ipiid')) {
+			destinationRequest.headers.set('ipiid', response.headers.get('ipiid'));
+		}
+	}
+
+	return await handleRequest(destinationRequest, destinationUrl);
+}
+
 addEventListener("fetch", event => {
-	const request = event.request
+	let request = event.request
 	const url = new URL(request.url);
 	const destinationUrl = url.searchParams.get("destination");
+	const prefetchUrl = url.searchParams.get("prefetch");
 
 	console.log(`HTTP ${request.method} - ${request.url}` );
-
 
 	if (request.method === "OPTIONS") {
 		// Handle CORS preflight requests
@@ -122,7 +148,7 @@ addEventListener("fetch", event => {
 	// }
 	else if (request.method === "GET" || request.method === "HEAD" || request.method === "POST") {
 		// Handle request
-		event.respondWith(handleRequest(request, destinationUrl));
+		event.respondWith(handleRequestWrapper(request, destinationUrl, prefetchUrl));
 	}
 	else {
 		event.respondWith(
