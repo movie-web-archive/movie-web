@@ -16,6 +16,7 @@ export function TextInputControl({
   className,
   placeholder,
 }: TextInputControlProps) {
+  const test = "asdf";
   const input = (
     <input
       type="text"
