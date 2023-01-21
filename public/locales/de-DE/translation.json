@@ -1,0 +1,50 @@
+{
+	"global": {
+		"name": "movie-web"
+	},
+	"search": {
+		"loading": "Ihre Lieblingssendungen werden gesucht",
+		"providersFailed": "{{fails}}/{{total}} Anbieter fehlgeschlagen!",
+		"allResults": "Das ist alles was wir haben!",
+		"noResults": "Wir konnten nichts finden!",
+		"allFailed": "Alle Anbieter sind fehlgeschlagen!",
+		"headingTitle": "Suchergebnisse",
+		"headingLink": "Zurück zur Startseite",
+		"bookmarks": "Lesezeichen",
+		"continueWatching": "Weiter schauen",
+		"tagline": "Weil legal schauen langweilig ist",
+		"title": "Was wollen Sie sehen?",
+		"placeholder": "Was wollen Sie sehen?"
+	},
+	"media": {
+		"invalidUrl": "Der URL ist könnte ungültig sein",
+		"arrowText": "Zurück"
+	},
+	"seasons": {
+		"season": "Saison {{season}}",
+		"failed": "Saisondaten konnten nicht abgerufen werden"
+	},
+	"notFound": {
+		"backArrow": "Zurück zur Startseite",
+		"media": {
+			"title": "Medien konnten nicht abgerufen werden",
+			"description": "Medien konnten nicht abgerufen werden. Entweder sie wurden entfernt oder der URL wurde manipuliert."
+		},
+		"provider": {
+			"title": "Dieser Anbieter wurde deaktiviert",
+			"description": "Wir hatten probleme mit diesem Anbieter, oder er war instabiel, also mussten wir ihn deaktivieren."
+		},
+		"page": {
+			"title": "Wir konnten diese Seite nicht finden",
+			"description": "Wir haben überall gesucht: Aber diese Seite konnten wir nicht finden."
+		}
+	},
+	"searchBar": {
+		"movie": "Film",
+		"series": "Serie",
+		"Search": "Suche"
+	},
+	"errorBoundary": {
+		"text": "Die App hat einen Fehler festgestellt. Melden Sie dies bitte an"
+	}
+}
