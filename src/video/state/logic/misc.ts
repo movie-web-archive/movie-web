@@ -9,6 +9,7 @@ export type VideoMiscError = {
   initalized: boolean;
   isCasting: boolean;
   stateProviderId: string;
+  isInParty: boolean;
 };
 
 function getMiscFromState(state: VideoPlayerState): VideoMiscError {
@@ -18,6 +19,7 @@ function getMiscFromState(state: VideoPlayerState): VideoMiscError {
     initalized: state.initalized,
     isCasting: state.casting.isCasting,
     stateProviderId: state.stateProviderId,
+    isInParty: state.watchParty.isInParty,
   };
 }
 

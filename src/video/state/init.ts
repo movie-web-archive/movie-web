@@ -24,6 +24,7 @@ export function resetForSource(s: VideoPlayerState) {
 }
 
 function initPlayer(): VideoPlayerState {
+  console.log("INITIALIZING");
   return {
     interface: {
       popout: null,
@@ -58,6 +59,10 @@ function initPlayer(): VideoPlayerState {
       player: null,
     },
 
+    watchParty: {
+      isInParty: false,
+    },
+
     meta: null,
     source: null,
 
@@ -80,6 +85,7 @@ export function registerVideoPlayer(): string {
     throw new Error("duplicate id");
   }
 
+  console.log("REGISTERING VIDEO PLAYER");
   _players.set(id, initPlayer());
   return id;
 }

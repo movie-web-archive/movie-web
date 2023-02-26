@@ -72,6 +72,11 @@ export type VideoPlayerState = {
     instance: cast.framework.CastContext | null;
   };
 
+  // watch party state
+  watchParty: {
+    isInParty: boolean;
+  };
+
   // misc
   canAirplay: boolean;
   initalized: boolean;

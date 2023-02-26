@@ -10,6 +10,7 @@ export function setProvider(
   state.stateProvider = provider;
   state.initalized = true;
   state.stateProviderId = provider.getId();
+  console.log("SETTING ID (setProvider)", state.stateProviderId);
   updateMisc(descriptor, state);
 }
 
@@ -30,6 +31,7 @@ export function unsetStateProvider(
   }
   state.stateProvider = null;
   state.stateProviderId = "video"; // go back to video when casting stops
+  console.log("SETTING ID (unsetStateProvider)", state.stateProviderId);
   updateMisc(descriptor, state);
 }
 
