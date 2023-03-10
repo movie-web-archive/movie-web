@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import { ErrorBoundary } from "@/components/layout/ErrorBoundary";
 import { conf } from "@/setup/config";
-import { registerSW } from "virtual:pwa-register";
+import { registerSW
+
+ } from "virtual:pwa-register";
 
 import App from "@/setup/App";
 import "@/setup/ga";
