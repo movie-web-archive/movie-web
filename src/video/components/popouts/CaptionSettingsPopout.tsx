@@ -125,6 +125,8 @@ export function CaptionSettingsPopout(props: {
                 className={`flex h-8 w-8 items-center justify-center rounded transition-[background-color,transform] duration-100 hover:bg-[#1c161b79] active:scale-110 ${
                   color === captionSettings.style.color ? "bg-[#1C161B]" : ""
                 }`}
+                // added because of key errors / prevents rerendering
+                key={color}
                 onClick={() => setCaptionColor(color)}
               >
                 <div
