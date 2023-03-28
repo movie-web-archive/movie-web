@@ -27,8 +27,6 @@ export function KeyboardShortcutsAction() {
 
     let isRolling = false;
     const onKeyDown = (evt: KeyboardEvent) => {
-      if (!videoInterface.isFocused) return;
-
       switch (evt.key.toLowerCase()) {
         // Toggle fullscreen
         case "f":
