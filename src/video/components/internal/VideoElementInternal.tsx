@@ -1,5 +1,6 @@
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useMediaPlaying } from "@/video/state/logic/mediaplaying";
+import { useMeta } from "@/video/state/logic/meta";
 import { useMisc } from "@/video/state/logic/misc";
 import { setProvider, unsetStateProvider } from "@/video/state/providers/utils";
 import { createVideoStateProvider } from "@/video/state/providers/videoStateProvider";
@@ -14,7 +15,7 @@ function VideoElement(props: Props) {
   const mediaPlaying = useMediaPlaying(descriptor);
   const misc = useMisc(descriptor);
   const ref = useRef<HTMLVideoElement>(null);
-
+  const meta = useMeta(descriptor);
   const initalized = useMemo(() => !!misc.wrapperInitialized, [misc]);
   const stateProviderId = useMemo(() => misc.stateProviderId, [misc]);
 
@@ -41,6 +42,11 @@ function VideoElement(props: Props) {
       autoPlay={props.autoPlay}
       muted={mediaPlaying.volume === 0}
       playsInline
+      poster={
+        meta && meta.meta.meta.backdrops && meta.meta.meta.backdrops.length
+          ? meta.meta.meta.backdrops[0]
+          : ""
+      }
       className="z-0 h-full w-full"
     />
   );

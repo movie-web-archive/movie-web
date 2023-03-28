@@ -2,6 +2,7 @@ import { MWMediaMeta, MWMediaType, MWSeasonMeta } from "./types";
 
 export const JW_API_BASE = "https://apis.justwatch.com";
 export const JW_IMAGE_BASE = "https://images.justwatch.com";
+export const JW_BACKDROP_BASE = "https://www.justwatch.com/images";
 
 export type JWContentTypes = "movie" | "show";
 
@@ -20,6 +21,7 @@ export type JWEpisodeShort = {
 export type JWMediaResult = {
   title: string;
   poster?: string;
+  backdrops?: { backdrop_url: string }[];
   id: number;
   original_release_year?: number;
   jw_entity_id: string;
@@ -63,6 +65,9 @@ export function formatJWMeta(
         })
       );
   }
+  const backdrops = media.backdrops?.map((u) =>
+    `${JW_BACKDROP_BASE}${u.backdrop_url}`.replace("{profile}", "s1440")
+  );
 
   return {
     title: media.title,
@@ -71,6 +76,7 @@ export function formatJWMeta(
     poster: media.poster
       ? `${JW_IMAGE_BASE}${media.poster.replace("{profile}", "s166")}`
       : undefined,
+    backdrops,
     type,
     seasons: seasons as any,
     seasonData: season

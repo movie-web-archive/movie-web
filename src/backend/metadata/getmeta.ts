@@ -23,6 +23,7 @@ interface JWExternalId {
 }
 
 interface JWDetailedMeta extends JWMediaResult {
+  backdrops: { backdrop_url: string }[];
   external_ids: JWExternalId[];
 }
 
