@@ -60,10 +60,13 @@ export type VideoPlayerState = {
     type: MWStreamType;
     providerId?: string;
     embedId?: string;
-    caption: null | {
-      url: string;
-      id: string;
-    };
+    caption:
+      | undefined
+      | null
+      | {
+          url: string;
+          id: string;
+        };
   };
 
   // casting state

@@ -11,10 +11,13 @@ export type VideoSourceEvent = {
     type: MWStreamType;
     providerId?: string;
     embedId?: string;
-    caption: null | {
-      id: string;
-      url: string;
-    };
+    caption:
+      | undefined
+      | null
+      | {
+          id: string;
+          url: string;
+        };
   };
 };
 
