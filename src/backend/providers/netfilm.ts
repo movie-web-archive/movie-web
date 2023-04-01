@@ -1,26 +1,32 @@
 import { proxiedFetch } from "../helpers/fetch";
 import { registerProvider } from "../helpers/register";
-import { MWStreamQuality, MWStreamType } from "../helpers/streams";
+import {
+  MWCaptionType,
+  MWStreamQuality,
+  MWStreamType,
+} from "../helpers/streams";
 import { MWMediaType } from "../metadata/types";
 
 const netfilmBase = "https://net-film.vercel.app";
 
-const qualityMap = {
-  "360": MWStreamQuality.Q360P,
-  "480": MWStreamQuality.Q480P,
-  "720": MWStreamQuality.Q720P,
-  "1080": MWStreamQuality.Q1080P,
+const qualityMap: Record<number, MWStreamQuality> = {
+  360: MWStreamQuality.Q360P,
+  540: MWStreamQuality.Q540P,
+  480: MWStreamQuality.Q480P,
+  720: MWStreamQuality.Q720P,
+  1080: MWStreamQuality.Q1080P,
 };
-type QualityInMap = keyof typeof qualityMap;
 
 registerProvider({
   id: "netfilm",
   displayName: "NetFilm",
   rank: 15,
   type: [MWMediaType.MOVIE, MWMediaType.SERIES],
-  disabled: true, // https://github.com/lamhoang1256/netfilm/issues/25
 
   async scrape({ media, episode, progress }) {
+    if (!this.type.includes(media.meta.type)) {
+      throw new Error("Unsupported type");
+    }
     // search for relevant item
     const searchResponse = await proxiedFetch<any>(
       `/api/search?keyword=${encodeURIComponent(media.meta.title)}`,
@@ -48,20 +54,29 @@ registerProvider({
         }
       );
 
-      const { qualities } = watchInfo.data;
+      const data = watchInfo.data;
 
       // get best quality source
-      const source = qualities.reduce((p: any, c: any) =>
-        c.quality > p.quality ? c : p
+      const source: { url: string; quality: number } = data.qualities.reduce(
+        (p: any, c: any) => (c.quality > p.quality ? c : p)
       );
+
+      const mappedCaptions = data.subtitles.map((sub: Record<string, any>) => ({
+        needsProxy: false,
+        url: sub.url.replace("https://convert-srt-to-vtt.vercel.app/?url=", ""),
+        type: MWCaptionType.SRT,
+        langIso: sub.language,
+      }));
 
       return {
         embeds: [],
         stream: {
-          streamUrl: source.url,
-          quality: qualityMap[source.quality as QualityInMap],
+          streamUrl: source.url
+            .replace("akm-cdn", "aws-cdn")
+            .replace("gg-cdn", "aws-cdn"),
+          quality: qualityMap[source.quality],
           type: MWStreamType.HLS,
-          captions: [],
+          captions: mappedCaptions,
         },
       };
     }
@@ -109,20 +124,29 @@ registerProvider({
       }
     );
 
-    const { qualities } = episodeStream.data;
+    const data = episodeStream.data;
 
     // get best quality source
-    const source = qualities.reduce((p: any, c: any) =>
-      c.quality > p.quality ? c : p
+    const source: { url: string; quality: number } = data.qualities.reduce(
+      (p: any, c: any) => (c.quality > p.quality ? c : p)
     );
+
+    const mappedCaptions = data.subtitles.map((sub: Record<string, any>) => ({
+      needsProxy: false,
+      url: sub.url.replace("https://convert-srt-to-vtt.vercel.app/?url=", ""),
+      type: MWCaptionType.SRT,
+      langIso: sub.language,
+    }));
 
     return {
       embeds: [],
       stream: {
-        streamUrl: source.url,
-        quality: qualityMap[source.quality as QualityInMap],
+        streamUrl: source.url
+          .replace("akm-cdn", "aws-cdn")
+          .replace("gg-cdn", "aws-cdn"),
+        quality: qualityMap[source.quality],
         type: MWStreamType.HLS,
-        captions: [],
+        captions: mappedCaptions,
       },
     };
   },

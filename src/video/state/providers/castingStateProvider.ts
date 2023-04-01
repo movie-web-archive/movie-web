@@ -12,6 +12,7 @@ import {
 } from "@/video/components/hooks/volumeStore";
 import { resetStateForSource } from "@/video/state/providers/helpers";
 import { updateInterface } from "@/video/state/logic/interface";
+import { revokeCaptionBlob } from "@/backend/helpers/captions";
 import { getPlayerState } from "../cache";
 import { updateMediaPlaying } from "../logic/mediaplaying";
 import { VideoPlayerStateProvider } from "./providerTypes";
@@ -83,6 +84,9 @@ export function createCastingStateProvider(
       state.pausedWhenSeeking = state.mediaPlaying.isPaused;
       this.pause();
     },
+    togglePictureInPicture() {
+      // no picture in picture while casting
+    },
     async setVolume(v) {
       // clamp time between 0 and 1
       let volume = Math.min(v, 1);
@@ -129,12 +133,15 @@ export function createCastingStateProvider(
         type: source.type,
         url: source.source,
         caption: null,
+        embedId: source.embedId,
+        providerId: source.providerId,
       };
       resetStateForSource(descriptor, state);
       updateSource(descriptor, state);
     },
     setCaption(id, url) {
       if (state.source) {
+        revokeCaptionBlob(state.source.caption?.url);
         state.source.caption = {
           id,
           url,
@@ -144,6 +151,7 @@ export function createCastingStateProvider(
     },
     clearCaption() {
       if (state.source) {
+        revokeCaptionBlob(state.source.caption?.url);
         state.source.caption = null;
         updateSource(descriptor, state);
       }
@@ -218,6 +226,8 @@ export function createCastingStateProvider(
           quality: state.source.quality,
           source: state.source.url,
           type: state.source.type,
+          embedId: state.source.embedId,
+          providerId: state.source.providerId,
         });
 
       return {
