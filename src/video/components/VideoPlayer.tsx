@@ -31,6 +31,7 @@ import { PictureInPictureAction } from "@/video/components/actions/PictureInPict
 import { CaptionRendererAction } from "./actions/CaptionRendererAction";
 import { SettingsAction } from "./actions/SettingsAction";
 import { DividerAction } from "./actions/DividerAction";
+import { NextEpisodeAction } from "./actions/NextEpisodeAction";
 
 type Props = VideoPlayerBaseProps;
 
@@ -167,6 +168,7 @@ export function VideoPlayer(props: Props) {
               {show ? <PopoutProviderAction /> : null}
             </BackdropAction>
             <CaptionRendererAction isControlsShown={show} />
+            <NextEpisodeAction />
             {props.children}
           </VideoPlayerError>
         </>

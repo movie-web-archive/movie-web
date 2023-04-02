@@ -37,9 +37,13 @@ module.exports = {
         "loading-pin": {
           "0%, 40%, 100%": { height: "0.5em", "background-color": "#282336" },
           "20%": { height: "1em", "background-color": "white" }
+        },
+        "fill": {
+          "0%": { width: "100%" },
+          "100%": { width: "0%" }
         }
       },
-      animation: { "loading-pin": "loading-pin 1.8s ease-in-out infinite" }
+      animation: { "loading-pin": "loading-pin 1.8s ease-in-out infinite", "fill": "fill 10s linear forwards" },
     }
   },
   plugins: [require("tailwind-scrollbar"), require("@tailwindcss/line-clamp")]
