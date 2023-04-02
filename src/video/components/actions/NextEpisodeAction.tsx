@@ -17,8 +17,9 @@ export function NextEpisodeAction() {
     useCurrentSeriesEpisodeInfo(descriptor);
 
   const nextEpisode = useMemo(() => {
+    if (!currentEpisodeInfo) return null;
     const next = currentSeasonInfo?.episodes?.find(
-      (episode) => episode.number === currentEpisodeInfo!.number + 1
+      (episode) => episode.number === currentEpisodeInfo.number + 1
     );
     return next;
   }, [currentEpisodeInfo, currentSeasonInfo]);
@@ -31,7 +32,6 @@ export function NextEpisodeAction() {
     if (episodeId && seasonId) setEpisode(seasonId, episodeId);
   }, [nextEpisode, currentSeasonInfo, setEpisode]);
   useEffect(() => {
-    console.log(almostFinished);
     if (!almostFinished) return;
     if (timeout.current) return;
     timeout.current = setTimeout(() => {
