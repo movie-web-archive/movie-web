@@ -5,7 +5,9 @@ import {
 } from "@/backend/helpers/streams";
 import { DetailedMeta } from "@/backend/metadata/getmeta";
 import Hls from "hls.js";
+import { P2PT, Peer } from "@/@types/p2pt";
 import { VideoPlayerStateProvider } from "./providers/providerTypes";
+import { WPPlayerCommand } from "./providers/watchPartyStateProvider";
 
 export type VideoPlayerMeta = {
   meta: DetailedMeta;
@@ -20,6 +22,14 @@ export type VideoPlayerMeta = {
     title: string;
     episodes?: { id: string; number: number; title: string }[];
   }[];
+};
+
+export type WatchPartyState = {
+  connection: P2PT | null;
+  peers: Set<Peer<WPPlayerCommand>> | null;
+  roomId: string | null;
+  isInParty: boolean;
+  isHost: boolean;
 };
 
 export type VideoPlayerState = {
@@ -75,9 +85,7 @@ export type VideoPlayerState = {
   };
 
   // watch party state
-  watchParty: {
-    isInParty: boolean;
-  };
+  watchParty: WatchPartyState;
 
   // misc
   canAirplay: boolean;

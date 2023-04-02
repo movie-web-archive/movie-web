@@ -17,7 +17,10 @@ export function VideoPlayerContextProvider(props: { children: ReactNode }) {
     setId(vidId);
 
     return () => {
-      unregisterVideoPlayer(vidId);
+      // delay unregistering to allow for state providers to destroy first
+      setTimeout(() => {
+        unregisterVideoPlayer(vidId);
+      }, 1000);
     };
   }, [setId]);
 

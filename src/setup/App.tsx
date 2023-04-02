@@ -31,10 +31,14 @@ function App() {
                 </Route>
 
                 {/* pages */}
-                <Route exact path="/media/:media" component={MediaView} />
                 <Route
                   exact
-                  path="/media/:media/:season/:episode"
+                  path="/media/:media/:roomId?"
+                  component={MediaView}
+                />
+                <Route
+                  exact
+                  path="/media/:media/:season/:episode/:roomId?"
                   component={MediaView}
                 />
                 <Route
@@ -46,7 +50,11 @@ function App() {
                 {/* other */}
                 <Route exact path="/dev" component={DeveloperView} />
                 <Route exact path="/dev/test" component={TestView} />
-                <Route exact path="/dev/video" component={VideoTesterView} />
+                <Route
+                  exact
+                  path="/dev/video/:roomId?"
+                  component={VideoTesterView}
+                />
                 <Route
                   exact
                   path="/dev/providers"

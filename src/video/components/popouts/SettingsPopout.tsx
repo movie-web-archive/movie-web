@@ -8,6 +8,7 @@ import { SourceSelectionAction } from "@/video/components/actions/list-entries/S
 import { CaptionSelectionPopout } from "./CaptionSelectionPopout";
 import { SourceSelectionPopout } from "./SourceSelectionPopout";
 import { CaptionSettingsPopout } from "./CaptionSettingsPopout";
+import { WatchPartyAction } from "../actions/WatchPartyAction";
 
 export function SettingsPopout() {
   const floatingRouter = useFloatingRouter();
@@ -21,6 +22,7 @@ export function SettingsPopout() {
           <DownloadAction />
           <SourceSelectionAction onClick={() => navigate("/source")} />
           <CaptionsSelectionAction onClick={() => navigate("/captions")} />
+          <WatchPartyAction />
         </FloatingCardView.Content>
       </FloatingView>
       <SourceSelectionPopout router={floatingRouter} prefix="source" />

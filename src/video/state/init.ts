@@ -60,7 +60,11 @@ function initPlayer(): VideoPlayerState {
     },
 
     watchParty: {
+      connection: null,
+      peers: null,
+      roomId: null,
       isInParty: false,
+      isHost: false,
     },
 
     meta: null,

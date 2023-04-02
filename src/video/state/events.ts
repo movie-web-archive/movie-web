@@ -5,7 +5,8 @@ export type VideoPlayerEvent =
   | "interface"
   | "meta"
   | "error"
-  | "misc";
+  | "misc"
+  | "watchparty";
 
 function createEventString(id: string, event: VideoPlayerEvent): string {
   return `_vid:::${id}:::${event}`;
@@ -21,7 +22,7 @@ export function sendEvent<T>(id: string, event: VideoPlayerEvent, data: T) {
 export function listenEvent<T>(
   id: string,
   event: VideoPlayerEvent,
-  cb: (data: T) => void
+  cb: (data: CustomEvent<T>) => void
 ) {
   document.addEventListener<any>(createEventString(id, event), cb);
 }
@@ -29,7 +30,7 @@ export function listenEvent<T>(
 export function unlistenEvent<T>(
   id: string,
   event: VideoPlayerEvent,
-  cb: (data: T) => void
+  cb: (data: CustomEvent<T>) => void
 ) {
   document.removeEventListener<any>(createEventString(id, event), cb);
 }

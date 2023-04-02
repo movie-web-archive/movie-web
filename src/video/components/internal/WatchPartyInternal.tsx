@@ -1,10 +1,14 @@
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useMediaPlaying } from "@/video/state/logic/mediaplaying";
-import { useMisc } from "@/video/state/logic/misc";
 import { useSource } from "@/video/state/logic/source";
+import { useWatchParty } from "@/video/state/logic/watchparty";
 import { setProvider, unsetStateProvider } from "@/video/state/providers/utils";
-import { createWatchPartyStateProvider } from "@/video/state/providers/watchPartyStateProvider";
+import {
+  createWatchPartyStateProvider,
+  joinRoom,
+} from "@/video/state/providers/watchPartyStateProvider";
 import { useEffect, useMemo, useRef } from "react";
+import { useParams } from "react-router-dom";
 
 interface Props {
   autoPlay?: boolean;
@@ -14,11 +18,12 @@ export function WatchPartyInternal(props: Props) {
   const descriptor = useVideoPlayerDescriptor();
   const mediaPlaying = useMediaPlaying(descriptor);
   const source = useSource(descriptor);
-  const misc = useMisc(descriptor);
+  const watchParty = useWatchParty(descriptor);
   const lastValue = useRef<boolean>(false);
   const ref = useRef<HTMLVideoElement>(null);
-
-  const isInParty = useMemo(() => misc.isInParty, [misc]);
+  const { roomId } = useParams<{ roomId?: string }>();
+  const isInParty = useMemo(() => watchParty.isInParty, [watchParty.isInParty]);
+  const isConnected = useRef(false);
 
   useEffect(() => {
     if (lastValue.current === isInParty) return;
@@ -37,6 +42,18 @@ export function WatchPartyInternal(props: Props) {
       destroy();
     };
   }, [descriptor, isInParty]);
+
+  // responsible for joining the room with the roomId param from url
+  useEffect(() => {
+    const isHost = !roomId;
+    if (isHost) return;
+    if (isConnected.current) return;
+
+    if (!isInParty) {
+      joinRoom(roomId, descriptor);
+      isConnected.current = true;
+    }
+  }, [roomId, isInParty, descriptor, isConnected]);
 
   // this element is remotely controlled by a state provider
   if (!isInParty) return null;
