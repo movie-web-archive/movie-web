@@ -57,7 +57,7 @@ export function Chat(props: ChatProps) {
   );
 }
 
-export function TestView() {
+export default function TestView() {
   return (
     <div>
       <Chat />
