@@ -63,7 +63,7 @@ export function joinRoom(room: string, descriptor: string) {
 }
 
 export function createRoom(descriptor: string) {
-  const roomId = "roomIdWillBeHere"; // Math.random().toString(36).substring(2, 15);
+  const roomId = Math.random().toString(36).substring(2, 15);
   const state = getPlayerState(descriptor);
   const peers = new Set<Peer<WPPlayerCommand>>();
   const p2p = new window.P2PT<WPPlayerCommand>([
