@@ -26,7 +26,7 @@ type MWMediaMetaBase = {
   id: string;
   year?: string;
   poster?: string;
-  backdrops?: string[];
+  backdrop?: string;
 };
 
 type MWMediaMetaSpecific =

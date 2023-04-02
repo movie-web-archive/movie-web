@@ -276,7 +276,7 @@ export function createVideoStateProvider(
     clearCaption() {
       if (state.source) {
         revokeCaptionBlob(state.source.caption?.url);
-        state.source.caption = null;
+        state.source.caption = undefined;
         updateSource(descriptor, state);
       }
     },

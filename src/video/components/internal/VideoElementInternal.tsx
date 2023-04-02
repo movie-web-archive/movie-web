@@ -42,11 +42,7 @@ function VideoElement(props: Props) {
       autoPlay={props.autoPlay}
       muted={mediaPlaying.volume === 0}
       playsInline
-      poster={
-        meta && meta.meta.meta.backdrops && meta.meta.meta.backdrops.length
-          ? meta.meta.meta.backdrops[0]
-          : ""
-      }
+      poster={(meta && meta.meta.meta.backdrop) ?? undefined}
       className="z-0 h-full w-full"
     />
   );

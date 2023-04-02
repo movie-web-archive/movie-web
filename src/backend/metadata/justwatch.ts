@@ -65,9 +65,17 @@ export function formatJWMeta(
         })
       );
   }
-  const backdrops = media.backdrops?.map((u) =>
-    `${JW_BACKDROP_BASE}${u.backdrop_url}`.replace("{profile}", "s1440")
-  );
+  let backdrop;
+  if (
+    media.backdrops &&
+    media.backdrops.length &&
+    media.backdrops[0].backdrop_url
+  ) {
+    backdrop = `${JW_BACKDROP_BASE}${media.backdrops[0].backdrop_url}`.replace(
+      "{profile}",
+      "s1440"
+    );
+  }
 
   return {
     title: media.title,
@@ -76,7 +84,7 @@ export function formatJWMeta(
     poster: media.poster
       ? `${JW_IMAGE_BASE}${media.poster.replace("{profile}", "s166")}`
       : undefined,
-    backdrops,
+    backdrop,
     type,
     seasons: seasons as any,
     seasonData: season

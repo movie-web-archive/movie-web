@@ -62,7 +62,6 @@ export type VideoPlayerState = {
     embedId?: string;
     caption:
       | undefined
-      | null
       | {
           url: string;
           id: string;
