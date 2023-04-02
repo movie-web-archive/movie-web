@@ -32,11 +32,17 @@ export function NextEpisodeAction() {
     if (episodeId && seasonId) setEpisode(seasonId, episodeId);
   }, [nextEpisode, currentSeasonInfo, setEpisode]);
   useEffect(() => {
-    if (!almostFinished) return;
+    if (!almostFinished) {
+      // if the user goes back again reset the timer
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+        timeout.current = null;
+      } else {
+        return;
+      }
+    }
     if (timeout.current) return;
-    timeout.current = setTimeout(() => {
-      handleNextEpisode();
-    }, timeoutMs);
+    timeout.current = setTimeout(() => handleNextEpisode(), timeoutMs);
   }, [
     almostFinished,
     nextEpisode,
