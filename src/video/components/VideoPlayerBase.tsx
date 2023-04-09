@@ -10,6 +10,7 @@ import {
 } from "../state/hooks";
 import { MetaAction } from "./actions/MetaAction";
 import { VideoElementInternal } from "./internal/VideoElementInternal";
+import MediaSessionInternal from "./internal/MediaSessionInternal";
 
 export interface VideoPlayerBaseProps {
   children?:
@@ -48,6 +49,7 @@ function VideoPlayerBaseWithState(props: VideoPlayerBaseProps) {
         <MetaAction />
         <VideoElementInternal autoPlay={props.autoPlay} />
         <CastingInternal />
+        <MediaSessionInternal />
         <WrapperRegisterInternal wrapper={ref.current} />
         <div className="absolute inset-0">{children}</div>
       </div>

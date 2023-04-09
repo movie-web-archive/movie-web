@@ -19,80 +19,11 @@ import { updateError } from "@/video/state/logic/error";
 import { updateMisc } from "@/video/state/logic/misc";
 import { resetStateForSource } from "@/video/state/providers/helpers";
 import { revokeCaptionBlob } from "@/backend/helpers/captions";
-import { MWMediaType } from "@/backend/metadata/types";
 import { getPlayerState } from "../cache";
 import { updateMediaPlaying } from "../logic/mediaplaying";
 import { VideoPlayerStateProvider } from "./providerTypes";
 import { updateProgress } from "../logic/progress";
 import { handleBuffered } from "./utils";
-import { VideoPlayerState } from "../types";
-
-function addMediaSession(state: VideoPlayerState, player: HTMLVideoElement) {
-  let artwork: any[] = [];
-  if (state.meta?.meta.meta.poster) {
-    artwork = [
-      // for low end devices
-      {
-        src: state.meta?.meta.meta.poster,
-        sizes: "256x256",
-        type: "image/png",
-      },
-      // for high end devices
-      {
-        src: state.meta?.meta.meta.poster,
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ];
-  }
-  const playerEl = player;
-  const mediaSession = navigator.mediaSession;
-  mediaSession.metadata = new MediaMetadata({ artwork });
-  const metadata = mediaSession.metadata;
-  if (state.meta?.meta.meta.type === MWMediaType.MOVIE) {
-    metadata.title = state.meta?.meta.meta.title;
-  }
-  if (state.meta?.meta.meta.type === MWMediaType.SERIES) {
-    const currentEpisodeId = state.meta!.episode!.episodeId;
-    const currentSeasonId = state.meta!.episode!.seasonId;
-    const currentSeason = state.meta!.seasons!.find(
-      (season) => season.id === currentSeasonId
-    );
-    const currentEpisode = currentSeason!.episodes?.find(
-      (episode) => episode.id === currentEpisodeId
-    );
-    metadata.title = currentEpisode!.title;
-    metadata.artist = currentSeason!.title;
-    metadata.album = state.meta!.meta.meta.title;
-  }
-  mediaSession.setActionHandler("play", () => playerEl.play());
-  mediaSession.setActionHandler("pause", () => playerEl.pause());
-  mediaSession.setActionHandler("seekbackward", () => {
-    if (playerEl.currentTime < 10) playerEl.currentTime = 0;
-    playerEl.currentTime -= 10;
-  });
-  mediaSession.setActionHandler("seekforward", () => {
-    if (playerEl.currentTime + 10 > playerEl.duration)
-      playerEl.currentTime = playerEl.duration;
-    playerEl.currentTime += 10;
-  });
-
-  playerEl.addEventListener("play", () => {
-    mediaSession.playbackState = "playing";
-  });
-  playerEl.addEventListener("pause", () => {
-    mediaSession.playbackState = "paused";
-  });
-}
-
-function removeMediaSession() {
-  navigator.mediaSession.metadata = null;
-  navigator.mediaSession.playbackState = "none";
-  navigator.mediaSession.setActionHandler("play", null);
-  navigator.mediaSession.setActionHandler("pause", null);
-  navigator.mediaSession.setActionHandler("seekbackward", null);
-  navigator.mediaSession.setActionHandler("seekforward", null);
-}
 
 function errorMessage(err: MediaError) {
   switch (err.code) {
@@ -412,10 +343,6 @@ export function createVideoStateProvider(
         canAirplay
       );
 
-      if ("mediaSession" in navigator) {
-        addMediaSession(state, player);
-      }
-
       if (state.source) {
         this.setSource({
           quality: state.source.quality,
@@ -450,10 +377,6 @@ export function createVideoStateProvider(
             "webkitplaybacktargetavailabilitychanged",
             canAirplay
           );
-
-          if ("mediaSession" in navigator && navigator.mediaSession.metadata) {
-            removeMediaSession();
-          }
         },
       };
     },
