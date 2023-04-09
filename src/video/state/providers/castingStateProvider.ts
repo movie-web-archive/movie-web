@@ -149,7 +149,7 @@ export function createCastingStateProvider(
         quality: source.quality,
         type: source.type,
         url: source.source,
-        caption: undefined,
+        caption: null,
         embedId: source.embedId,
         providerId: source.providerId,
       };
@@ -169,7 +169,7 @@ export function createCastingStateProvider(
     clearCaption() {
       if (state.source) {
         revokeCaptionBlob(state.source.caption?.url);
-        state.source.caption = undefined;
+        state.source.caption = null;
         updateSource(descriptor, state);
       }
     },
