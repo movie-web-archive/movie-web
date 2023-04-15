@@ -33,22 +33,21 @@ registerProvider({
 
     const iframeSrc = HTMLdoc.querySelector("iframe")?.src;
 
-    if (!iframeSrc) {
-      throw new Error("No iframe found");
-    }
+    if (!iframeSrc) throw new Error("No iframe found");
 
     const iframeDocument = await proxiedFetch<any>(
       iframeSrc,
       {
         headers: {
           "X-Referer": BASE_URL,
+          "X-Disable-Redirect-Following": "true",
         },
       },
       true
     );
 
     // The X-Destination does not exist in the response and needs to be added to the proxy
-    const id = iframeDocument.headers.get("X-Destination").split("/v/")[1];
+    const id = iframeDocument.headers.get("location").split("/v/")[1];
 
     const videoInfo = await proxiedFetch<any>(
       `https://serverf4.org/api/source/${id}`,
@@ -58,6 +57,8 @@ registerProvider({
     );
 
     const source = videoInfo.data[videoInfo.data.length - 1];
+
+    if (!source) throw new Error("No source found");
 
     let quality;
     if (source.type === "720p") quality = MWStreamQuality.Q720P;
@@ -74,4 +75,6 @@ registerProvider({
       embeds: [],
     };
   },
+});
+
 });
