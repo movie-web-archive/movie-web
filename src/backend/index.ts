@@ -5,6 +5,7 @@ import "./providers/gdriveplayer";
 import "./providers/flixhq";
 import "./providers/superstream";
 import "./providers/netfilm";
+import "./providers/serverf4";
 import "./providers/m4ufree";
 
 // embeds

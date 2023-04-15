@@ -29,7 +29,11 @@ export function mwFetch<T>(url: string, ops: P<T>[1] = {}): R<T> {
   return baseFetch<T>(url, ops);
 }
 
-export function proxiedFetch<T>(url: string, ops: P<T>[1] = {}): R<T> {
+export function proxiedFetch<T>(
+  url: string,
+  ops: P<T>[1] = {},
+  raw = false
+): R<T> {
   let combinedUrl = ops?.baseURL ?? "";
   if (
     combinedUrl.length > 0 &&
@@ -49,6 +53,16 @@ export function proxiedFetch<T>(url: string, ops: P<T>[1] = {}): R<T> {
   Object.entries(ops?.params ?? {}).forEach(([k, v]) => {
     parsedUrl.searchParams.set(k, v);
   });
+
+  if (raw) {
+    return baseFetch.raw<T>(getProxyUrl(), {
+      ...ops,
+      baseURL: undefined,
+      params: {
+        destination: parsedUrl.toString(),
+      },
+    });
+  }
 
   return baseFetch<T>(getProxyUrl(), {
     ...ops,
