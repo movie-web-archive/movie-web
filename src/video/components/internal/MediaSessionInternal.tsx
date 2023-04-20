@@ -2,12 +2,19 @@ import { MWMediaType } from "@/backend/metadata/types";
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useControls } from "@/video/state/logic/controls";
 import { useProgress } from "@/video/state/logic/progress";
-import { useEffect, useRef } from "react";
-import { VideoMetaEvent, useMeta } from "@/video/state/logic/meta";
+import { useEffect, useMemo, useRef } from "react";
+// import { VideoMetaEvent, useMeta } from "@/video/state/logic/meta";
+import { useCurrentSeriesEpisodeInfo } from "../hooks/useCurrentSeriesEpisodeInfo";
 
 export default function MediaSessionInternal() {
   const descriptor = useVideoPlayerDescriptor();
-  const metaRef = useRef<VideoMetaEvent>(useMeta(descriptor));
+  // const meta = useMeta(descriptor);
+  const { currentEpisodeInfo, currentSeasonInfo, meta } =
+    useCurrentSeriesEpisodeInfo(descriptor);
+  const currentEpisodeInfoMemo = useMemo(
+    () => currentEpisodeInfo,
+    [currentEpisodeInfo]
+  );
   const controlsRef = useRef(useControls(descriptor));
   const progressRef = useRef(useProgress(descriptor));
   const mediaSessionRef = useRef<MediaSession | null>(null);
@@ -54,8 +61,8 @@ export default function MediaSessionInternal() {
 
   useEffect(() => {
     if (mediaSessionRef.current === null) return;
-    if (!metaRef.current) return;
-    const media = metaRef.current.meta.meta;
+    if (!meta) return;
+    const media = meta.meta;
     let artwork: any[] = [];
     if (media.poster) {
       artwork = [
@@ -82,18 +89,21 @@ export default function MediaSessionInternal() {
       }
     }
     if (media.type === MWMediaType.SERIES) {
-      const currentEpisodeId = metaRef.current.episode?.episodeId;
-      const currentSeason = media.seasonData;
-      const currentEpisode = currentSeason.episodes.find(
-        (episode) => episode.id === currentEpisodeId
-      );
-      if (currentEpisode) {
-        mediaSession.metadata.title = currentEpisode.title;
+      // const currentEpisodeId =
+      // const currentSeason = media.seasonData;
+      // const currentEpisode = currentSeason.episodes.find(
+      //   (episode) => episode.id === currentEpisodeId
+      // );
+      if (currentEpisodeInfo) {
+        mediaSession.metadata.title = currentEpisodeInfo.title;
       }
-      mediaSession.metadata.artist = currentSeason.title;
+      if (currentSeasonInfo) {
+        mediaSession.metadata.artist = currentSeasonInfo.title;
+      }
       mediaSession.metadata.album = media.title;
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentEpisodeInfoMemo]);
 
   return null;
 }
