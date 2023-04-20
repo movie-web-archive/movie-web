@@ -32,6 +32,7 @@ import { CaptionRendererAction } from "./actions/CaptionRendererAction";
 import { SettingsAction } from "./actions/SettingsAction";
 import { DividerAction } from "./actions/DividerAction";
 import { NextEpisodeAction } from "./actions/NextEpisodeAction";
+import { VolumeAdjustedAction } from "./actions/VolumeAdjustedAction";
 
 type Props = VideoPlayerBaseProps;
 
@@ -92,6 +93,7 @@ export function VideoPlayer(props: Props) {
         <>
           <KeyboardShortcutsAction />
           <PageTitleAction />
+          <VolumeAdjustedAction />
           <VideoPlayerError onGoBack={props.onGoBack}>
             <BackdropAction onBackdropChange={onBackdropChange}>
               <CenterPosition>
