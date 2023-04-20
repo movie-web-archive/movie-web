@@ -12,7 +12,7 @@ export function Layout(props: { children: ReactNode }) {
   return (
     <div>
       <div className="fixed inset-x-0 z-[1000]">
-        {!isOnline ? <Banner type="error">{t("errors.offline")}</Banner> : null}
+        {!isOnline && <Banner type="error">{t("errors.offline")}</Banner>}
       </div>
       <div
         style={{
