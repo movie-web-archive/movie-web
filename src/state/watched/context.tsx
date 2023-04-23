@@ -1,5 +1,5 @@
 import {
-  ReactNode,
+  type ReactNode,
   createContext,
   useCallback,
   useContext,
@@ -27,14 +27,12 @@ function shouldSave(
   // short movie
   if (duration < FIVETEEN_MINUTES) {
     if (time < 5) return false;
-    if (timeFromEnd < 60) return false;
-    return true;
+    return timeFromEnd >= 60;
   }
 
   // long movie
   if (time < 30) return false;
-  if (timeFromEnd < FIVE_MINUTES && !isSeries) return false;
-  return true;
+  return !(timeFromEnd < FIVE_MINUTES && !isSeries);
 }
 
 interface WatchedStoreDataWrapper {

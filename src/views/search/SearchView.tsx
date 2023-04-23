@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import Sticky from "react-stickynode";
+import Sticky, { STATUS_FIXED, type Status } from "react-stickynode";
 
 import { Navigation } from "@/components/layout/Navigation";
 import { ThinContainer } from "@/components/layout/ThinContainer";
@@ -20,7 +20,7 @@ export function SearchView() {
   const bannerSize = useBannerSize();
 
   const stickStateChanged = useCallback(
-    ({ status }: Sticky.Status) => setShowBg(status === Sticky.STATUS_FIXED),
+    ({ status }: Status) => setShowBg(status === STATUS_FIXED),
     [setShowBg]
   );
 

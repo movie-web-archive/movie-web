@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useMemo } from "react";
+import { type ReactNode, createContext, useContext, useMemo } from "react";
 
 import { LangCode } from "@/setup/iso6391";
 import { useStore } from "@/utils/storage";
@@ -36,32 +36,28 @@ export function SettingsProvider(props: { children: ReactNode }) {
         setSettings((oldSettings) => {
           const captionSettings = oldSettings.captionSettings;
           captionSettings.language = language;
-          const newSettings = oldSettings;
-          return newSettings;
+          return oldSettings;
         });
       },
       setCaptionDelay(delay: number) {
         setSettings((oldSettings) => {
           const captionSettings = oldSettings.captionSettings;
           captionSettings.delay = enforceRange(-10, delay, 10);
-          const newSettings = oldSettings;
-          return newSettings;
+          return oldSettings;
         });
       },
       setCaptionColor(color) {
         setSettings((oldSettings) => {
           const style = oldSettings.captionSettings.style;
           style.color = color;
-          const newSettings = oldSettings;
-          return newSettings;
+          return oldSettings;
         });
       },
       setCaptionFontSize(size) {
         setSettings((oldSettings) => {
           const style = oldSettings.captionSettings.style;
           style.fontSize = enforceRange(10, size, 60);
-          const newSettings = oldSettings;
-          return newSettings;
+          return oldSettings;
         });
       },
       setCaptionBackgroundColor(backgroundColor) {
@@ -71,8 +67,7 @@ export function SettingsProvider(props: { children: ReactNode }) {
             0,
             7
           )}${backgroundColor.toString(16).padStart(2, "0")}`;
-          const newSettings = oldSettings;
-          return newSettings;
+          return oldSettings;
         });
       },
     };

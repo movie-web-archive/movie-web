@@ -2,7 +2,7 @@ import {
   Transition as HeadlessTransition,
   TransitionClasses,
 } from "@headlessui/react";
-import { Fragment, ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 type TransitionAnimations =
   | "slide-down"

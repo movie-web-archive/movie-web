@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import { Transition } from "@/components/Transition";
 import { useIsMobile } from "@/hooks/useIsMobile";

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from "react";
+import { type ReactNode, useEffect, useRef } from "react";
 
 export function createFloatingAnchorEvent(id: string): string {
   return `__floating::anchor::${id}`;

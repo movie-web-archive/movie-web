@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, type ReactNode } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { IconPatch } from "@/components/buttons/IconPatch";
@@ -33,7 +33,7 @@ interface ErrorMessageProps {
     path: string;
   };
   localSize?: boolean;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export function ErrorMessage(props: ErrorMessageProps) {

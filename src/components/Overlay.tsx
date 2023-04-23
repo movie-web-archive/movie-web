@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import { Helmet } from "react-helmet";
 
 import { Transition } from "@/components/Transition";
 
-export function Overlay(props: { children: React.ReactNode }) {
+export function Overlay(props: { children: ReactNode }) {
   return (
     <>
       <Helmet>

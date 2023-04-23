@@ -1,6 +1,7 @@
-import React, {
+import {
   MouseEventHandler,
   SyntheticEvent,
+  forwardRef,
   useEffect,
   useState,
 } from "react";
@@ -47,90 +48,89 @@ function Option({ option, onClick, tabIndex }: OptionProps) {
   );
 }
 
-export const DropdownButton = React.forwardRef<
-  HTMLDivElement,
-  DropdownButtonProps
->((props: DropdownButtonProps, ref) => {
-  const [setBackdrop, backdropProps, highlightedProps] = useBackdrop();
-  const [delayedSelectedId, setDelayedSelectedId] = useState(
-    props.selectedItem
-  );
+export const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
+  (props: DropdownButtonProps, ref) => {
+    const [setBackdrop, backdropProps, highlightedProps] = useBackdrop();
+    const [delayedSelectedId, setDelayedSelectedId] = useState(
+      props.selectedItem
+    );
 
-  useEffect(() => {
-    let id: ReturnType<typeof setTimeout>;
+    useEffect(() => {
+      let id: ReturnType<typeof setTimeout>;
 
-    if (props.open) {
-      setDelayedSelectedId(props.selectedItem);
-    } else {
-      id = setTimeout(() => {
+      if (props.open) {
         setDelayedSelectedId(props.selectedItem);
-      }, 200);
-    }
-    return () => {
-      if (id) clearTimeout(id);
+      } else {
+        id = setTimeout(() => {
+          setDelayedSelectedId(props.selectedItem);
+        }, 200);
+      }
+      return () => {
+        if (id) clearTimeout(id);
+      };
+      /* eslint-disable-next-line */
+    }, [props.open]);
+
+    const selectedItem: OptionItem = props.options.find(
+      (opt) => opt.id === props.selectedItem
+    ) || { id: "movie", name: "movie", icon: Icons.ARROW_LEFT };
+
+    useEffect(() => {
+      setBackdrop(props.open);
+      /* eslint-disable-next-line */
+    }, [props.open]);
+
+    const onOptionClick = (e: SyntheticEvent, option: OptionItem) => {
+      e.stopPropagation();
+      props.setSelectedItem(option.id);
+      props.setOpen(false);
     };
-    /* eslint-disable-next-line */
-  }, [props.open]);
 
-  const selectedItem: OptionItem = props.options.find(
-    (opt) => opt.id === props.selectedItem
-  ) || { id: "movie", name: "movie", icon: Icons.ARROW_LEFT };
-
-  useEffect(() => {
-    setBackdrop(props.open);
-    /* eslint-disable-next-line */
-  }, [props.open]);
-
-  const onOptionClick = (e: SyntheticEvent, option: OptionItem) => {
-    e.stopPropagation();
-    props.setSelectedItem(option.id);
-    props.setOpen(false);
-  };
-
-  return (
-    <div className="w-full min-w-[140px] sm:w-auto">
-      <div
-        ref={ref}
-        className="relative w-full sm:w-auto"
-        {...highlightedProps}
-      >
-        <BackdropContainer
-          onClick={() => props.setOpen(false)}
-          {...backdropProps}
+    return (
+      <div className="w-full min-w-[140px] sm:w-auto">
+        <div
+          ref={ref}
+          className="relative w-full sm:w-auto"
+          {...highlightedProps}
         >
-          <ButtonControl
-            {...props}
-            className="sm:justify-left relative z-20 flex h-10 w-full items-center justify-center space-x-2 rounded-[20px] bg-bink-400 px-4 py-2 text-white hover:bg-bink-300"
+          <BackdropContainer
+            onClick={() => props.setOpen(false)}
+            {...backdropProps}
           >
-            <Icon icon={selectedItem.icon} />
-            <span className="flex-1">{selectedItem.name}</span>
-            <Icon
-              icon={Icons.CHEVRON_DOWN}
-              className={`transition-transform ${
-                props.open ? "rotate-180" : ""
+            <ButtonControl
+              {...props}
+              className="sm:justify-left relative z-20 flex h-10 w-full items-center justify-center space-x-2 rounded-[20px] bg-bink-400 px-4 py-2 text-white hover:bg-bink-300"
+            >
+              <Icon icon={selectedItem.icon} />
+              <span className="flex-1">{selectedItem.name}</span>
+              <Icon
+                icon={Icons.CHEVRON_DOWN}
+                className={`transition-transform ${
+                  props.open ? "rotate-180" : ""
+                }`}
+              />
+            </ButtonControl>
+            <div
+              className={`absolute top-0 z-10 w-full rounded-[20px] bg-denim-300 pt-[40px] transition-all duration-200 ${
+                props.open
+                  ? "block max-h-60 opacity-100"
+                  : "invisible max-h-0 opacity-0"
               }`}
-            />
-          </ButtonControl>
-          <div
-            className={`absolute top-0 z-10 w-full rounded-[20px] bg-denim-300 pt-[40px] transition-all duration-200 ${
-              props.open
-                ? "block max-h-60 opacity-100"
-                : "invisible max-h-0 opacity-0"
-            }`}
-          >
-            {props.options
-              .filter((opt) => opt.id !== delayedSelectedId)
-              .map((opt) => (
-                <Option
-                  option={opt}
-                  key={opt.id}
-                  onClick={(e) => onOptionClick(e, opt)}
-                  tabIndex={props.open ? 0 : undefined}
-                />
-              ))}
-          </div>
-        </BackdropContainer>
+            >
+              {props.options
+                .filter((opt) => opt.id !== delayedSelectedId)
+                .map((opt) => (
+                  <Option
+                    option={opt}
+                    key={opt.id}
+                    onClick={(e) => onOptionClick(e, opt)}
+                    tabIndex={props.open ? 0 : undefined}
+                  />
+                ))}
+            </div>
+          </BackdropContainer>
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);

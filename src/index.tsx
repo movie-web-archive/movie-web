@@ -1,6 +1,6 @@
 import "core-js/stable";
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
+import { StrictMode, Suspense, lazy } from "react";
+import { render } from "react-dom";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import type { ReactNode } from "react-router-dom/node_modules/@types/react/index";
 import { registerSW } from "virtual:pwa-register";
@@ -28,7 +28,7 @@ registerSW({
   immediate: true,
 });
 
-const LazyLoadedApp = React.lazy(async () => {
+const LazyLoadedApp = lazy(async () => {
   await initializeStores();
   return {
     default: App,
@@ -42,8 +42,8 @@ function TheRouter(props: { children: ReactNode }) {
   return <HashRouter>{props.children}</HashRouter>;
 }
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  <StrictMode>
     <ErrorBoundary>
       <TheRouter>
         <Suspense fallback="">
@@ -51,6 +51,6 @@ ReactDOM.render(
         </Suspense>
       </TheRouter>
     </ErrorBoundary>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById("root")
 );

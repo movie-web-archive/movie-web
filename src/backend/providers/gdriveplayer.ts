@@ -24,12 +24,11 @@ const format = {
     const iv = CryptoJS.enc.Hex.parse(json.iv) || "";
     const salt = CryptoJS.enc.Hex.parse(json.s) || "";
 
-    const cipher = CryptoJS.lib.CipherParams.create({
+    return CryptoJS.lib.CipherParams.create({
       ciphertext,
       iv,
       salt,
     });
-    return cipher;
   },
 };
 

@@ -4,7 +4,7 @@ import { customAlphabet } from "nanoid";
 import { proxiedFetch } from "@/backend/helpers/fetch";
 import { registerProvider } from "@/backend/helpers/register";
 import {
-  MWCaption,
+  type MWCaption,
   MWCaptionType,
   MWStreamQuality,
   MWStreamType,

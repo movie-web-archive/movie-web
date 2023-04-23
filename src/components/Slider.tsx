@@ -1,4 +1,4 @@
-import { ChangeEventHandler, useEffect, useRef } from "react";
+import { type ChangeEventHandler, useEffect, useRef } from "react";
 
 export type SliderProps = {
   label?: string;

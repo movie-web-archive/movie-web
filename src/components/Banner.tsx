@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
+
 import { Icon, Icons } from "@/components/Icon";
 import { useBanner } from "@/hooks/useBanner";
 
-export function Banner(props: { children: React.ReactNode; type: "error" }) {
+export function Banner(props: { children: ReactNode; type: "error" }) {
   const [ref] = useBanner<HTMLDivElement>("internet");
   const styles = {
     error: "bg-[#C93957] text-white",

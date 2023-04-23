@@ -1,8 +1,8 @@
 import { SimpleCache } from "@/utils/cache";
 
 import {
-  JWContentTypes,
-  JWMediaResult,
+  type JWContentTypes,
+  type JWMediaResult,
   JW_API_BASE,
   formatJWMeta,
   mediaTypeToJW,

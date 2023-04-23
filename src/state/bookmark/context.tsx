@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useMemo } from "react";
+import { type ReactNode, createContext, useContext, useMemo } from "react";
 
 import { MWMediaMeta } from "@/backend/metadata/types";
 import { useStore } from "@/utils/storage";
@@ -24,8 +24,7 @@ function getBookmarkIndexFromMedia(
   bookmarks: MWMediaMeta[],
   media: MWMediaMeta
 ): number {
-  const a = bookmarks.findIndex((v) => v.id === media.id);
-  return a;
+  return bookmarks.findIndex((v) => v.id === media.id);
 }
 
 export function BookmarkContextProvider(props: { children: ReactNode }) {

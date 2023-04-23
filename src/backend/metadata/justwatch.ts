@@ -1,4 +1,4 @@
-import { MWMediaMeta, MWMediaType, MWSeasonMeta } from "./types";
+import { type MWMediaMeta, MWMediaType, type MWSeasonMeta } from "./types";
 
 export const JW_API_BASE = "https://apis.justwatch.com";
 export const JW_IMAGE_BASE = "https://images.justwatch.com";

@@ -1,6 +1,6 @@
 import {
   Dispatch,
-  ReactNode,
+  type ReactNode,
   SetStateAction,
   createContext,
   useContext,

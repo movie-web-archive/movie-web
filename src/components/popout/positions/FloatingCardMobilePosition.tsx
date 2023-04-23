@@ -1,6 +1,6 @@
 import { animated, config, useSpring } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface MobilePositionProps {
   children?: ReactNode;

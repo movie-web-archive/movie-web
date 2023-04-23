@@ -1,4 +1,4 @@
-import { MWEmbed, MWEmbedType } from "@/backend/helpers/embed";
+import { type MWEmbed, MWEmbedType } from "@/backend/helpers/embed";
 
 import { proxiedFetch } from "../helpers/fetch";
 import { registerProvider } from "../helpers/register";

@@ -1,5 +1,11 @@
 import { animated, easings, useSpringValue } from "@react-spring/web";
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useTranslation } from "react-i18next";
 
 import { FloatingCardAnchorPosition } from "@/components/popout/positions/FloatingCardAnchorPosition";

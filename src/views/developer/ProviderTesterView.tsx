@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 
 import { testData } from "@/__tests__/providers/testdata";
 import { MWProviderScrapeResult } from "@/backend/helpers/provider";
@@ -24,12 +24,10 @@ interface MediaScraperProps {
 }
 
 function MediaSelector(props: MediaSelectorProps) {
-  const options: DetailedMeta[] = testData;
-
   return (
     <div className="flex flex-col space-y-4">
       <Title className="mb-8">Choose media</Title>
-      {options.map((v) => (
+      {testData.map((v) => (
         <ArrowLink
           key={v.imdbId}
           onClick={() => props.onSelect(v)}
@@ -101,7 +99,7 @@ export default function ProviderTesterView() {
   const [media, setMedia] = useState<DetailedMeta | null>(null);
   const [providerId, setProviderId] = useState<string | null>(null);
 
-  let content: ReactNode = null;
+  let content: ReactNode;
   if (!providerId) {
     content = <ProviderSelector onSelect={(id) => setProviderId(id)} />;
   } else if (!media) {

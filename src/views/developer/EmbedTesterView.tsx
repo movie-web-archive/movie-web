@@ -1,4 +1,10 @@
-import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 import { MWEmbed, MWEmbedScraper, MWEmbedType } from "@/backend/helpers/embed";
 import { getEmbeds } from "@/backend/helpers/register";
@@ -114,7 +120,7 @@ export default function EmbedTesterView() {
     [embedScraperId]
   );
 
-  let content: ReactNode = null;
+  let content: ReactNode;
   if (!embedScraperId || !embedScraper) {
     content = <EmbedScraperSelector onSelect={(id) => setEmbedScraperId(id)} />;
   } else if (!embed) {

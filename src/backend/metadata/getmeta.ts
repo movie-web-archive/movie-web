@@ -1,8 +1,8 @@
 import { FetchError } from "ofetch";
 
 import {
-  JWMediaResult,
-  JWSeasonMetaResult,
+  type JWMediaResult,
+  type JWSeasonMetaResult,
   JW_API_BASE,
   formatJWMeta,
   mediaTypeToJW,

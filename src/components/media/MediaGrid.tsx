@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
+import { type ReactNode, forwardRef } from "react";
 
 interface MediaGridProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export const MediaGrid = forwardRef<HTMLDivElement, MediaGridProps>(

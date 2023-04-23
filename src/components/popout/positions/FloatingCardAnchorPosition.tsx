@@ -1,4 +1,10 @@
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { createFloatingAnchorEvent } from "@/components/popout/FloatingAnchor";
 

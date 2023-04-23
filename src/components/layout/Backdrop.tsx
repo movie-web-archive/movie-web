@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useState } from "react";
+import { type ReactNode, createRef, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { useFade } from "@/hooks/useFade";
@@ -71,7 +71,7 @@ function Backdrop(props: BackdropProps) {
 
 export function BackdropContainer(
   props: {
-    children: React.ReactNode;
+    children: ReactNode;
   } & BackdropProps
 ) {
   const root = createRef<HTMLDivElement>();

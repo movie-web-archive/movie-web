@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export function useLoading<T extends (...args: any) => Promise<any>>(
   action: T
@@ -16,7 +16,7 @@ export function useLoading<T extends (...args: any) => Promise<any>>(
   // we want action to be memoized forever
   const actionMemo = useMemo(() => action, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  React.useEffect(() => {
+  useEffect(() => {
     isMounted.current = true;
     return () => {
       isMounted.current = false;

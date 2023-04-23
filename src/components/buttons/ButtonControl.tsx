@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 export interface ButtonControlProps {
   onClick?: () => void;
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 

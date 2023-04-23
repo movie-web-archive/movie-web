@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 
 interface ILinkPropsBase {
