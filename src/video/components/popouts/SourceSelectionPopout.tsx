@@ -1,24 +1,26 @@
 import { useMemo, useRef, useState } from "react";
-import { Icons } from "@/components/Icon";
-import { useLoading } from "@/hooks/useLoading";
-import { Loading } from "@/components/layout/Loading";
-import { IconPatch } from "@/components/buttons/IconPatch";
-import { useVideoPlayerDescriptor } from "@/video/state/hooks";
-import { useMeta } from "@/video/state/logic/meta";
-import { useControls } from "@/video/state/logic/controls";
-import { MWStream } from "@/backend/helpers/streams";
+import { useTranslation } from "react-i18next";
+
+import { MWEmbed, MWEmbedType } from "@/backend/helpers/embed";
+import { MWProviderScrapeResult } from "@/backend/helpers/provider";
 import {
   getEmbedScraperByType,
   getProviders,
 } from "@/backend/helpers/register";
 import { runEmbedScraper, runProvider } from "@/backend/helpers/run";
-import { MWProviderScrapeResult } from "@/backend/helpers/provider";
-import { useTranslation } from "react-i18next";
-import { MWEmbed, MWEmbedType } from "@/backend/helpers/embed";
+import { MWStream } from "@/backend/helpers/streams";
+import { IconPatch } from "@/components/buttons/IconPatch";
+import { Icons } from "@/components/Icon";
+import { Loading } from "@/components/layout/Loading";
 import { FloatingCardView } from "@/components/popout/FloatingCard";
 import { FloatingView } from "@/components/popout/FloatingView";
 import { useFloatingRouter } from "@/hooks/useFloatingRouter";
+import { useLoading } from "@/hooks/useLoading";
+import { useVideoPlayerDescriptor } from "@/video/state/hooks";
+import { useControls } from "@/video/state/logic/controls";
+import { useMeta } from "@/video/state/logic/meta";
 import { useSource } from "@/video/state/logic/source";
+
 import { PopoutListEntry } from "./PopoutUtils";
 
 interface EmbedEntryProps {
@@ -166,7 +168,7 @@ export function SourceSelectionPopout(props: {
       });
     }
 
-    const embedsRes = Object.entries(embedsPerType).flatMap(([_, entries]) => {
+    return Object.entries(embedsPerType).flatMap(([_, entries]) => {
       if (entries.length > 1)
         return entries.map((embed, i) => ({
           ...embed,
@@ -174,8 +176,6 @@ export function SourceSelectionPopout(props: {
         }));
       return entries;
     });
-
-    return embedsRes;
   }, [scrapeResult?.embeds]);
 
   return (
