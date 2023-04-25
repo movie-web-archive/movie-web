@@ -126,7 +126,7 @@ export function CaptionSelectionPopout(props: {
           <div>
             {linkedCaptions.map((link) => (
               <PopoutListEntry
-                key={link.langIso}
+                key={link.id}
                 active={link.id === currentCaption}
                 loading={loading && link.id === loadingId.current}
                 errored={error && link.id === loadingId.current}
