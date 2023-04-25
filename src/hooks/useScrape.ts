@@ -40,37 +40,34 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
         media: meta,
         ...selected,
         onNext(ctx) {
-          if (isMounted) {
-            setEventLog((arr) => [
-              ...arr,
-              {
-                errored: false,
-                id: ctx.id,
-                eventId: ctx.eventId,
-                type: ctx.type,
-                percentage: 0,
-              },
-            ]);
-          }
+          if (!isMounted) return;
+          setEventLog((arr) => [
+            ...arr,
+            {
+              errored: false,
+              id: ctx.id,
+              eventId: ctx.eventId,
+              type: ctx.type,
+              percentage: 0,
+            },
+          ]);
         },
         onProgress(ctx) {
-          if (isMounted) {
-            setEventLog((arr) => {
-              const item = arr.reverse().find((v) => v.id === ctx.id);
-              if (item) {
-                item.errored = ctx.errored;
-                item.percentage = ctx.percentage;
-              }
-              return [...arr];
-            });
-          }
+          if (!isMounted) return;
+          setEventLog((arr) => {
+            const item = arr.reverse().find((v) => v.id === ctx.id);
+            if (item) {
+              item.errored = ctx.errored;
+              item.percentage = ctx.percentage;
+            }
+            return [...arr];
+          });
         },
       });
 
-      if (isMounted) {
-        setPending(false);
-        setStream(scrapedStream);
-      }
+      if (!isMounted) return;
+      setPending(false);
+      setStream(scrapedStream);
     })();
 
     return () => {
