@@ -31,6 +31,7 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
+    let isMounted = true; // Add a boolean flag to keep track of component mount status
     setPending(true);
     setStream(null);
     setEventLog([]);
@@ -39,32 +40,42 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
         media: meta,
         ...selected,
         onNext(ctx) {
-          setEventLog((arr) => [
-            ...arr,
-            {
-              errored: false,
-              id: ctx.id,
-              eventId: ctx.eventId,
-              type: ctx.type,
-              percentage: 0,
-            },
-          ]);
+          if (isMounted) {
+            setEventLog((arr) => [
+              ...arr,
+              {
+                errored: false,
+                id: ctx.id,
+                eventId: ctx.eventId,
+                type: ctx.type,
+                percentage: 0,
+              },
+            ]);
+          }
         },
         onProgress(ctx) {
-          setEventLog((arr) => {
-            const item = arr.reverse().find((v) => v.id === ctx.id);
-            if (item) {
-              item.errored = ctx.errored;
-              item.percentage = ctx.percentage;
-            }
-            return [...arr];
-          });
+          if (isMounted) {
+            setEventLog((arr) => {
+              const item = arr.reverse().find((v) => v.id === ctx.id);
+              if (item) {
+                item.errored = ctx.errored;
+                item.percentage = ctx.percentage;
+              }
+              return [...arr];
+            });
+          }
         },
       });
 
-      setPending(false);
-      setStream(scrapedStream);
+      if (isMounted) {
+        setPending(false);
+        setStream(scrapedStream);
+      }
     })();
+
+    return () => {
+      isMounted = false;
+    };
   }, [meta, selected]);
 
   return {
