@@ -36,34 +36,42 @@ export function CastingInternal() {
     const state = getPlayerState(descriptor);
     if (!available) return;
 
-    state.casting.instance = cast.framework.CastContext.getInstance();
-    state.casting.instance.setOptions({
-      receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
-      autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
-    });
+    if (
+      typeof chrome !== "undefined" &&
+      chrome.cast &&
+      chrome.cast.isAvailable
+    ) {
+      state.casting.instance = cast.framework.CastContext.getInstance();
+      state.casting.instance.setOptions({
+        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
+      });
 
-    state.casting.player = new cast.framework.RemotePlayer();
-    state.casting.controller = new cast.framework.RemotePlayerController(
-      state.casting.player
-    );
+      state.casting.player = new cast.framework.RemotePlayer();
+      state.casting.controller = new cast.framework.RemotePlayerController(
+        state.casting.player
+      );
 
-    function connectionChanged(e: cast.framework.RemotePlayerChangedEvent) {
-      if (e.field === "isConnected") {
-        state.casting.isCasting = e.value;
-        updateMisc(descriptor, state);
-      }
-    }
-    state.casting.controller.addEventListener(
-      cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
-      connectionChanged
-    );
-
-    return () => {
-      state.casting.controller?.removeEventListener(
+      const connectionChanged = (
+        e: cast.framework.RemotePlayerChangedEvent
+      ) => {
+        if (e.field === "isConnected") {
+          state.casting.isCasting = e.value;
+          updateMisc(descriptor, state);
+        }
+      };
+      state.casting.controller.addEventListener(
         cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
         connectionChanged
       );
-    };
+
+      return () => {
+        state.casting.controller?.removeEventListener(
+          cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
+          connectionChanged
+        );
+      };
+    }
   }, [available, descriptor]);
 
   return null;
