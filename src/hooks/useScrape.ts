@@ -31,6 +31,7 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
+    let isMounted = true; // Add a boolean flag to keep track of component mount status
     setPending(true);
     setStream(null);
     setEventLog([]);
@@ -39,6 +40,7 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
         media: meta,
         ...selected,
         onNext(ctx) {
+          if (!isMounted) return;
           setEventLog((arr) => [
             ...arr,
             {
@@ -51,6 +53,7 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
           ]);
         },
         onProgress(ctx) {
+          if (!isMounted) return;
           setEventLog((arr) => {
             const item = arr.reverse().find((v) => v.id === ctx.id);
             if (item) {
@@ -62,9 +65,14 @@ export function useScrape(meta: DetailedMeta, selected: SelectedMediaData) {
         },
       });
 
+      if (!isMounted) return;
       setPending(false);
       setStream(scrapedStream);
     })();
+
+    return () => {
+      isMounted = false;
+    };
   }, [meta, selected]);
 
   return {

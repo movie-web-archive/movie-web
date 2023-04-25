@@ -90,6 +90,9 @@ export function BackdropAction(props: BackdropActionProps) {
       lastBackdropValue.current = currentValue;
       props.onBackdropChange?.(currentValue);
     }
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current);
+    };
   }, [moved, mediaPlaying, props, videoInterface]);
   const showUI = moved || mediaPlaying.isPaused || !!videoInterface.popout;
 

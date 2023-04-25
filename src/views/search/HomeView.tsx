@@ -126,9 +126,12 @@ function NewDomainModal() {
   }, [history]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setLoaded(true);
     }, 500);
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   // If you see this bit of code, don't snitch!
