@@ -66,7 +66,8 @@
       "download": "Download",
       "settings": "Settings",
       "pictureInPicture": "Picture in Picture",
-      "playbackSpeed": "Playback speed"
+      "playbackSpeed": "Playback speed",
+      "nextEpisode": "Next"
     },
     "popouts": {
       "back": "Go back",
