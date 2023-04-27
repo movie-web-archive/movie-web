@@ -1,8 +1,10 @@
+import { useEffect, useMemo, useRef } from "react";
+
 import { MWMediaType } from "@/backend/metadata/types";
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useControls } from "@/video/state/logic/controls";
 import { useProgress } from "@/video/state/logic/progress";
-import { useEffect, useMemo, useRef } from "react";
+
 // import { VideoMetaEvent, useMeta } from "@/video/state/logic/meta";
 import { useCurrentSeriesEpisodeInfo } from "../hooks/useCurrentSeriesEpisodeInfo";
 
