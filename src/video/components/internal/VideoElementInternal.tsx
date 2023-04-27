@@ -1,10 +1,11 @@
+import { useEffect, useMemo, useRef } from "react";
+
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useMediaPlaying } from "@/video/state/logic/mediaplaying";
 import { useMeta } from "@/video/state/logic/meta";
 import { useMisc } from "@/video/state/logic/misc";
 import { setProvider, unsetStateProvider } from "@/video/state/providers/utils";
 import { createVideoStateProvider } from "@/video/state/providers/videoStateProvider";
-import { useEffect, useMemo, useRef } from "react";
 
 interface Props {
   autoPlay?: boolean;
