@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useControls } from "@/video/state/logic/controls";
@@ -7,6 +8,7 @@ import { useProgress } from "@/video/state/logic/progress";
 import { useCurrentSeriesEpisodeInfo } from "../hooks/useCurrentSeriesEpisodeInfo";
 
 export function NextEpisodeAction() {
+  const { t } = useTranslation();
   const descriptor = useVideoPlayerDescriptor();
   const { setCurrentEpisode } = useControls(descriptor);
   const setEpisode = useMemo(() => setCurrentEpisode, [setCurrentEpisode]);
@@ -64,11 +66,13 @@ export function NextEpisodeAction() {
         if (timeout.current) clearTimeout(timeout.current);
       }}
       className={[
-        "z-2 absolute bottom-24 right-10 overflow-hidden rounded bg-white px-2 py-2 text-sm font-bold text-black",
+        "z-2 absolute bottom-24 right-10 overflow-hidden rounded border-2 border-black bg-white px-2 py-2 text-sm font-bold text-black",
         almostFinished ? "" : "hidden",
       ].join(" ")}
     >
-      <span className="z-2 relative">Next: {nextEpisode.title}</span>
+      <span className="z-2 relative">
+        {t("videoPlayer.buttons.nextEpisode")}: {nextEpisode.title}
+      </span>
       <div className="absolute right-[0px] top-0 z-0 h-full w-full animate-fill bg-black bg-opacity-40" />
     </button>
   );
