@@ -1,7 +1,9 @@
+import { useCallback, useEffect, useMemo, useRef } from "react";
+
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
-import { useMemo, useEffect, useRef, useCallback } from "react";
-import { useProgress } from "@/video/state/logic/progress";
 import { useControls } from "@/video/state/logic/controls";
+import { useProgress } from "@/video/state/logic/progress";
+
 import { useCurrentSeriesEpisodeInfo } from "../hooks/useCurrentSeriesEpisodeInfo";
 
 export function NextEpisodeAction() {
@@ -62,12 +64,12 @@ export function NextEpisodeAction() {
         if (timeout.current) clearTimeout(timeout.current);
       }}
       className={[
-        "z-2 absolute bottom-24 right-10 overflow-hidden rounded bg-white py-2 px-2 text-sm font-bold text-black",
+        "z-2 absolute bottom-24 right-10 overflow-hidden rounded bg-white px-2 py-2 text-sm font-bold text-black",
         almostFinished ? "" : "hidden",
       ].join(" ")}
     >
       <span className="z-2 relative">Next: {nextEpisode.title}</span>
-      <div className="absolute top-0 right-[0px] z-0 h-full w-full animate-fill bg-black bg-opacity-40" />
+      <div className="absolute right-[0px] top-0 z-0 h-full w-full animate-fill bg-black bg-opacity-40" />
     </button>
   );
 }
