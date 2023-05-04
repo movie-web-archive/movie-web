@@ -109,7 +109,8 @@
   "settings": {
     "title": "Paramètres",
     "language": "Language",
-    "captionLanguage": "Langue des sous-titres"
+    "captionLanguage": "Langue des sous-titres",
+    "saveWatchHistory": "Sauvegarde de l'historique"
   },
   "v3": {
     "newSiteTitle": "Nouvelle version disponible!",

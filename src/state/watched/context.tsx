@@ -9,6 +9,7 @@ import {
   useMemo,
   useRef,
 } from "react";
+import { useSettings } from "@/state/settings";
 import { VideoProgressStore } from "./store";
 import { StoreMediaItem, WatchedStoreItem, WatchedStoreData } from "./types";
 
@@ -63,7 +64,7 @@ function isSameEpisode(media: StoreMediaItem, v: StoreMediaItem) {
 
 export function WatchedContextProvider(props: { children: ReactNode }) {
   const [watched, setWatched] = useStore(VideoProgressStore);
-
+  const { saveWatchHistory } = useSettings();
   const contextValue = useMemo(
     () => ({
       removeProgress(id: string) {
@@ -78,6 +79,9 @@ export function WatchedContextProvider(props: { children: ReactNode }) {
         progress: number,
         total: number
       ): void {
+        if (!saveWatchHistory) {
+          return;
+        }
         setWatched((data: WatchedStoreData) => {
           const newData = { ...data };
           let item = newData.items.find((v) => isSameEpisode(media, v.item));
@@ -128,7 +132,7 @@ export function WatchedContextProvider(props: { children: ReactNode }) {
       },
       watched,
     }),
-    [watched, setWatched]
+    [watched, setWatched, saveWatchHistory]
   );
 
   return (

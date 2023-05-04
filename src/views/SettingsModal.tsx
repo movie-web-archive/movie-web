@@ -15,6 +15,7 @@ import CaptionColorSelector, {
   colors,
 } from "@/components/CaptionColorSelector";
 import { Slider } from "@/components/Slider";
+import { OnOffButton } from "@/components/buttons/OnOffButton";
 import { conf } from "@/setup/config";
 
 export default function SettingsModal(props: {
@@ -28,6 +29,7 @@ export default function SettingsModal(props: {
     setCaptionLanguage,
     setCaptionBackgroundColor,
     setCaptionFontSize,
+    setWatchHistoryActivation,
   } = useSettings();
   const { t, i18n } = useTranslation();
 
@@ -70,6 +72,17 @@ export default function SettingsModal(props: {
                     setLanguage(val.id as LangCode);
                   }}
                   options={appLanguageOptions}
+                />
+              </div>
+              <div className="mb-6 flex flex-row justify-between">
+                <label className="font-bold">
+                  {t("settings.saveWatchHistory")}
+                </label>
+                <OnOffButton
+                  defaultOn
+                  onClick={(isActivate) =>
+                    setWatchHistoryActivation(isActivate)
+                  }
                 />
               </div>
               <div className="flex flex-col justify-between">
@@ -119,7 +132,7 @@ export default function SettingsModal(props: {
                   <label className="font-bold" htmlFor="color">
                     {t("videoPlayer.popouts.captionPreferences.color")}
                   </label>
-                  <div className="flex flex-row gap-2">
+                  <div className="mb-6 flex flex-row gap-2">
                     {colors.map((color) => (
                       <CaptionColorSelector color={color} />
                     ))}

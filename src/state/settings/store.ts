@@ -8,6 +8,7 @@ export const SettingsStore = createVersionedStore<MWSettingsData>()
     create(): MWSettingsDataV1 {
       return {
         language: "en",
+        saveWatchHistory: true,
         captionSettings: {
           delay: 0,
           style: {
@@ -21,6 +22,7 @@ export const SettingsStore = createVersionedStore<MWSettingsData>()
     migrate(data: MWSettingsDataV1): MWSettingsData {
       return {
         language: data.language,
+        saveWatchHistory: data.saveWatchHistory,
         captionSettings: {
           language: "none",
           ...data.captionSettings,
@@ -33,6 +35,7 @@ export const SettingsStore = createVersionedStore<MWSettingsData>()
     create(): MWSettingsData {
       return {
         language: "en",
+        saveWatchHistory: true,
         captionSettings: {
           delay: 0,
           language: "none",

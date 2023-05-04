@@ -27,10 +27,12 @@ export interface CaptionSettings {
 }
 export interface MWSettingsDataV1 {
   language: LangCode;
+  saveWatchHistory: boolean;
   captionSettings: CaptionSettingsV1;
 }
 
 export interface MWSettingsData {
   language: LangCode;
+  saveWatchHistory: boolean;
   captionSettings: CaptionSettings;
 }

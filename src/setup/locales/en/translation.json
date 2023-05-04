@@ -110,7 +110,8 @@
   "settings": {
     "title": "Settings",
     "language": "Language",
-    "captionLanguage": "Caption Language"
+    "captionLanguage": "Caption Language",
+    "saveWatchHistory": "Save watch history"
   },
   "v3": {
     "newSiteTitle": "New version now released!",

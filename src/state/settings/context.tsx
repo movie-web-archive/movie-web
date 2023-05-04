@@ -11,6 +11,7 @@ interface MWSettingsDataSetters {
   setCaptionColor(color: string): void;
   setCaptionFontSize(size: number): void;
   setCaptionBackgroundColor(backgroundColor: number): void;
+  setWatchHistoryActivation(saveWatchHistory: boolean): void;
 }
 type MWSettingsDataWrapper = MWSettingsData & MWSettingsDataSetters;
 const SettingsContext = createContext<MWSettingsDataWrapper>(null as any);
@@ -27,6 +28,14 @@ export function SettingsProvider(props: { children: ReactNode }) {
           return {
             ...oldSettings,
             language,
+          };
+        });
+      },
+      setWatchHistoryActivation(saveWatchHistory) {
+        setSettings((oldSettings) => {
+          return {
+            ...oldSettings,
+            saveWatchHistory,
           };
         });
       },
