@@ -87,6 +87,7 @@
       "linkedCaptions": "Linked captions",
       "customCaption": "Custom caption",
       "uploadCustomCaption": "Upload caption",
+      "dropCustomCaption": "Drop caption file here",
       "noEmbeds": "No embeds were found for this source",
 
       "errors": {

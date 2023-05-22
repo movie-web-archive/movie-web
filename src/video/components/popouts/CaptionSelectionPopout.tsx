@@ -1,4 +1,4 @@
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -9,6 +9,7 @@ import {
   subtitleTypeList,
 } from "@/backend/helpers/captions";
 import { MWCaption, MWCaptionType } from "@/backend/helpers/streams";
+import FileDropHandler from "@/components/FileDropHandler";
 import { Icon, Icons } from "@/components/Icon";
 import { FloatingCardView } from "@/components/popout/FloatingCard";
 import { FloatingView } from "@/components/popout/FloatingView";
@@ -53,6 +54,8 @@ export function CaptionSelectionPopout(props: {
     }
   );
 
+  const [dragging, setDragging] = useState(false);
+
   const currentCaption = source.source?.caption?.id;
   const customCaptionUploadElement = useRef<HTMLInputElement>(null);
   return (
@@ -62,8 +65,12 @@ export function CaptionSelectionPopout(props: {
       height={500}
     >
       <FloatingCardView.Header
-        title={t("videoPlayer.popouts.captions")}
-        description={t("videoPlayer.popouts.descriptions.captions")}
+        title={t("videoPlayer.popouts.back")}
+        description={
+          dragging
+            ? t("videoPlayer.popouts.dropCustomCaption")
+            : t("videoPlayer.popouts.descriptions.captions")
+        }
         goBack={() => props.router.navigate("/")}
         action={
           <button
@@ -78,69 +85,91 @@ export function CaptionSelectionPopout(props: {
           </button>
         }
       />
-      <FloatingCardView.Content noSection>
-        <PopoutSection>
-          <PopoutListEntry
-            active={!currentCaption}
-            onClick={() => {
-              controls.clearCaption();
-              controls.closePopout();
-            }}
-          >
-            {t("videoPlayer.popouts.noCaptions")}
-          </PopoutListEntry>
-          <PopoutListEntry
-            key={customCaption}
-            active={currentCaption === customCaption}
-            loading={loading && loadingId.current === customCaption}
-            errored={error && loadingId.current === customCaption}
-            onClick={() => customCaptionUploadElement.current?.click()}
-          >
-            {currentCaption === customCaption
-              ? t("videoPlayer.popouts.customCaption")
-              : t("videoPlayer.popouts.uploadCustomCaption")}
-            <input
-              className="hidden"
-              ref={customCaptionUploadElement}
-              accept={subtitleTypeList.join(",")}
-              type="file"
-              onChange={(e) => {
-                if (!e.target.files) return;
-                const customSubtitle = {
-                  langIso: "custom",
-                  url: URL.createObjectURL(e.target.files[0]),
-                  type: MWCaptionType.UNKNOWN,
-                };
-                setCaption(customSubtitle, false);
+      <FileDropHandler
+        onDraggingChange={(isDragging) => {
+          setDragging(isDragging);
+        }}
+        onDrop={(event) => {
+          const files = event.dataTransfer.files;
+          if (!files || files.length === 0) return;
+
+          const customSubtitle = {
+            langIso: "custom",
+            url: URL.createObjectURL(files[0]),
+            type: MWCaptionType.UNKNOWN,
+          };
+          setCaption(customSubtitle, false);
+        }}
+      >
+        <FloatingCardView.Content
+          noSection
+          className={`transition duration-300 ${
+            dragging ? "brightness-50" : ""
+          }`}
+        >
+          <PopoutSection>
+            <PopoutListEntry
+              active={!currentCaption}
+              onClick={() => {
+                controls.clearCaption();
+                controls.closePopout();
               }}
-            />
-          </PopoutListEntry>
-        </PopoutSection>
-
-        <p className="sticky top-0 z-10 flex items-center space-x-1 bg-ash-300 px-5 py-3 text-xs font-bold uppercase">
-          <Icon className="text-base" icon={Icons.LINK} />
-          <span>{t("videoPlayer.popouts.linkedCaptions")}</span>
-        </p>
-
-        <PopoutSection className="pt-0">
-          <div>
-            {linkedCaptions.map((link) => (
-              <PopoutListEntry
-                key={link.langIso}
-                active={link.id === currentCaption}
-                loading={loading && link.id === loadingId.current}
-                errored={error && link.id === loadingId.current}
-                onClick={() => {
-                  loadingId.current = link.id;
-                  setCaption(link, true);
+            >
+              {t("videoPlayer.popouts.noCaptions")}
+            </PopoutListEntry>
+            <PopoutListEntry
+              key={customCaption}
+              active={currentCaption === customCaption}
+              loading={loading && loadingId.current === customCaption}
+              errored={error && loadingId.current === customCaption}
+              onClick={() => customCaptionUploadElement.current?.click()}
+            >
+              {currentCaption === customCaption
+                ? t("videoPlayer.popouts.customCaption")
+                : t("videoPlayer.popouts.uploadCustomCaption")}
+              <input
+                className="hidden"
+                ref={customCaptionUploadElement}
+                accept={subtitleTypeList.join(",")}
+                type="file"
+                onChange={(e) => {
+                  if (!e.target.files) return;
+                  const customSubtitle = {
+                    langIso: "custom",
+                    url: URL.createObjectURL(e.target.files[0]),
+                    type: MWCaptionType.UNKNOWN,
+                  };
+                  setCaption(customSubtitle, false);
                 }}
-              >
-                {link.langIso}
-              </PopoutListEntry>
-            ))}
-          </div>
-        </PopoutSection>
-      </FloatingCardView.Content>
+              />
+            </PopoutListEntry>
+          </PopoutSection>
+
+          <p className="sticky top-0 z-10 flex items-center space-x-1 bg-ash-300 px-5 py-3 text-xs font-bold uppercase">
+            <Icon className="text-base" icon={Icons.LINK} />
+            <span>{t("videoPlayer.popouts.linkedCaptions")}</span>
+          </p>
+
+          <PopoutSection className="pt-0">
+            <div>
+              {linkedCaptions.map((link) => (
+                <PopoutListEntry
+                  key={link.langIso}
+                  active={link.id === currentCaption}
+                  loading={loading && link.id === loadingId.current}
+                  errored={error && link.id === loadingId.current}
+                  onClick={() => {
+                    loadingId.current = link.id;
+                    setCaption(link, true);
+                  }}
+                >
+                  {link.langIso}
+                </PopoutListEntry>
+              ))}
+            </div>
+          </PopoutSection>
+        </FloatingCardView.Content>
+      </FileDropHandler>
     </FloatingView>
   );
 }

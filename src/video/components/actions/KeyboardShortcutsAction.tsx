@@ -74,6 +74,10 @@ export function KeyboardShortcutsAction() {
           controls.setVolume(Math.min(mediaPlaying.volume + 0.1, 1), true);
           break;
 
+        case "escape":
+          controls.closePopout();
+          break;
+
         // Do a barrel Roll!
         case "r":
           if (isRolling || evt.ctrlKey || evt.metaKey) return;
