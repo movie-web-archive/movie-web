@@ -4,6 +4,8 @@ import { ContentCaption } from "subsrt-ts/dist/types/handler";
 
 import { parseSubtitles, sanitize } from "@/backend/helpers/captions";
 import { Transition } from "@/components/Transition";
+import mainFilter from "@/setup/subtitleFilters/main.json"; // https://github.com/DrKain/subclean/blob/main/filters/main.json
+import userFilter from "@/setup/subtitleFilters/users.json"; // https://github.com/DrKain/subclean/tree/main/filters/users.json
 import { useSettings } from "@/state/settings";
 
 import { useVideoPlayerDescriptor } from "../../state/hooks";
@@ -16,10 +18,26 @@ export function CaptionCue({ text, scale }: { text?: string; scale?: number }) {
 
   // https://www.w3.org/TR/webvtt1/#dom-construction-rules
   // added a <br /> for newlines
-  const html = sanitize(textWithNewlines, {
+  let html = sanitize(textWithNewlines, {
     ALLOWED_TAGS: ["c", "b", "i", "u", "span", "ruby", "rt", "br"],
     ADD_TAGS: ["v", "lang"],
     ALLOWED_ATTR: ["title", "lang"],
+  });
+
+  const filterList = [...mainFilter, ...userFilter];
+  const disallowedRegexes = filterList.filter((str) => str.startsWith("/"));
+  const disallowedStrings = filterList.filter((str) => !str.startsWith("/"));
+
+  disallowedStrings.forEach((str) => {
+    if (html.toLowerCase().includes(str.toLowerCase())) {
+      html = "";
+    }
+  });
+
+  disallowedRegexes.forEach((regex) => {
+    if (new RegExp(regex).test(html)) {
+      html = "";
+    }
   });
 
   return (
