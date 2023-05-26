@@ -17,6 +17,7 @@ function CurrentCaption() {
   const descriptor = useVideoPlayerDescriptor();
   const source = useSource(descriptor);
   const meta = useMeta(descriptor);
+  const { t } = useTranslation();
 
   const linkedCaptions = useMemo(
     () =>
@@ -26,12 +27,16 @@ function CurrentCaption() {
   const captionId = source.source?.caption?.id;
   const captionName =
     linkedCaptions.find((caption) => caption.id === captionId)?.langIso ??
-    (captionId === "external-custom" ? "Custom" : null);
+    (captionId === "external-custom"
+      ? t("videoPlayer.popouts.customCaption")
+      : null);
+
+  if (!captionName) return null;
 
   return (
     <div className="rounded-md bg-denim-300 px-2 py-1 transition-colors">
       <p className="text-center text-xs font-bold text-slate-300 transition-colors">
-        {captionName ?? "None"}
+        {captionName}
       </p>
     </div>
   );
@@ -45,7 +50,7 @@ export function CaptionsSelectionAction(props: Props) {
       icon={Icons.CAPTIONS}
       onClick={props.onClick}
       right={<CurrentCaption />}
-      noChevron
+      noChevron // TODO: Make this false if <CurrentCaption /> returns null
     >
       {t("videoPlayer.buttons.captions")}
     </PopoutListAction>

@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Icons } from "@/components/Icon";
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useMediaPlaying } from "@/video/state/logic/mediaplaying";
-import { useMeta } from "@/video/state/logic/meta";
-import { useSource } from "@/video/state/logic/source";
 
 import { PopoutListAction } from "../../popouts/PopoutUtils";
 
@@ -32,8 +30,8 @@ export function PlaybackSpeedSelectionAction(props: Props) {
     <PopoutListAction
       icon={Icons.TACHOMETER}
       onClick={props.onClick}
-      noChevron
       right={<CurrentPlaybackSpeed />}
+      noChevron
     >
       {t("videoPlayer.buttons.playbackSpeed")}
     </PopoutListAction>
