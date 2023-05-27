@@ -13,7 +13,7 @@ interface Props {
   onClick: () => any;
 }
 
-function CurrentCaption() {
+export function CaptionsSelectionAction(props: Props) {
   const descriptor = useVideoPlayerDescriptor();
   const source = useSource(descriptor);
   const meta = useMeta(descriptor);
@@ -31,26 +31,20 @@ function CurrentCaption() {
       ? t("videoPlayer.popouts.customCaption")
       : null);
 
-  if (!captionName) return null;
-
-  return (
-    <div className="rounded-md bg-denim-300 px-2 py-1 transition-colors">
-      <p className="text-center text-xs font-bold text-slate-300 transition-colors">
-        {captionName}
-      </p>
-    </div>
-  );
-}
-
-export function CaptionsSelectionAction(props: Props) {
-  const { t } = useTranslation();
-
   return (
     <PopoutListAction
       icon={Icons.CAPTIONS}
       onClick={props.onClick}
-      right={<CurrentCaption />}
-      noChevron // TODO: Make this false if <CurrentCaption /> returns null
+      right={
+        captionName ? (
+          <div className="rounded-md bg-denim-300 px-2 py-1 transition-colors">
+            <p className="text-center text-xs font-bold text-slate-300 transition-colors">
+              {captionName}
+            </p>
+          </div>
+        ) : null
+      }
+      noChevron={!!captionName} // TODO: Make this false if <CurrentCaption /> returns null
     >
       {t("videoPlayer.buttons.captions")}
     </PopoutListAction>
