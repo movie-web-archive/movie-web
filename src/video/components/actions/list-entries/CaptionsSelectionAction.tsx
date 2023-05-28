@@ -44,7 +44,7 @@ export function CaptionsSelectionAction(props: Props) {
           </div>
         ) : null
       }
-      noChevron={!!captionName} // TODO: Make this false if <CurrentCaption /> returns null
+      noChevron={!!captionName}
     >
       {t("videoPlayer.buttons.captions")}
     </PopoutListAction>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { MWStreamQuality, MWStreamType } from "@/backend/helpers/streams";
+import { MWStreamQuality } from "@/backend/helpers/streams";
 import { Icons } from "@/components/Icon";
 import { normalizeTitle } from "@/utils/normalizeTitle";
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
