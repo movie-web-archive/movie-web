@@ -115,6 +115,13 @@ export function CaptionSelectionPopout(props: {
               }}
             />
           </PopoutListEntry>
+          <PopoutListEntry
+            onClick={async () => {
+              props.router.navigate("/caption-search");
+            }}
+          >
+            Search for captions
+          </PopoutListEntry>
         </PopoutSection>
 
         <p className="sticky top-0 z-10 flex items-center space-x-1 bg-ash-300 px-5 py-3 text-xs font-bold uppercase">

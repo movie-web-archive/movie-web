@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { FloatingCardView } from "@/components/popout/FloatingCard";
 import { FloatingDragHandle } from "@/components/popout/FloatingDragHandle";
 import { FloatingView } from "@/components/popout/FloatingView";
@@ -7,14 +9,22 @@ import { DownloadAction } from "@/video/components/actions/list-entries/Download
 import { PlaybackSpeedSelectionAction } from "@/video/components/actions/list-entries/PlaybackSpeedSelectionAction";
 import { SourceSelectionAction } from "@/video/components/actions/list-entries/SourceSelectionAction";
 
+import {
+  CaptionSearchPopout,
+  ParsedCaptionLanguages,
+} from "./CaptionSearchPopout";
 import { CaptionSelectionPopout } from "./CaptionSelectionPopout";
 import { CaptionSettingsPopout } from "./CaptionSettingsPopout";
+import { DetailedCaptionSearchPopout } from "./DetailedCaptionSearchPopout";
 import { PlaybackSpeedPopout } from "./PlaybackSpeedPopout";
 import { SourceSelectionPopout } from "./SourceSelectionPopout";
 
 export function SettingsPopout() {
   const floatingRouter = useFloatingRouter();
   const { pageProps, navigate } = floatingRouter;
+  const [captionLanguages, setCaptionLanguages] =
+    useState<ParsedCaptionLanguages | null>(null);
+  const [currentLanguage, setCurrentLanguage] = useState<string | null>(null);
 
   return (
     <>
@@ -31,6 +41,19 @@ export function SettingsPopout() {
       </FloatingView>
       <SourceSelectionPopout router={floatingRouter} prefix="source" />
       <CaptionSelectionPopout router={floatingRouter} prefix="captions" />
+      <CaptionSearchPopout
+        router={floatingRouter}
+        prefix="caption-search"
+        setCaptionLanguages={setCaptionLanguages}
+        captionLanguages={captionLanguages}
+        setCurrentLanguage={setCurrentLanguage}
+      />
+      <DetailedCaptionSearchPopout
+        router={floatingRouter}
+        prefix="detailed-caption-search"
+        captionLanguages={captionLanguages}
+        currentLanguage={currentLanguage}
+      />
       <CaptionSettingsPopout
         router={floatingRouter}
         prefix="caption-settings"
