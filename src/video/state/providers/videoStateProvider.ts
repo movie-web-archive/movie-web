@@ -193,6 +193,7 @@ export function createVideoStateProvider(
         caption: null,
         embedId: source.embedId,
         providerId: source.providerId,
+        sources: source.sources,
       };
       updateSource(descriptor, state);
     },

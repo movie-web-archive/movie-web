@@ -1,4 +1,8 @@
-import { MWStreamQuality, MWStreamType } from "@/backend/helpers/streams";
+import {
+  MWQualityStream,
+  MWStreamQuality,
+  MWStreamType,
+} from "@/backend/helpers/streams";
 
 type VideoPlayerSource = {
   source: string;
@@ -6,6 +10,7 @@ type VideoPlayerSource = {
   quality: MWStreamQuality;
   providerId?: string;
   embedId?: string;
+  sources?: MWQualityStream[];
 } | null;
 
 export type VideoPlayerStateController = {

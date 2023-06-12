@@ -2,6 +2,7 @@ import Hls from "hls.js";
 
 import {
   MWCaption,
+  MWQualityStream,
   MWStreamQuality,
   MWStreamType,
 } from "@/backend/helpers/streams";
@@ -75,6 +76,7 @@ export type VideoPlayerState = {
       url: string;
       id: string;
     };
+    sources?: MWQualityStream[];
   };
 
   // casting state

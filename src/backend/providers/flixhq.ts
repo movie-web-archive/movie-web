@@ -122,6 +122,7 @@ registerProvider({
         quality: qualityMap[source.quality],
         type: source.isM3U8 ? MWStreamType.HLS : MWStreamType.MP4,
         captions: watchInfo.subtitles.map(convertSubtitles).filter(Boolean),
+        sources: watchInfo.sources,
       },
     };
   },

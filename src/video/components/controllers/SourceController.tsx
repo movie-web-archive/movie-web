@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { getCaptionUrl, makeCaptionId } from "@/backend/helpers/captions";
 import {
   MWCaption,
+  MWQualityStream,
   MWStreamQuality,
   MWStreamType,
 } from "@/backend/helpers/streams";
@@ -19,6 +20,7 @@ interface SourceControllerProps {
   providerId?: string;
   embedId?: string;
   captions: MWCaption[];
+  sources?: MWQualityStream[];
 }
 async function tryFetch(captions: MWCaption[]) {
   for (let i = 0; i < captions.length; i += 1) {

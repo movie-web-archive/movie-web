@@ -32,6 +32,11 @@ export type MWCaption = {
   langIso: string;
 };
 
+export type MWQualityStream = {
+  url: string;
+  quality: MWStreamQuality;
+};
+
 export type MWStream = {
   streamUrl: string;
   type: MWStreamType;
@@ -39,6 +44,7 @@ export type MWStream = {
   providerId?: string;
   embedId?: string;
   captions: MWCaption[];
+  sources?: MWQualityStream[];
 };
 
 export type MWEmbedStream = MWStream & {

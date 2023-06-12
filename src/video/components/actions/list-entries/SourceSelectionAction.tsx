@@ -1,3 +1,4 @@
+import { SyntheticEvent } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icons } from "@/components/Icon";
@@ -7,6 +8,7 @@ import { PopoutListAction } from "../../popouts/PopoutUtils";
 
 interface Props {
   onClick?: () => any;
+  onQuality?: (e: SyntheticEvent) => void;
 }
 
 export function SourceSelectionAction(props: Props) {
@@ -16,7 +18,7 @@ export function SourceSelectionAction(props: Props) {
     <PopoutListAction
       icon={Icons.CLAPPER_BOARD}
       onClick={props.onClick}
-      right={<QualityDisplayAction />}
+      right={<QualityDisplayAction onQuality={props.onQuality} />}
       noChevron
     >
       {t("videoPlayer.buttons.source")}

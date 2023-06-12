@@ -228,7 +228,6 @@ registerProvider({
       }
     }
 
-    console.log(embeds);
     return {
       embeds,
     };

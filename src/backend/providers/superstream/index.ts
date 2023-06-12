@@ -203,6 +203,12 @@ registerProvider({
           quality: qualityMap[hdQuality.quality as QualityInMap],
           type: MWStreamType.MP4,
           captions: mappedCaptions,
+          sources: mediaRes.list
+            .filter((item: any) => item.path)
+            .map((item: any) => ({
+              url: item.path,
+              quality: item.real_quality,
+            })),
         },
       };
     }
@@ -257,6 +263,12 @@ registerProvider({
         streamUrl: hdQuality.path,
         type: MWStreamType.MP4,
         captions: mappedCaptions,
+        sources: mediaRes.list
+          .filter((item: any) => item.url)
+          .map((item: any) => ({
+            url: item.path,
+            quality: item.real_quality,
+          })),
       },
     };
   },

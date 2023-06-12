@@ -1,3 +1,5 @@
+import { SyntheticEvent } from "react";
+
 import { FloatingCardView } from "@/components/popout/FloatingCard";
 import { FloatingDragHandle } from "@/components/popout/FloatingDragHandle";
 import { FloatingView } from "@/components/popout/FloatingView";
@@ -10,6 +12,7 @@ import { SourceSelectionAction } from "@/video/components/actions/list-entries/S
 import { CaptionSelectionPopout } from "./CaptionSelectionPopout";
 import { CaptionSettingsPopout } from "./CaptionSettingsPopout";
 import { PlaybackSpeedPopout } from "./PlaybackSpeedPopout";
+import { QualitySelectionPopout } from "./QualitySelectionPopout";
 import { SourceSelectionPopout } from "./SourceSelectionPopout";
 
 export function SettingsPopout() {
@@ -22,7 +25,13 @@ export function SettingsPopout() {
         <FloatingDragHandle />
         <FloatingCardView.Content>
           <DownloadAction />
-          <SourceSelectionAction onClick={() => navigate("/source")} />
+          <SourceSelectionAction
+            onClick={() => navigate("/source")}
+            onQuality={(e: SyntheticEvent) => {
+              e.stopPropagation();
+              navigate("/quality");
+            }}
+          />
           <CaptionsSelectionAction onClick={() => navigate("/captions")} />
           <PlaybackSpeedSelectionAction
             onClick={() => navigate("/playback-speed")}
@@ -30,6 +39,7 @@ export function SettingsPopout() {
         </FloatingCardView.Content>
       </FloatingView>
       <SourceSelectionPopout router={floatingRouter} prefix="source" />
+      <QualitySelectionPopout router={floatingRouter} prefix="quality" />
       <CaptionSelectionPopout router={floatingRouter} prefix="captions" />
       <CaptionSettingsPopout
         router={floatingRouter}

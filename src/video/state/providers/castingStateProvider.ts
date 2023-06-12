@@ -154,6 +154,7 @@ export function createCastingStateProvider(
         caption: null,
         embedId: source.embedId,
         providerId: source.providerId,
+        sources: source.sources,
       };
       resetStateForSource(descriptor, state);
       updateSource(descriptor, state);
@@ -247,6 +248,7 @@ export function createCastingStateProvider(
           type: state.source.type,
           embedId: state.source.embedId,
           providerId: state.source.providerId,
+          sources: state.source.sources,
         });
 
       return {

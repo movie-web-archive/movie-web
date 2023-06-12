@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { MWStreamQuality, MWStreamType } from "@/backend/helpers/streams";
+import {
+  MWQualityStream,
+  MWStreamQuality,
+  MWStreamType,
+} from "@/backend/helpers/streams";
 
 import { getPlayerState } from "../cache";
 import { listenEvent, sendEvent, unlistenEvent } from "../events";
@@ -17,6 +21,7 @@ export type VideoSourceEvent = {
       id: string;
       url: string;
     };
+    sources?: MWQualityStream[];
   };
 };
 
