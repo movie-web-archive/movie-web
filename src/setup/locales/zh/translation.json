@@ -38,7 +38,7 @@
     },
     "provider": {
       "title": "该内容提供者已被停用",
-      "description": "我们的提供者出现问题，或是太不稳定，导致无法使用，所以我们不得不将其停用。"
+      "description": "内容提供者出现问题或无法稳定使用，所以我们不得不将其停用。"
     },
     "page": {
       "title": "无法找到页面",
@@ -71,7 +71,16 @@
     "popouts": {
       "back": "返回",
       "sources": "视频源",
-      "seasons": "分季",
+      "close": "关闭",
+      "seasons": {
+        "title": "分季",
+        "other": "其他分季",
+        "noSeason": "无分季"
+      },
+      "episodes": {
+        "unknown": "未知分集",
+        "noEpisode": "无分集"
+      },
       "captions": "字幕",
       "playbackSpeed": "播放速度",
       "customPlaybackSpeed": "自定义播放速度",
@@ -83,19 +92,19 @@
         "color": "颜色"
       },
       "episode": "第{{index}}集 - {{title}}",
-      "noCaptions": "没有字幕",
+      "noCaptions": "无字幕",
       "linkedCaptions": "已链接字幕",
       "customCaption": "自定义字幕",
       "uploadCustomCaption": "上传字幕",
       "noEmbeds": "未发现该视频源的嵌入内容",
       "errors": {
-        "loadingWentWong": "加载 {{seasonTitle}} 的分集时出现了一些问题",
-        "embedsError": "为您喜欢的这一东西加载嵌入内容时出现了一些问题"
+        "loadingWentWong": "加载 {{seasonTitle}} 的分集时出了一些问题",
+        "embedsError": "为您喜欢的这一东西加载嵌入内容时出了一些问题"
       },
       "descriptions": {
         "sources": "您想使用哪个内容提供者？",
         "embeds": "选择要观看的视频",
-        "seasons": "选择您要观看的季",
+        "seasons": "选择您要观看的分季",
         "episode": "选择一个分集",
         "captions": "选择字幕语言",
         "captionPreferences": "让字幕看起来如您所想",
