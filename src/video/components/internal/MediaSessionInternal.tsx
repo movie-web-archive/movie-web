@@ -1,16 +1,14 @@
 import { useEffect, useMemo, useRef } from "react";
 
-import { MWMediaType } from "@/backend/metadata/types";
+import { MWMediaType } from "@/backend/metadata/types/mw";
 import { useVideoPlayerDescriptor } from "@/video/state/hooks";
 import { useControls } from "@/video/state/logic/controls";
 import { useProgress } from "@/video/state/logic/progress";
 
-// import { VideoMetaEvent, useMeta } from "@/video/state/logic/meta";
 import { useCurrentSeriesEpisodeInfo } from "../hooks/useCurrentSeriesEpisodeInfo";
 
 export default function MediaSessionInternal() {
   const descriptor = useVideoPlayerDescriptor();
-  // const meta = useMeta(descriptor);
   const { currentEpisodeInfo, currentSeasonInfo, meta } =
     useCurrentSeriesEpisodeInfo(descriptor);
   const currentEpisodeInfoMemo = useMemo(
@@ -20,12 +18,6 @@ export default function MediaSessionInternal() {
   const controlsRef = useRef(useControls(descriptor));
   const progressRef = useRef(useProgress(descriptor));
   const mediaSessionRef = useRef<MediaSession | null>(null);
-
-  // useEffect(() => {
-  //   controlsRef.current = controls;
-  //   progressRef.current = progress;
-  //   metaRef.current = metadata;
-  // }, [progress, controls, metadata]);
 
   useEffect(() => {
     if (!("mediaSession" in navigator)) return;
@@ -52,7 +44,6 @@ export default function MediaSessionInternal() {
       }
     });
     return () => {
-      // mediaSession.metadata = null;
       mediaSession.playbackState = "none";
       mediaSession.setActionHandler("play", null);
       mediaSession.setActionHandler("pause", null);
@@ -91,11 +82,6 @@ export default function MediaSessionInternal() {
       }
     }
     if (media.type === MWMediaType.SERIES) {
-      // const currentEpisodeId =
-      // const currentSeason = media.seasonData;
-      // const currentEpisode = currentSeason.episodes.find(
-      //   (episode) => episode.id === currentEpisodeId
-      // );
       if (currentEpisodeInfo) {
         mediaSession.metadata.title = currentEpisodeInfo.title;
       }
