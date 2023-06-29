@@ -155,7 +155,7 @@ export function getMediaDetails<
     return get<TReturn>(`/movie/${id}`, { append_to_response: "external_ids" });
   }
   if (type === "show") {
-    return get<TReturn>(`/tv/${id}?append_to_response=external_ids`);
+    return get<TReturn>(`/tv/${id}`, { append_to_response: "external_ids" });
   }
   throw new Error("Invalid media type");
 }
