@@ -5,7 +5,6 @@ import {
   TMDBMediaToMediaType,
   formatTMDBMeta,
   getEpisodes,
-  getExternalIds,
   getMediaDetails,
   getMediaPoster,
   getMovieFromExternalId,
@@ -90,8 +89,7 @@ export async function getMetaFromId(
 
   if (!details) return null;
 
-  const externalIds = await getExternalIds(id, mediaTypeToTMDB(type));
-  const imdbId = externalIds.imdb_id ?? undefined;
+  const imdbId = details.external_ids.imdb_id;
 
   let seasonData: TMDBSeasonMetaResult | undefined;
 
