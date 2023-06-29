@@ -152,7 +152,7 @@ export function getMediaDetails<
   TReturn = MediaDetailReturn<T>
 >(id: string, type: T): Promise<TReturn> {
   if (type === "movie") {
-    return get<TReturn>(`/movie/${id}?append_to_response=external_ids`);
+    return get<TReturn>(`/movie/${id}`, { append_to_response: "external_ids" });
   }
   if (type === "show") {
     return get<TReturn>(`/tv/${id}?append_to_response=external_ids`);
