@@ -173,7 +173,7 @@ export interface TMDBMovieData {
   vote_average: number;
   vote_count: number;
   external_ids: {
-    imdb_id: string;
+    imdb_id: string | null;
   };
 }
 
