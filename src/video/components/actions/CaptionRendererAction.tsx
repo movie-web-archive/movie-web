@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { useAsync } from "react-use";
 import { ContentCaption } from "subsrt-ts/dist/types/handler";
+import { v4 as uuid } from "uuid";
 
 import { parseSubtitles, sanitize } from "@/backend/helpers/captions";
 import { Transition } from "@/components/Transition";
@@ -97,7 +98,7 @@ export function CaptionRendererAction({
     []
   );
   if (!captions.current.length) return null;
-  const visibileCaptions = captions.current.filter(({ start, end }) =>
+  const visibleCaptions = captions.current.filter(({ start, end }) =>
     isVisible(start, end, captionSettings.delay, videoTime)
   );
   return (
@@ -109,8 +110,8 @@ export function CaptionRendererAction({
       animation="slide-up"
       show
     >
-      {visibileCaptions.map(({ start, end, content }) => (
-        <CaptionCue key={`${start}-${end}`} text={content} />
+      {visibleCaptions.map(({ content }) => (
+        <CaptionCue key={uuid()} text={content} />
       ))}
     </Transition>
   );
