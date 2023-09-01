@@ -32,6 +32,7 @@ import { useControls } from "@/video/state/logic/controls";
 
 import { CaptionRendererAction } from "./actions/CaptionRendererAction";
 import { DividerAction } from "./actions/DividerAction";
+import { NextEpisodeAction } from "./actions/NextEpisodeAction";
 import { SettingsAction } from "./actions/SettingsAction";
 import { VolumeAdjustedAction } from "./actions/VolumeAdjustedAction";
 
@@ -148,6 +149,7 @@ export function VideoPlayer(props: Props) {
                       <div />
                       <div className="flex items-center justify-center">
                         <SeriesSelectionAction />
+                        <NextEpisodeAction />
                         <PictureInPictureAction />
                         <SettingsAction />
                       </div>
@@ -158,6 +160,7 @@ export function VideoPlayer(props: Props) {
                       <LeftSideControls />
                       <div className="flex-1" />
                       <SeriesSelectionAction />
+                      <NextEpisodeAction />
                       <DividerAction />
                       <SettingsAction />
                       <ChromecastAction />
