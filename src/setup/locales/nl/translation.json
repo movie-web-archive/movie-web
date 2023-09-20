@@ -1,6 +1,6 @@
 {
   "global": {
-    "name": "movie-web"
+    "name": "zflixer"
   },
   "search": {
     "loading_series": "We zoeken je favoriete series...",
