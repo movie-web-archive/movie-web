@@ -23,7 +23,7 @@
       "genericTitle": "Whoops, it broke!",
       "failedMeta": "Failed to load meta",
       "mediaFailed": "We failed to request the media you asked for, check your internet connection and try again.",
-      "videoFailed": "We encountered an error while playing the video you requested. If this keeps happening please report the issue to the <0>Discord server</0> or on <1>GitHub</1>."
+      "videoFailed": "We encountered an error while playing the video you requested. If this keeps happening please report the issue to the <0>Discord server</0> or on the <1>Home Page</1>."
     }
   },
   "seasons": {
