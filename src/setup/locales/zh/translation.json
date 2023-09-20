@@ -1,6 +1,6 @@
 {
   "global": {
-    "name": "movie-web"
+    "name": "zflixer"
   },
   "search": {
     "loading_series": "正在获取您最喜欢的连续剧……",
