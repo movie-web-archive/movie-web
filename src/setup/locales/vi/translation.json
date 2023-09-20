@@ -1,6 +1,6 @@
 {
   "global": {
-    "name": "movie-web"
+    "name": "zflixer"
   },
   "search": {
     "loading_series": "Đang tìm chương trình yêu thích của bạn...",
