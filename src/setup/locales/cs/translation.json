@@ -1,6 +1,6 @@
 {
   "global": {
-    "name": "movie-web"
+    "name": "zflixer"
   },
   "search": {
     "loading_series": "Načítání Vašich oblíbených seriálů...",
