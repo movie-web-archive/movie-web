@@ -1,0 +1,137 @@
+{
+  "global": {
+    "name": "movie-web"
+  },
+  "search": {
+    "loading_series": "Obteniendo tus series favoritas...",
+    "loading_movie": "Obteniendo tus películas favoritas...",
+    "loading": "Cargando...",
+    "allResults": "Es todo lo que tenemos!",
+    "noResults": "No hemos podido encontrar nada!",
+    "allFailed": "Error buscando contenido, ¡inténtalo otra vez!",
+    "headingTitle": "Resultados de la búsqueda",
+    "bookmarks": "Favoritos",
+    "continueWatching": "Seguir viendo",
+    "title": "¿Qué quieres ver?",
+    "placeholder": "¿Qué quieres ver?"
+  },
+  "media": {
+    "movie": "Movie",
+    "series": "Series",
+    "stopEditing": "Para edición",
+    "errors": {
+      "genericTitle": "Whoops, ¡se ha roto!",
+      "failedMeta": "Fallo al cargar meta",
+      "mediaFailed": "Fallo al solicitar el contenido solicitado, comprueba tu conexión a internet e inténtalo de nuevo.",
+      "videoFailed": "Fallo reproduciendo el video solicitado. Si sigue ocurriendo, por favor, envía un informe al <0>Servidor de Discord</0> o en <1>GitHub</1>."
+    }
+  },
+  "seasons": {
+    "seasonAndEpisode": "S{{season}} E{{episode}}"
+  },
+  "notFound": {
+    "genericTitle": "No encontrado",
+    "backArrow": "Volver a la pantalla principal",
+    "media": {
+      "title": "No se ha podido encontrar el contenido",
+      "description": "No hemos podido encontrar el contenido solicitado. O ha sido eliminado o has modificado la URL"
+    },
+    "provider": {
+      "title": "Este proveedor ha sido deshabilitado",
+      "description": "Tenemos problemas con el proveedor o era demasiado inestable para usarlo así que lo hemos tenido que deshabilitar.."
+    },
+    "page": {
+      "title": "No se encuentra la página",
+      "description": "Hemos buscado en todas partes: debajo de las papeleras, en el armario, detrás del proxy pero no hemos encontrado la página que estás buscando."
+    }
+  },
+  "searchBar": {
+    "movie": "Película",
+    "series": "Series",
+    "Search": "Buscar"
+  },
+  "videoPlayer": {
+    "findingBestVideo": "Encontrar el mejor video para ti",
+    "noVideos": "Whoops, no se han encontrado videos para ti",
+    "loading": "Cargando...",
+    "backToHome": "Volver a la página principal",
+    "backToHomeShort": "Volver",
+    "seasonAndEpisode": "S{{season}} E{{episode}}",
+    "timeLeft": "{{timeLeft}} restantes",
+    "finishAt": "Termina a las {{timeFinished, datetime}}",
+    "buttons": {
+      "episodes": "Episodios",
+      "source": "Origen",
+      "captions": "Subtítulos",
+      "download": "Descargar",
+      "settings": "Configuración",
+      "pictureInPicture": "Imagen sobre imagen",
+      "playbackSpeed": "Velocidad de reproducción"
+    },
+    "popouts": {
+      "back": "Volver",
+      "sources": "Origen",
+      "close": "Cerrar",
+      "seasons": {
+        "title":"Temporadas",
+        "other": "Otras temporadas",
+        "noSeason": "No hay temporadas"
+      },
+      "episodes": {
+        "unknown": "Episodio desconocido",
+        "noEpisode": "No hay episodio"
+      },
+      "captions": "Subtítulos",
+      "playbackSpeed": "Velocidad de reproducción",
+      "customPlaybackSpeed": "Vedlocidad de reproducción personalizada",
+      "captionPreferences": {
+        "title": "Personalizar",
+        "delay": ">Retraso",
+        "fontSize": "Tamaño",
+        "opacity": "Opacidad",
+        "color": "Color"
+      },
+      "episode": "E{{index}} - {{title}}",
+      "noCaptions": "No hay subtítulos",
+      "linkedCaptions": "Subtítulos enlazados",
+      "customCaption": "Subtítulo personalizado",
+      "uploadCustomCaption": "Subir subtítulo",
+      "noEmbeds": "No se encontró contenido incrustado para este origen",
+
+      "errors": {
+        "loadingWentWong": "Algo ha ido mal cargando los episodios para {{seasonTitle}}",
+        "embedsError": "Algo ha ido mal cargando el contenido incrustado para esto que te gusta"
+      },
+      "descriptions": {
+        "sources": "¿Qué proveedor quieres usar?",
+        "embeds": "Elige qué video ver",
+        "seasons": "Elige qué temporada quieres ver",
+        "episode": "Elige un episodio",
+        "captions": "Elige un idioma para los subtítulos",
+        "captionPreferences": "Haz que los subtítulos se vean como quieres",
+        "playbackSpeed": "Cambia la velocidad de reproducción"
+      }
+    },
+    "errors": {
+      "fatalError": "El reproductor de video encontró un error fatal, por favor envíalo al <0>Servidor de Discord</0> o en <1>GitHub</1>."
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "language": "Idioma",
+    "captionLanguage": "Idioma de los subtítulos"
+  },
+  "v3": {
+    "newSiteTitle": "¡Se ha publicado una nueva versión!",
+    "newDomain": "https://movie-web.app",
+    "newDomainText": "movie-web pronto se moverá a un nuevo dominio: <0>https://movie-web.app</0>. Asegúeate de actualizar tus favoritos porque <1>el sitio antiguo dejará de funcionar el {{date}}.</1>",
+    "tireless": "Hemos trabajado sin descanso en esta nueva versión, esperamos que disfrutes lo que hemos cocinado durante los últimos meses.",
+    "leaveAnnouncement": "¡Llévame ahí!"
+  },
+  "casting": {
+    "casting": "Enviando a dispositivo..."
+  },
+  "errors": {
+    "offline": "Comprueba tu conexión a internet"
+  }
+}
