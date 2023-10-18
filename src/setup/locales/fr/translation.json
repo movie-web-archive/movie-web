@@ -3,27 +3,27 @@
     "name": "movie-web"
   },
   "search": {
-    "loading_series": "Recherche de votre série préférée...",
-    "loading_movie": "Recherche de vos films préférés...",
+    "loading_series": "Chargement de tes séries préférées...",
+    "loading_movie": "Chargement de tes films préférés...",
     "loading": "Chargement...",
     "allResults": "C'est tout ce que nous avons!",
     "noResults": "Nous n'avons rien trouvé!",
-    "allFailed": "Le média n'a pas été trouvé, veuillez réessayez!",
+    "allFailed": "Échec de la recherche de médias, essaie à nouveau!",
     "headingTitle": "Résultats de la recherche",
     "bookmarks": "Favoris",
-    "continueWatching": "Continuer le visionnage",
-    "title": "Que voulez-vous voir?",
-    "placeholder": "Que voulez-vous voir?"
+    "continueWatching": "Continuer à regarder",
+    "title": "Que veux-tu regarder?",
+    "placeholder": "Que veux-tu regarder?"
   },
   "media": {
-    "movie": "Films",
-    "series": "Séries",
-    "stopEditing": "Arrêter l'édition",
+    "movie": "Film",
+    "series": "Série",
+    "stopEditing": "Arrêter de modifier",
     "errors": {
-      "genericTitle": "Oups, c'est coupé !",
-      "failedMeta": "Impossible de charger les métadonnées",
-      "mediaFailed": "Nous n'avons pas réussi à récupérer le média que vous avez demandé. Veuillez vérifier votre connexion Internet et réessayer.",
-      "videoFailed": "Nous avons rencontré une erreur lors de la lecture de la vidéo que vous avez demandée. Si cela se reproduit, veuillez signaler le problème au serveur <0>Discord</0> ou sur <1>GitHub</1>."
+      "genericTitle": "Oups, ça a planté!",
+      "failedMeta": "Échec du chargement des métadonnées",
+      "mediaFailed": "Nous n'avons pas pu obtenir le média que tu as demandé, vérifie ta connexion Internet et réessaie.",
+      "videoFailed": "Une erreur s'est produite pendant la lecture de la vidéo demandée. Si cela continue, signale le problème sur le <0>serveur Discord</0> ou sur <1>GitHub</1>."
     }
   },
   "seasons": {
@@ -33,16 +33,16 @@
     "genericTitle": "Introuvable",
     "backArrow": "Retour à l'accueil",
     "media": {
-      "title": "Impossible de trouver ce média",
-      "description": "Nous n'avons pas trouvé le média que vous avez demandé. Soit il a été supprimé, soit vous avez modifié l'URL."
+      "title": "Média introuvable",
+      "description": "Nous n'avons pas pu trouver le média que tu as demandé. Soit il a été supprimé, soit tu as modifié l'URL"
     },
     "provider": {
       "title": "Ce fournisseur a été désactivé",
-      "description": "Nous avons eu des problèmes avec le fournisseur ou il était trop instable pour être utilisé, nous avons donc dû le désactiver."
+      "description": "Nous avons rencontré des problèmes avec ce fournisseur, ou il était trop instable pour être utilisé, donc nous avons dû le désactiver."
     },
     "page": {
-      "title": "Impossible de trouver cette page",
-      "description": "Nous avons cherché partout : sous les poubelles, dans le placard, derrière le proxy, mais nous n'avons finalement pas trouvé la page que vous cherchez."
+      "title": "Page introuvable",
+      "description": "Nous avons cherché partout : sous les poubelles, dans le placard, derrière le proxy, mais nous n'avons finalement pas pu trouver la page que tu cherches."
     }
   },
   "searchBar": {
@@ -51,77 +51,86 @@
     "Search": "Rechercher"
   },
   "videoPlayer": {
-    "findingBestVideo": "Recherche de la meilleure vidéo pour vous",
-    "noVideos": "Désolé, nous n'avons pas pu trouver de vidéos pour vous",
+    "findingBestVideo": "Recherche de la meilleure vidéo pour toi",
+    "noVideos": "Oups, aucune vidéo trouvée",
     "loading": "Chargement...",
-    "backToHome": "Retour à la page d'accueil",
+    "backToHome": "Retour à l'accueil",
     "backToHomeShort": "Retour",
     "seasonAndEpisode": "S{{season}} E{{episode}}",
     "timeLeft": "{{timeLeft}} restant",
-    "finishAt": "Terminer à {{timeFinished, datetime}}",
+    "finishAt": "Fin à {{timeFinished, datetime}}",
     "buttons": {
       "episodes": "Épisodes",
       "source": "Source",
       "captions": "Sous-titres",
       "download": "Télécharger",
       "settings": "Paramètres",
-      "pictureInPicture": "Image dans l'image",
-      "playbackSpeed": "Vitesse"
+      "pictureInPicture": "Picture In Picture",
+      "playbackSpeed": "Vitesse de lecture"
     },
     "popouts": {
-      "back": "Retourner",
+      "back": "Retour",
       "sources": "Sources",
-      "seasons": "Saisons",
+      "close": "Fermer",
+      "seasons": {
+        "title": "Saisons",
+        "other": "Autres saisons",
+        "noSeason": "Pas de saison"
+      },
+      "episodes": {
+        "unknown": "Épisode inconnu",
+        "noEpisode": "Pas d'épisode"
+      },
       "captions": "Sous-titres",
       "playbackSpeed": "Vitesse de lecture",
       "customPlaybackSpeed": "Vitesse de lecture personnalisée",
       "captionPreferences": {
         "title": "Personnaliser",
         "delay": "Délai",
-        "fontSize": "Taille",
+        "fontSize": "Taille d'écriture",
         "opacity": "Opacité",
         "color": "Couleur"
       },
       "episode": "E{{index}} - {{title}}",
       "noCaptions": "Pas de sous-titres",
-      "linkedCaptions": "Sous-titres liés",
-      "customCaption": "Sous-titres personnalisés",
-      "uploadCustomCaption": "Télécharger des sous-titres",
-      "noEmbeds": "Aucun contenu intégré n'a été trouvé pour cette source",
+      "linkedCaptions": "Sous-titres associés",
+      "customCaption": "Sous-titre personnalisé",
+      "uploadCustomCaption": "Télécharger le sous-titre",
+      "noEmbeds": "Aucune intégration trouvée pour cette source",
       "errors": {
-        "loadingWentWong": "Un problème est survenu lors du chargement des épisodes pour {{seasonTitle}}",
-        "embedsError": "Un problème est survenu lors du chargement des contenus intégrés pour cet élément que vous aimez"
+        "loadingWentWong": "Un problème est survenu lors du chargement des épisodes de {{seasonTitle}}",
+        "embedsError": "Un problème est survenu lors du chargement des intégrations pour ce truc que tu aimes"
       },
       "descriptions": {
-        "sources": "Quel fournisseur voulez-vous utiliser ?",
-        "embeds": "Choisissez quelle vidéo regarder",
-        "seasons": "Choisissez la saison que vous voulez regarder",
-        "episode": "Sélectionnez un épisode",
-        "captions": "Choisissez une langue de sous-titres",
-        "captionPreferences": "Personnalisez l'apparence des sous-titres",
-        "playbackSpeed": "Changer la vitesse de lecture"
+        "sources": "Quel fournisseur veux-tu utiliser?",
+        "embeds": "Choisis quelle vidéo voir",
+        "seasons": "Choisis la saison que tu veux regarder",
+        "episode": "Choisis un épisode",
+        "captions": "Choisis une langue de sous-titre",
+        "captionPreferences": "Personnalise l'apparence des sous-titres",
+        "playbackSpeed": "Change la vitesse de lecture"
       }
     },
     "errors": {
-      "fatalError": "Le lecteur vidéo a rencontré une erreur fatale, veuillez la signaler au serveur <0>Discord</0> ou sur <1>GitHub</1>."
+      "fatalError": "Le lecteur vidéo a rencontré une erreur fatale, merci de la signaler sur le <0>serveur Discord</0> ou sur <1>GitHub</1>."
     }
   },
   "settings": {
     "title": "Paramètres",
-    "language": "Language",
+    "language": "Langue",
     "captionLanguage": "Langue des sous-titres"
   },
   "v3": {
-    "newSiteTitle": "Nouvelle version disponible!",
+    "newSiteTitle": "Nouvelle version maintenant disponible!",
     "newDomain": "https://movie-web.app",
-    "newDomainText": "movie-web déménagera bientôt vers un nouveau domaine : <0>https://movie-web.app</0>. Veillez à mettre à jour tous vos favoris car <1>l'ancien site web cessera de fonctionner le {{date}}.</1>",
-    "tireless": "Nous avons travaillé sans relâche sur cette nouvelle mise à jour et nous espérons que vous apprécierez ce que nous avons préparé ces derniers mois.",
-    "leaveAnnouncement": "Emmenez-moi là!"
+    "newDomainText": "movie-web va bientôt déménager vers un nouveau domaine : <0>https://movie-web.app</0>. Assure-toi de mettre à jour tous tes favoris car <1>l'ancien site cessera de fonctionner le {{date}}.</1>",
+    "tireless": "Nous avons travaillé sans relâche sur cette nouvelle mise à jour, nous espérons que tu apprécieras ce que nous avons préparé ces derniers mois.",
+    "leaveAnnouncement": "Emmenez-moi là-bas!"
   },
   "casting": {
-    "casting": "Transmission à l'appareil..."
+    "casting": "Diffusion vers l'appareil..."
   },
   "errors": {
-    "offline": "Vérifiez votre connexion internet"
+    "offline": "Vérifie ta connexion Internet"
   }
 }
