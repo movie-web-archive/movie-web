@@ -114,9 +114,7 @@ export function VideoPlayer(props: Props) {
                 >
                   <MobileCenterAction />
                 </Transition>
-              ) : (
-                ""
-              )}
+              ) : null}
               <Transition
                 animation="slide-down"
                 show={show}
