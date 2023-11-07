@@ -92,10 +92,10 @@
                 "color": "لون"
             },
             "episode": "E{{index}} - {{title}}",
-            "noCaptions": "لا توجد مقاطع ترجمة",
+            "noCaptions": "إخفاء مقاطع ترجمة",
             "linkedCaptions": "مقاطع ترجمة ذات صلة",
             "customCaption": "مقاطع ترجمة مخصصة",
-            "uploadCustomCaption": "رفع مقاطع ترجمة",
+            "uploadCustomCaption": "رفع مقطع ترجمة",
             "noEmbeds": "لم يتم العثور على تضمينات لهذا المصدر",
             "errors": {
                 "loadingWentWong": "حدث خطأ أثناء تحميل حلقات {{seasonTitle}}",
