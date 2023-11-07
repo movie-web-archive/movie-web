@@ -1,0 +1,136 @@
+﻿{
+    "global": {
+        "name": "movie-web"
+    },
+    "search": {
+        "loading_series": "جارٍ جلب مسلسلاتك المفضلة...",
+        "loading_movie": "جارٍ جلب أفلامك المفضلة...",
+        "loading": "تحميل...",
+        "allResults": "هذا كل ما لدينا!",
+        "noResults": "لم نتمكن من العثور على أي شيء!",
+        "allFailed": "تعذَّرَ العثور على الوسائط، حاول مجددا!",
+        "headingTitle": "نتائج البحث",
+        "bookmarks": "علامات مرجعية",
+        "continueWatching": "مواصلة المشاهدة",
+        "title": "ماذا تريد أن تشاهد؟",
+        "placeholder": "ماذا تريد أن تشاهد؟"
+    },
+    "media": {
+        "movie": "أفلام",
+        "series": "مسلسلات",
+        "stopEditing": "إنهاء التعديل",
+        "errors": {
+            "genericTitle": "اووبس، لقد تعطَّل",
+            "failedMeta": "تعذَّرَ تحميل بيانات التعريف",
+            "mediaFailed": "تعذَّرَ طلبُ ماأردتَ مِن وسائط، تحقق من اتصالك بالأنترنت ثم حاول مجددا ",
+            "videoFailed": "واجهتنا مشكلة أثناء عرض الفيديو الذي طلبته. إن تكرر الأمر فرجاءً قم بإبلاغنا عنه على <0>Discord server</0> أو على <1>GitHub</1>."
+        }
+    },
+    "seasons": {
+        "seasonAndEpisode": "S{{season}} E{{episode}}"
+    },
+    "notFound": {
+        "genericTitle": "غير موجود",
+        "backArrow": "العودة إلى الصفحة الرئيسية",
+        "media": {
+            "title": "تعذَّرَ العثور هذا الوسيط",
+            "description": "تعذَّرَ العثور هذا الوسيط. إما أنه حذف أو أن الرابط إليه مختلف عما أدخلته."
+        },
+        "provider": {
+            "title": "تم تعطيل هذ المزود",
+            "description": "تم تعطيل هذ المزود لكونه غير مستقر."
+        },
+        "page": {
+            "title": "تعذر العثور على هته الصفحة",
+            "description": "بحثنا في كل مكان:في الخزانة وحتى تحت الصناديق، ومع ذلك لم نعثر عن الصفحة التي طلبتَها.،"
+        }
+    },
+    "searchBar": {
+        "movie": "أفلام",
+        "series": "مسلسلات",
+        "Search": "بحث"
+    },
+    "videoPlayer": {
+        "findingBestVideo": "جارٍ البحث عن أنسب فيديو لك",
+        "noVideos": "اووبس، تعذر العثور على أي فيديو",
+        "loading": "تحميل...",
+        "backToHome": "العودة إلى الصفحة الرئيسية",
+        "backToHomeShort": "عودة",
+        "seasonAndEpisode": "S{{season}} E{{episode}}",
+        "timeLeft": "تبقى {{timeLeft}}",
+        "finishAt": "انتهى في {{timeFinished, datetime}}",
+        "buttons": {
+            "episodes": "الحلقات",
+            "source": "المصدر",
+            "captions": "مقاطع الترجمة",
+            "download": "تنزيل",
+            "settings": "إعدادات",
+            "pictureInPicture": "مشغل مصغر",
+            "playbackSpeed": "سرعة التشغيل"
+        },
+        "popouts": {
+            "back": "عودة",
+            "sources": "مصادر",
+            "close": "غلق",
+            "seasons": {
+                "title": "المواسم",
+                "other": "مواسم أخرى",
+                "noSeason": "لايوجد موسم"
+            },
+            "episodes": {
+                "unknown": "حلقة غير معروفة",
+                "noEpisode": "لاتوجد حلقة"
+            },
+            "captions": "مقاطع الترجمة",
+            "playbackSpeed": "سرعة التشغيل",
+            "customPlaybackSpeed": "سرعة التشغيل المخصصة",
+            "captionPreferences": {
+                "title": "تخصيص",
+                "delay": "تأخير",
+                "fontSize": "حجم",
+                "opacity": "شفافية",
+                "color": "لون"
+            },
+            "episode": "E{{index}} - {{title}}",
+            "noCaptions": "لا توجد مقاطع ترجمة",
+            "linkedCaptions": "مقاطع ترجمة ذات صلة",
+            "customCaption": "مقاطع ترجمة مخصصة",
+            "uploadCustomCaption": "رفع مقاطع ترجمة",
+            "noEmbeds": "لم يتم العثور على تضمينات لهذا المصدر",
+            "errors": {
+                "loadingWentWong": "حدث خطأ أثناء تحميل حلقات {{seasonTitle}}",
+                "embedsError": "حدث خطأ أثناء تحميل التضمينات"
+            },
+            "descriptions": {
+                "sources": "ما هو المزود الذي تريد استخدامه؟",
+                "embeds": "اختر الفيديو الذي تريد مشاهدته",
+                "seasons": "اختر الموسم الذي تريد مشاهدته",
+                "episode": "اختر حلقة",
+                "captions": "اختر لغة الترجمة",
+                "captionPreferences": "اجعل من مقاطع الترجمة تظهر كما تريد",
+                "playbackSpeed": "تغيير سرعة التشغيل"
+            }
+        },
+        "errors": {
+            "fatalError": "واجه مشغل الفيديو خطأً فادحًا، رجاءً قم بإبلاغنا عن الأمر على <0>Discord server</0> أو على <1>GitHub</1>."
+        }
+    },
+    "settings": {
+        "title": "إعدادات",
+        "language": "لغة الواجهة",
+        "captionLanguage": "لغة مقاطع الترجمة"
+    },
+    "v3": {
+        "newSiteTitle": "إصدار جديد تم إصداره!",
+        "newDomain": "https://movie-web.app",
+        "newDomainText": "movie-web سينتقل قريبا إلى النطاق الجديد: <0>https://movie-web.app</0>. تأكد من تحديث جميع إشاراتك المرجعية لأن <1>الموقع القديم سيتوقف عن العمل بتاريخ {{date}}.</1>",
+        "tireless": "لقد عملنا بلا كلل على هذا التحديث الجديد، ونأمل أن تستمتع بما قمنا بإعداده خلال الأشهر الماضية.",
+        "leaveAnnouncement": "خذني إلى هناك!"
+    },
+    "casting": {
+        "casting": "جارٍ على الجهاز..."
+    },
+    "errors": {
+        "offline": "تحقق من اتصالك بالأنترنت"
+    }
+}

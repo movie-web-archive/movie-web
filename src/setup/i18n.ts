@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 // Languages
 import { captionLanguages } from "./iso6391";
+import ar from "./locales/ar/translation.json";
 import cs from "./locales/cs/translation.json";
 import de from "./locales/de/translation.json";
 import en from "./locales/en/translation.json";
@@ -16,6 +17,9 @@ import vi from "./locales/vi/translation.json";
 import zh from "./locales/zh/translation.json";
 
 const locales = {
+  ar: {
+    translation: ar,
+  },
   en: {
     translation: en,
   },
