@@ -14,6 +14,7 @@ import pl from "./locales/pl/translation.json";
 import tr from "./locales/tr/translation.json";
 import vi from "./locales/vi/translation.json";
 import zh from "./locales/zh/translation.json";
+import ptbr from "./locales/pt-br/translation.json";
 
 const locales = {
   en: {
@@ -48,6 +49,9 @@ const locales = {
   },
   pl: {
     translation: pl,
+  },
+  ptbr: {
+    translation: ptbr,
   },
 };
 i18n
