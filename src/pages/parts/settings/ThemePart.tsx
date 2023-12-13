@@ -21,6 +21,10 @@ const availableThemes = [
     id: "gray",
     key: "settings.appearance.themes.gray",
   },
+  {
+    id: "white",
+    key: "settings.appearance.themes.white",
+  },
 ];
 
 function ThemePreview(props: {

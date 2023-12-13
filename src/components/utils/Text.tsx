@@ -10,7 +10,7 @@ export function Heading1(props: TextProps) {
   return (
     <h1
       className={[
-        "text-3xl lg:text-5xl font-bold text-white mb-9",
+        "text-3xl lg:text-5xl font-bold text mb-9",
         props.border ? borderClass : null,
         props.className ?? "",
       ].join(" ")}
