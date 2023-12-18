@@ -30,7 +30,7 @@
     },
     "trust": {
       "title": "Do you trust this server?",
-      "host": "You are connecting to <0>{{hostname}}</0> - please confirm you trust it before making an account",
+      "host": "You are connecting to a Backend Server - please confirm you trust it before making an account",
       "failed": {
         "title": "Failed to reach server",
         "text": "Did you configure it correctly?"
@@ -62,9 +62,9 @@
     "goHome": "Back to home"
   },
   "global": {
-    "name": "movie-web",
+    "name": "CineXplore",
     "pages": {
-      "pagetitle": "{{title}} - movie-web",
+      "pagetitle": "{{title}} - CineXplore",
       "dmca": "DMCA",
       "settings": "Settings",
       "about": "About",
@@ -186,8 +186,8 @@
       },
       "downloads": {
         "title": "Download",
-        "disclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.",
-        "hlsExplanation": "This media is a HLS stream which cannot be downloaded on movie-web.",
+        "disclaimer": "Downloads are taken directly from the provider. CineXplore does not have control over how the downloads are provided.",
+        "hlsExplanation": "This media is a HLS stream which cannot be downloaded on CineXplore.",
         "downloadVideo": "Download video",
         "downloadCaption": "Download current caption",
         "onPc": {
@@ -269,7 +269,7 @@
     },
     "dmca": {
       "title": "DMCA",
-      "text": "Welcome to movie-web's DMCA contact page! We respect intellectual property rights and want to address any copyright concerns swiftly. If you believe your copyrighted work has been improperly used on our platform, please send a detailed DMCA notice to the email below. Please include a description of the copyrighted material, your contact details, and a statement of good faith belief. We're committed to resolving these matters promptly and appreciate your cooperation in keeping movie-web a place that respects creativity and copyrights."
+      "text": "Welcome to CineXplore's DMCA contact page! We respect intellectual property rights and want to address any copyright concerns swiftly. If you believe your copyrighted work has been improperly used on our platform, please send a detailed DMCA notice to the email below. Please include a description of the copyrighted material, your contact details, and a statement of good faith belief. We're committed to resolving these matters promptly and appreciate your cooperation in keeping CineXplore a place that respects creativity and copyrights."
     }
   },
   "navigation": {
@@ -386,16 +386,16 @@
     }
   },
   "about": {
-    "title": "About movie-web",
-    "description": "movie-web is a web application that searches the internet for streams. The team aims for a mostly minimalistic approach to consuming content.",
+    "title": "About CineXplore",
+    "description": "CineXplore is a web application that searches the internet for streams. The team aims for a mostly minimalistic approach to consuming content.",
     "faqTitle": "Common questions",
     "q1": {
       "title": "Where does the content come from?",
-      "body": "movie-web does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by movie-web, everything is through this searching mechanism."
+      "body": "CineXplore does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by CineXplore, everything is through this searching mechanism."
     },
     "q2": {
       "title": "Where can I request a show or movie?",
-      "body": "It's not possible to request a show or movie, movie-web does not manage any content. All content is viewed through sources on the internet."
+      "body": "It's not possible to request a show or movie, CineXplore does not manage any content. All content is viewed through sources on the internet."
     },
     "q3": {
       "title": "The search results display the show or movie, why can't I play it?",
@@ -411,7 +411,7 @@
     },
     "legal": {
       "disclaimer": "Disclaimer",
-      "disclaimerText": "movie-web does not host any files, it merely links to 3rd party services. Legal issues should be taken up with the file hosts and providers. movie-web is not responsible for any media files shown by the video providers."
+      "disclaimerText": "CineXplore does not host any files, it merely links to 3rd party services. Legal issues should be taken up with the file hosts and providers. CineXplore is not responsible for any media files shown by the video providers."
     }
   }
 }

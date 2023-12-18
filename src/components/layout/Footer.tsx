@@ -73,6 +73,25 @@ export function Footer() {
           </h3>
           <p className="mt-3">{t("footer.legal.disclaimerText")}</p>
         </div>
+        <div className="col-span-1 flex items-center">
+          <div className="flex flex-col">
+            <h3 className="font-semibold text-type-emphasis">
+              Download Our App
+            </h3>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.risfat.cinexplore"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cinexplore.devtech365.com/storage/images/google-play-badge.png"
+                width="300"
+                alt="App Download"
+                className="mr-2"
+              />
+            </a>
+          </div>
+        </div>
         <div className="flex flex-wrap gap-[0.5rem] -ml-3">
           <FooterLink icon={Icons.GITHUB} href={conf().GITHUB_LINK}>
             {t("footer.links.github")}
