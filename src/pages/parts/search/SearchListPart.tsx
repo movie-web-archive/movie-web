@@ -18,7 +18,7 @@ function SearchSuffix(props: { failed?: boolean; results?: number }) {
   const icon: Icons = props.failed ? Icons.WARNING : Icons.EYE_SLASH;
 
   return (
-    <div className="mb-24 mt-40  flex flex-col items-center justify-center space-y-3 text-center">
+    <div className="my-24  flex flex-col items-center justify-center space-y-2 text-center">
       <IconPatch
         icon={icon}
         className={`text-xl ${

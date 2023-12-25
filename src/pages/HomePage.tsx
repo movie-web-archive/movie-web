@@ -40,7 +40,7 @@ export function HomePage() {
 
   return (
     <HomeLayout showBg={showBg}>
-      <div className="mb-16 sm:mb-24">
+      <div>
         <Helmet>
           <title>{t("global.name")}</title>
         </Helmet>

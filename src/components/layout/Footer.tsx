@@ -102,7 +102,9 @@ export function FooterView(props: {
         " ",
       )}
     >
-      <div style={{ flex: "1 0 auto" }}>{props.children}</div>
+      <div className="min-h-[100dvh]" style={{ flex: "1 0 auto" }}>
+        {props.children}
+      </div>
       <Footer />
     </div>
   );
