@@ -1,4 +1,3 @@
-
 <p align="center"><img align="center" width="280" src="./.github/logo-dark.svg#gh-dark-mode-only"/></p>
 <p align="center"><img align="center" width="280" src="./.github/logo-light.svg#gh-light-mode-only"/></p>
 <p align="center">
@@ -7,6 +6,19 @@
   <a href="https://discord.movie-web.app"><kbd>🔵 discord</kbd></a> <a href="https://movie-web.app"><kbd>🟢 website</kbd></a>
 </p>
 <br/><br/>
+
+<div align="center">
+
+**Share Movie-Web App**
+
+[![Share on X](https://img.shields.io/badge/-share%20on%20x-black?style=flat&logo=x&logoColor=white)](https://x.com/intent/tweet?hashtags=MovieWeb%2Cmovies%2Cwatching&text=Check%20out%20this%20awesome%20movie%20web%20app%20%F0%9F%8E%A5%20Movie-Web%20-%20Simplify%20your%20movie%20experience%20easily.%20&url=https%3A%2F%2Fmovie-web.app)
+[![Share on Reddit](https://img.shields.io/badge/-share%20on%20reddit-ff4500?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Discover%20Movie-Web%20-%20An%20intuitive%20platform%20for%20streaming%20movies%20with%20ease.%20%23MovieWeb%20%23movies%20%23watching&url=https%3A%2F%2Fmovie-web.app)
+[![Share on Telegram](https://img.shields.io/badge/-share%20on%20telegram-0088cc?style=flat&logo=telegram&logoColor=white)](https://t.me/share/url"?text=Check%20out%20this%20awesome%20movie%20web%20app%20%F0%9F%8E%A5%20Movie-Web%20-%20Simplify%20your%20movie%20experience%20easily.%20%23MovieWeb%20%23movies%20%23watching&url=https%3A%2F%2Fmovie-web.app)
+[![Share on WhatsApp](https://img.shields.io/badge/-share%20on%20whatsapp-128c7e?style=flat&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?text=Discover%20Movie-Web%20-%20An%20amazing%20web%20app%20for%20effortless%20movie%20watching.%20https%3A%2F%2Fmovie-web.app%20%23MovieWeb%20%23movies%20%23watching)
+[![Share on Mastodon](https://img.shields.io/badge/-share%20on%20mastodon-5c4ee8?style=flat&logo=mastodon&logoColor=white)](https://mastodon.social/share?text=Check%20out%20this%20awesome%20movie%20web%20app%20%F0%9F%8E%A5%20Movie-Web%20-%20Simplify%20your%20movie%20experience%20easily.%20https%3A%2F%2Fmovie-web.app%20%23MovieWeb%20%23movies%20%23watching)
+[![Share on LinkedIn](https://img.shields.io/badge/-share%20on%20linkedin-0077b5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/feed)
+
+</div>
 
 # ⚡What is movie-web?
 
@@ -38,6 +50,7 @@ Content is fetched from third parties and scraping is done fully done on the cli
 # 🧬 Running locally for development
 
 To run locally, you must first clone the repository. After that run the following commands in the root of the repository:
+
 ```bash
 pnpm install
 pnpm run dev
@@ -46,6 +59,7 @@ pnpm run dev
 You have to also make an `.env` file to configure your environment. Inspire it from the content of `example.env`.
 
 To build production files, run:
+
 ```bash
 pnpm build
 ```
@@ -57,9 +71,8 @@ pnpm build
 
 A simple guide has been written to assist in hosting your own instance of movie-web. Check it out below
 
-|[Selfhosting guide](https://docs.movie-web.app)|
-|---|
-
+| [Selfhosting guide](https://docs.movie-web.app) |
+| ----------------------------------------------- |
 
 # 🤝 Contributors
 
