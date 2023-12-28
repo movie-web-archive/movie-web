@@ -43,6 +43,7 @@ export function DownloadView({ id }: { id: string }) {
   const { t } = useTranslation();
   const downloadUrl = useDownloadLink();
 
+  const tmdbId = usePlayerStore((s) => s.meta?.tmdbId);
   const sourceType = usePlayerStore((s) => s.source?.type);
   const selectedCaption = usePlayerStore((s) => s.caption?.selected);
   const subtitleUrl = useMemo(
@@ -68,7 +69,12 @@ export function DownloadView({ id }: { id: string }) {
                 <StyleTrans k="player.menus.downloads.hlsDisclaimer" />
               </Menu.Paragraph>
 
-              <Button className="w-full" href={downloadUrl} theme="purple">
+              <Button
+                className="w-full"
+                href={downloadUrl}
+                theme="purple"
+                download={`playlist-${tmdbId}.m3u8`}
+              >
                 {t("player.menus.downloads.downloadPlaylist")}
               </Button>
               <Button
