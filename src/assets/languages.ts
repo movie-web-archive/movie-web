@@ -13,6 +13,7 @@ import ne from "@/assets/locales/ne.json";
 import nl from "@/assets/locales/nl.json";
 import pirate from "@/assets/locales/pirate.json";
 import pl from "@/assets/locales/pl.json";
+import ptBR from "@/assets/locales/pt-BR.json";
 import sv from "@/assets/locales/sv.json";
 import th from "@/assets/locales/th.json";
 import tok from "@/assets/locales/tok.json";
@@ -21,28 +22,30 @@ import vi from "@/assets/locales/vi.json";
 import zh from "@/assets/locales/zh.json";
 
 export const locales = {
-  en,
-  cs,
-  de,
-  fr,
-  it,
-  nl,
-  pl,
-  tr,
-  vi,
-  zh,
-  he,
-  sv,
+  "en-US": en,
+  "cs-CZ": cs,
+  "de-DE": de,
+  "fr-FR": fr,
+  "pt-BR": ptBR,
+  "it-IT": it,
+  "nl-NL": nl,
+  "pl-PL": pl,
+  "tr-TR": tr,
+  "vi-VN": vi,
+  "zh-CN": zh,
+  "he-IL": he,
+  "sv-SE": sv,
   pirate,
   minion,
-  lv,
-  th,
-  ne,
-  ar,
-  es,
-  et,
+  "lv-LV": lv,
+  "th-TH": th,
+  "ne-NP": ne,
+  "ar-SA": ar,
+  "es-ES": es,
+  "et-EE": et,
   tok,
 };
+
 export type Locales = keyof typeof locales;
 
-export const rtlLocales: Locales[] = ["he", "ar"];
+export const rtlLocales: Locales[] = ["he-IL", "ar-SA"];

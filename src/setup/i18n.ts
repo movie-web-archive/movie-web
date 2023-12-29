@@ -1,5 +1,5 @@
 import i18n from "i18next";
-import ISO6391 from "iso-639-1";
+import localeCode from "locale-code";
 import { initReactI18next } from "react-i18next";
 
 import { locales } from "@/assets/languages";
@@ -42,11 +42,22 @@ const extraLanguages: Record<
   },
 };
 
-export const appLanguageOptions = langCodes.map((lang) => {
+type LanguageOption = {
+  code: string;
+  name: string;
+  nativeName: string;
+};
+
+export const appLanguageOptions: LanguageOption[] = langCodes.map((lang) => {
   const extraLang = extraLanguages[lang];
   if (extraLang) return extraLang;
 
-  const [langObj] = ISO6391.getLanguages([lang]);
+  const langObj: LanguageOption = {
+    code: lang,
+    name: localeCode.getLanguageName(lang),
+    nativeName: localeCode.getLanguageNativeName(lang),
+  };
+
   if (!langObj)
     throw new Error(`Language with code ${lang} cannot be found in database`);
   return langObj;
