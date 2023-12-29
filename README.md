@@ -37,7 +37,24 @@ Content is fetched from third parties and scraping is fully done on the client. 
 
 # 🧬 Running locally for development
 
-To run locally, you must first clone the repository. After that run the following commands in the root of the repository:
+links to download required tools
+- [node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [pnpm](https://pnpm.js.org/)
+- [git](https://git-scm.com/)
+
+
+To run locally, you must first clone the repository (make sure you have git installed on your system):
+```bash
+git clone https://github.com/movie-web/movie-web
+```
+
+install pnpm on your system by using the following command (make sure you have npm installed on your system):
+```bash
+npm install -g pnpm
+```
+
+After that run the following commands in the root of the repository:
 ```bash
 pnpm install
 pnpm run dev
@@ -49,9 +66,6 @@ To build production files, run:
 ```bash
 pnpm build
 ```
-
-> [!TIP]
-> You must use pnpm (`npm i -g pnpm`) and run NodeJS 20
 
 # 🥔 Selfhosting
 
