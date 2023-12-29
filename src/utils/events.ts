@@ -23,10 +23,12 @@ export function makeEmitter<T extends EventMap>(): Emitter<T> {
       if (!listeners[eventName]) listeners[eventName] = [];
       listeners[eventName]?.push(fn);
     },
+    
     off(eventName, fn) {
       listeners[eventName] =
         listeners[eventName]?.filter((v) => v !== fn) ?? [];
     },
+    
     emit(eventName, params) {
       (listeners[eventName] ?? []).forEach((fn) => fn(params));
     },
