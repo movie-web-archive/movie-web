@@ -35,6 +35,10 @@ Content is fetched from third parties and scraping is fully done on the client. 
 - To keep it cheap to host, amount of proxied requests need to be kept to a minimum
 - Also to keep it cheap, no content must ever be streamed through the proxy. So only streams not protected by CORS headers.
 
+# 📋 Requirements for running locally
+- If you don't have `pnpm` installed, you can follow the [instructions here](https://pnpm.io/installation).
+- You also need to [install NodeJS](https://nodejs.org/en/download).
+
 # 🧬 Running locally for development
 
 To run locally, you must first clone the repository. After that run the following commands in the root of the repository:
