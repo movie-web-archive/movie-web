@@ -19,6 +19,11 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
 
     function setSearch(value: string) {
       props.onChange(value, false);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
     }
 
     return (
