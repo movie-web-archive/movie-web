@@ -115,15 +115,11 @@
       },
       "morning": {
         "default": "tenpo sin ni la sina wile lukin e seme?",
-        "extra": [
-          "ken la sitelen Before Sunrise li pona"
-        ]
+        "extra": ["ken la sitelen Before Sunrise li pona"]
       },
       "night": {
         "default": "tenpo pimeja ni la sina wile lukin e seme?",
-        "extra": [
-          "sina pilin lape anu seme? o alasa lukin e sitelen Exorcist"
-        ]
+        "extra": ["sina pilin lape anu seme? o alasa lukin e sitelen Exorcist"]
       }
     }
   },
@@ -336,7 +332,8 @@
         "default": "sama",
         "gray": "pimeja",
         "red": "loje",
-        "teal": "laso walo"
+        "teal": "laso walo",
+        "orange": "loje jelo"
       },
       "title": "kule"
     },

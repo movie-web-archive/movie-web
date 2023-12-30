@@ -124,15 +124,11 @@
       },
       "morning": {
         "default": "Que voulez-vous regarder ce matin ?",
-        "extra": [
-          "J'ai entendu dire que Before Sunrise était un bon film"
-        ]
+        "extra": ["J'ai entendu dire que Before Sunrise était un bon film"]
       },
       "night": {
         "default": "Que voulez-vous regarder ce soir ?",
-        "extra": [
-          "Fatigué ? J'ai entendu dire que L'Exorciste était bien."
-        ]
+        "extra": ["Fatigué ? J'ai entendu dire que L'Exorciste était bien."]
       }
     }
   },
@@ -370,7 +366,8 @@
         "default": "Défaut",
         "gray": "Gris",
         "red": "Rouge",
-        "teal": "Saphir"
+        "teal": "Saphir",
+        "orange": "Orange-rouge"
       },
       "title": "Apparence"
     },

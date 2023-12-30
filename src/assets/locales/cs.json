@@ -124,15 +124,11 @@
       },
       "morning": {
         "default": "Na co byste se chtěli dnes ráno dívat?",
-        "extra": [
-          "Slyšel jsem, že Před úsvitem je super."
-        ]
+        "extra": ["Slyšel jsem, že Před úsvitem je super."]
       },
       "night": {
         "default": "Na co byste se chtěli dnes večer dívat?",
-        "extra": [
-          "Unaven? Slyšel jsem, že Vymítač ďábla je super."
-        ]
+        "extra": ["Unaven? Slyšel jsem, že Vymítač ďábla je super."]
       }
     }
   },
@@ -370,7 +366,8 @@
         "default": "Výchozí",
         "gray": "Šedá",
         "red": "Červená",
-        "teal": "Modrozelená"
+        "teal": "Modrozelená",
+        "orange": "oranžovo-červená"
       },
       "title": "Vzhled"
     },

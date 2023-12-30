@@ -123,15 +123,11 @@
       },
       "morning": {
         "default": "Vad vill du titta på den här morgonen?",
-        "extra": [
-          "Jag hör att Before Sunrise är bra"
-        ]
+        "extra": ["Jag hör att Before Sunrise är bra"]
       },
       "night": {
         "default": "Vad vill du titta på ikväll?",
-        "extra": [
-          "Trött? Jag hör att The Exorcist är bra."
-        ]
+        "extra": ["Trött? Jag hör att The Exorcist är bra."]
       }
     }
   },
@@ -352,7 +348,8 @@
         "default": "Standard",
         "gray": "Grå",
         "red": "Röd",
-        "teal": "Blågrön"
+        "teal": "Blågrön",
+        "orange-red": "Orange-röd"
       },
       "title": "Utseende"
     },

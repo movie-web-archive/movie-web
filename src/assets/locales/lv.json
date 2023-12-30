@@ -123,15 +123,11 @@
       },
       "morning": {
         "default": "Ko tu gribētu šorīt noskatīties?",
-        "extra": [
-          "Es dzirdu, ka Pirms saullēkta ir labs"
-        ]
+        "extra": ["Es dzirdu, ka Pirms saullēkta ir labs"]
       },
       "night": {
         "default": "Ko tu gribētu šovakar skatīties?",
-        "extra": [
-          "Noguris? Es dzirdu, ka Exorcist ir labs."
-        ]
+        "extra": ["Noguris? Es dzirdu, ka Exorcist ir labs."]
       }
     }
   },
@@ -352,7 +348,8 @@
         "default": "Parasts",
         "gray": "Pelēks",
         "red": "Sarkans",
-        "teal": "zilganzaļš"
+        "teal": "zilganzaļš",
+        "orange": "Oranžs Sarkans"
       },
       "title": "Izskats"
     },

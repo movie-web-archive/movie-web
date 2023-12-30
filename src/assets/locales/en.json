@@ -120,10 +120,7 @@
     },
     "titles": {
       "day": {
-        "default": "What would you like to watch this afternoon?",
-        "extra": [
-          "Feeling adventurous? Jurassic Park might be the perfect choice."
-        ]
+        "default": "What would you like to watch this afternoon?"
       },
       "morning": {
         "default": "What would you like to watch this morning?",
@@ -369,7 +366,8 @@
         "default": "Default",
         "gray": "Gray",
         "red": "Red",
-        "teal": "Teal"
+        "teal": "Teal",
+        "orange": "orange-red"
       },
       "title": "Appearance"
     },

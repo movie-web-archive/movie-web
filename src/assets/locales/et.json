@@ -124,15 +124,11 @@
       },
       "morning": {
         "default": "Mida te soovite täna hommikul vaadata?",
-        "extra": [
-          "Ma kuulsin, et Before Sunrise on hea"
-        ]
+        "extra": ["Ma kuulsin, et Before Sunrise on hea"]
       },
       "night": {
         "default": "Mida te soovite täna õhtul vaadata?",
-        "extra": [
-          "Väsinud? Olen kuulnud, et The Exorcist on hea."
-        ]
+        "extra": ["Väsinud? Olen kuulnud, et The Exorcist on hea."]
       }
     }
   },
@@ -370,7 +366,8 @@
         "default": "Vaikimisi",
         "gray": "Hall",
         "red": "Punane",
-        "teal": "Tumesinine"
+        "teal": "Tumesinine",
+        "orange": "Oranž-punane"
       },
       "title": "Välimus"
     },

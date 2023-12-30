@@ -124,15 +124,11 @@
       },
       "morning": {
         "default": "Cosa vorresti vedere questa mattina?",
-        "extra": [
-          "Ho sentito che «Prima Dell'alba» è buono"
-        ]
+        "extra": ["Ho sentito che «Prima Dell'alba» è buono"]
       },
       "night": {
         "default": "Cosa vorresti vedere questa stasera?",
-        "extra": [
-          "Stanco? Ho sentito che L'esorciccio è buono."
-        ]
+        "extra": ["Stanco? Ho sentito che L'esorciccio è buono."]
       }
     }
   },
@@ -370,7 +366,8 @@
         "default": "Predefinito",
         "gray": "Grigio",
         "red": "Rosso",
-        "teal": "Verde acqua"
+        "teal": "Verde acqua",
+        "orange": "Arancione rosso"
       },
       "title": "Aspetto"
     },

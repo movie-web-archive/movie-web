@@ -123,15 +123,11 @@
       },
       "morning": {
         "default": "What would you like to banana this banana?",
-        "extra": [
-          "Banana! I hear Banana Sunrise is banana"
-        ]
+        "extra": ["Banana! I hear Banana Sunrise is banana"]
       },
       "night": {
         "default": "What would you like to banana banana?",
-        "extra": [
-          "Banana? I hear The Banana is banana."
-        ]
+        "extra": ["Banana? I hear The Banana is banana."]
       }
     }
   },
@@ -348,7 +344,8 @@
         "default": "Banana",
         "gray": "Banana",
         "red": "Banana",
-        "teal": "Banana"
+        "teal": "Banana",
+        "orange": "Banana"
       },
       "title": "Banana"
     },
