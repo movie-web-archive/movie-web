@@ -37,21 +37,41 @@ Content is fetched from third parties and scraping is fully done on the client. 
 
 # 🧬 Running locally for development
 
-To run locally, you must first clone the repository. After that run the following commands in the root of the repository:
-```bash
-pnpm install
-pnpm run dev
-```
+To ensure a consistent development environment, we recommend using Node Version Manager (NVM) along with the specified Node.js version. Follow these steps to set up your local environment:
 
-You have to also make an `.env` file to configure your environment. Inspire it from the content of `example.env`.
+1. **Install NVM:**
+   - If you don't have NVM installed, follow the instructions [here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) to install it.
 
-To build production files, run:
-```bash
-pnpm build
-```
+2. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+3. **Use the Recommended Node.js Version:**
+   Run the following command to automatically switch to the recommended Node.js version specified in the `.nvmrc` file:
+   ```bash
+   nvm use
+   ```
+
+4. **Install Dependencies and Run Development Server:**
+   ```bash
+   pnpm install
+   pnpm run dev
+   ```
+
+5. **Configure Your Environment:**
+   Create an `.env` file by using the content of `example.env` as a template. Customize the values according to your needs.
+
+6. **Build Production Files:**
+   To build production files, run:
+   ```bash
+   pnpm build
+   ```
 
 > [!TIP]
-> You must use pnpm (`npm i -g pnpm`) and run NodeJS 20
+> Make sure you have pnpm installed (`npm i -g pnpm`) and use Node.js version 20 by following the steps above.
+
 
 # 🥔 Selfhosting
 
