@@ -1,6 +1,104 @@
 {
+  "about": {
+    "description": "movie-web là một ứng dụng web tìm kiếm các luồng trên internet. Nhóm chúng tôi hướng đến một cách tiếp cận tối giản hóa nội dung.",
+    "faqTitle": "Câu hỏi thường gặp",
+    "q1": {
+      "body": "movie-web không lưu trữ bất kỳ nội dung nào. Khi bạn nhấp vào một thứ để xem, internet sẽ được tìm kiếm cho phương tiện đã chọn (Trên màn hình tải và trong tab 'nguồn video' bạn có thể thấy bạn đang sử dụng nguồn nào). Phương tiện không bao giờ được tải lên bởi movie-web, mọi thứ đều thông qua cơ chế tìm kiếm này.",
+      "title": "Nội dung đến từ đâu?"
+    },
+    "q2": {
+      "body": "Không thể yêu cầu một chương trình hoặc phim, movie-web không quản lý bất kỳ nội dung nào. Tất cả nội dung đều được xem qua các nguồn trên internet.",
+      "title": "Tôi có thể yêu cầu chương trình hoặc phim ở đâu?"
+    },
+    "q3": {
+      "body": "Kết quả tìm kiếm của chúng tôi được cung cấp bởi Cơ sở dữ liệu phim (TMDB) và hiển thị bất kể nguồn của chúng tôi có nội dung đó hay không.",
+      "title": "Kết quả tìm kiếm hiển thị chương trình hoặc phim, tại sao tôi không thể phát nó?"
+    },
+    "title": "Về movie-web"
+  },
+  "actions": {
+    "copied": "Đã sao chép",
+    "copy": "Sao chép"
+  },
+  "auth": {
+    "createAccount": "Chưa có tài khoản? <0>Tạo một tài khoản.</0>",
+    "deviceNameLabel": "Tên thiết bị",
+    "deviceNamePlaceholder": "Điện thoại cá nhân",
+    "generate": {
+      "description": "Cụm từ bí mật của bạn hoạt động như tên người dùng và mật khẩu của bạn. Hãy đảm bảo giữ nó an toàn vì bạn sẽ cần nhập nó để đăng nhập vào tài khoản của mình",
+      "next": "Tôi đã lưu cụm từ bí mật của tôi",
+      "passphraseFrameLabel": "Cụm từ bí mật",
+      "title": "Cụm từ bí mật của bạn"
+    },
+    "hasAccount": "Đã có tài khoản? <0>Đăng nhập tại đây.</0>",
+    "login": {
+      "description": "Vui lòng nhập cụm từ bí mật của bạn để đăng nhập vào tài khoản của bạn",
+      "deviceLengthError": "Vui lòng nhập tên thiết bị",
+      "passphraseLabel": "Cụm từ bí mật 12 từ",
+      "passphrasePlaceholder": "Cụm từ bí mật",
+      "submit": "Đăng nhập",
+      "title": "Đăng nhập vào tài khoản của bạn",
+      "validationError": "Cụm từ bí mật không chính xác hoặc không đầy đủ"
+    },
+    "register": {
+      "information": {
+        "color1": "Màu hồ sơ một",
+        "color2": "Màu hồ sơ hai",
+        "header": "Nhập tên cho thiết bị của bạn và chọn màu sắc và biểu tượng người dùng theo sở thích của bạn",
+        "icon": "Biểu tượng người dùng",
+        "next": "Tiếp theo",
+        "title": "Thông tin tài khoản"
+      }
+    },
+    "trust": {
+      "failed": {
+        "text": "Bạn đã cấu hình đúng chưa?",
+        "title": "Không thể kết nối với máy chủ"
+      },
+      "host": "Bạn đang kết nối đến <0>{{hostname}}</0> - vui lòng xác nhận bạn tin tưởng nó trước khi tạo một tài khoản",
+      "no": "Quay lại",
+      "title": "Bạn có tin tưởng máy chủ này không?",
+      "yes": "Tôi tin tưởng máy chủ này"
+    },
+    "verify": {
+      "description": "Vui lòng nhập cụm từ bí mật từ trước để xác nhận bạn đã lưu nó và để tạo tài khoản của bạn",
+      "invalidData": "Dữ liệu không hợp lệ",
+      "noMatch": "Cụm từ bí mật không khớp",
+      "passphraseLabel": "Cụm từ bí mật 12 từ của bạn",
+      "recaptchaFailed": "Xác thực ReCaptcha thất bại",
+      "register": "Tạo tài khoản",
+      "title": "Xác nhận cụm từ bí mật của bạn"
+    }
+  },
+  "errors": {
+    "badge": "Nó đã hỏng",
+    "details": "Chi tiết lỗi",
+    "reloadPage": "Tải lại trang",
+    "showError": "Hiển thị chi tiết lỗi",
+    "title": "Chúng tôi đã gặp một lỗi!"
+  },
+  "footer": {
+    "legal": {
+      "disclaimer": "Từ chối trách nhiệm",
+      "disclaimerText": "movie-web không lưu trữ bất kỳ tệp nào, nó chỉ liên kết đến các dịch vụ của bên thứ ba. Các vấn đề pháp lý nên được giải quyết với các máy chủ tệp và nhà cung cấp. movie-web không chịu trách nhiệm về bất kỳ tệp phương tiện nào được hiển thị bởi các nhà cung cấp video."
+    },
+    "links": {
+      "discord": "Discord",
+      "dmca": "DMCA",
+      "github": "GitHub"
+    },
+    "tagline": "Xem các chương trình và phim yêu thích của bạn với ứng dụng phát trực tuyến mã nguồn mở này."
+  },
   "global": {
-    "name": "movie-web"
+    "name": "movie-web",
+    "pages": {
+      "about": "Về",
+      "dmca": "DMCA",
+      "login": "Đăng nhập",
+      "pagetitle": "{{title}} - movie-web",
+      "register": "Đăng ký",
+      "settings": "Cài đặt"
+    }
   },
   "home": {
     "bookmarks": {
@@ -9,58 +107,321 @@
     "continueWatching": {
       "sectionTitle": "Tiếp tục xem"
     },
+    "mediaList": {
+      "stopEditing": "Dừng chỉnh sửa"
+    },
     "search": {
-      "allResults": "Đó là tất cả chúng tôi có!",
-      "failed": "Không thể tìm thấy nội dung, hãy thử lại!",
+      "allResults": "Đó là tất cả những gì chúng tôi có!",
+      "failed": "Không tìm thấy phương tiện, hãy thử lại!",
       "loading": "Đang tải...",
-      "noResults": "Chúng tôi không thể tìm thấy gì!",
+      "noResults": "Chúng tôi không thể tìm thấy bất cứ thứ gì!",
       "placeholder": "Bạn muốn xem gì?",
       "sectionTitle": "Kết quả tìm kiếm"
-    }
-  },
-  "media": {
-    "episodeDisplay": "M{{season}} T{{episode}}",
-    "types": {
-      "movie": "Phim",
-      "show": "Chương trình truyền hình"
-    }
-  },
-  "navigation": {
-    "banner": {
-      "offline": "Hãy kiểm tra kết nối Internet của bạn"
-    }
-  },
-  "notFound": {
-    "badge": "Không tìm thấy",
-    "goHome": "Quay lại trang chính",
-    "message": "Chúng tôi đã tìm kiếm khắp nơi: dưới thùng rác, trong tủ quần áo, đằng sau máy chủ proxy nhưng vẫn không thể tìm thấy trang bạn đang tìm kiếm.",
-    "title": "Không thể tìm thấy trang"
-  },
-  "player": {
-    "back": {
-      "default": "Quay lại trang chính",
-      "short": "Quay lại"
     },
-    "menus": {
-      "episodes": {
-        "button": "Tập",
-        "loadingList": "Đang tải...",
-        "loadingTitle": "Đang tải..."
+    "titles": {
+      "day": {
+        "default": "Bạn muốn xem gì vào chiều nay?",
+        "extra": [
+          "Cảm thấy mạo hiểm? Jurassic Park có thể là lựa chọn hoàn hảo."
+        ]
       },
-      "sources": {
-        "title": "Nguồn"
+      "morning": {
+        "default": "Bạn muốn xem gì vào buổi sáng nay?",
+        "extra": [
+          "Tôi nghe nói Before Sunrise khá hay"
+        ]
+      },
+      "night": {
+        "default": "Bạn muốn xem gì vào tối nay?",
+        "extra": [
+          "Mệt mỏi? Tôi nghe nói The Exorcist khá hay."
+        ]
       }
     },
-    "metadata": {
-      "notFound": {
-        "badge": "Không tìm thấy",
-        "homeButton": "Quay lại trang chính",
-        "text": "Chúng tôi không thể tìm thấy nội dung mà bạn yêu cầu. Hoặc là nó đã bị xóa, hoặc bạn đã xáo trộn URL.",
-        "title": "Không thể tìm thấy nội dung."
+    "media": {
+      "episodeDisplay": "S{{season}} E{{episode}}",
+      "types": {
+        "movie": "Phim",
+        "show": "Chương trình"
       }
     },
-    "playbackError": {
-      "title": "Rất tiếc, đã hỏng!"
+    "navigation": {
+      "banner": {
+        "offline": "Kiểm tra kết nối internet của bạn"
+      },
+      "menu": {
+        "about": "Về chúng tôi",
+        "donation": "Quyên góp",
+        "logout": "Đăng xuất",
+        "register": "Đồng bộ hóa với đám mây",
+        "settings": "Cài đặt",
+        "support": "Hỗ trợ"
+      }
+    },
+    "notFound": {
+      "badge": "Không tìm thấy",
+      "goHome": "Quay lại trang chủ",
+      "message": "Chúng tôi đã tìm mọi nơi: dưới thùng rác, trong tủ, sau proxy nhưng cuối cùng không thể tìm thấy trang bạn đang tìm kiếm.",
+      "title": "Không thể tìm thấy trang"
+    },
+    "overlays": {
+      "close": "Đóng"
+    },
+    "player": {
+      "back": {
+        "default": "Quay lại trang chủ",
+        "short": "Quay lại"
+      },
+      "casting": {
+        "enabled": "Đang phát đến thiết bị..."
+      },
+      "menus": {
+        "settings": {
+          "videoSection": "Cài đặt video",
+          "experienceSection": "Trải nghiệm xem",
+          "enableSubtitles": "Bật phụ đề",
+          "subtitleItem": "Cài đặt phụ đề",
+          "sourceItem": "Nguồn video",
+          "playbackItem": "Cài đặt phát lại",
+          "downloadItem": "Tải xuống",
+          "qualityItem": "Chất lượng"
+        },
+        "episodes": {
+          "button": "Tập phim",
+          "loadingTitle": "Đang tải...",
+          "loadingList": "Đang tải...",
+          "loadingError": "Lỗi khi tải mùa",
+          "emptyState": "Không có tập phim nào trong mùa này, hãy kiểm tra lại sau!",
+          "episodeBadge": "E{{episode}}"
+        },
+        "sources": {
+          "title": "Nguồn",
+          "unknownOption": "Không rõ",
+          "noStream": {
+            "title": "Không có luồng",
+            "text": "Nguồn này không có luồng cho phim hoặc chương trình này."
+          },
+          "noEmbeds": {
+            "title": "Không tìm thấy embed",
+            "text": "Chúng tôi không thể tìm thấy bất kỳ embed nào, vui lòng thử một nguồn khác."
+          },
+          "failed": {
+            "title": "Không thể scrape",
+            "text": "Có lỗi khi cố gắng tìm bất kỳ video nào, vui lòng thử một nguồn khác."
+          }
+        },
+        "subtitles": {
+          "title": "Phụ đề",
+          "customizeLabel": "Tùy chỉnh",
+          "settings": {
+            "fixCapitals": "Sửa chữ hoa",
+            "delay": "Trễ phụ đề",
+            "backlink": "Phụ đề tùy chỉnh"
+          },
+          "customChoice": "Chọn phụ đề từ tệp",
+          "offChoice": "Tắt",
+          "unknownLanguage": "Không rõ"
+        },
+        "downloads": {
+          "disclaimer": "Các tải xuống được lấy trực tiếp từ nhà cung cấp. movie-web không kiểm soát cách cung cấp các tải xuống.",
+          "downloadSubtitle": "Tải xuống phụ đề hiện tại",
+          "downloadPlaylist": "Tải xuống danh sách phát",
+          "downloadVideo": "Tải xuống video",
+          "hlsDisclaimer": "Các tải xuống được lấy trực tiếp từ nhà cung cấp. movie-web không kiểm soát cách cung cấp các tải xuống. Xin lưu ý rằng bạn đang tải xuống một danh sách phát HLS, điều này dành cho người dùng quen thuộc với việc phát trực tuyến đa phương tiện nâng cao.",
+          "onAndroid": {
+            "1": "Để tải xuống trên Android, nhấp vào nút tải xuống sau đó, trên trang mới, <bold>nhấn và giữ</bold> trên video, sau đó chọn <bold>lưu</bold>.",
+            "shortTitle": "Tải xuống / Android",
+            "title": "Tải xuống trên Android"
+          },
+          "onIos": {
+            "1": "Để tải xuống trên iOS, nhấp vào nút tải xuống sau đó, trên trang mới, nhấp <bold><ios_share /></bold>, sau đó <bold>Lưu vào Tệp <ios_files /></bold>.",
+            "shortTitle": "Tải xuống / iOS",
+            "title": "Tải xuống trên iOS"
+          },
+          "onPc": {
+            "1": "Trên PC, nhấp vào nút tải xuống sau đó, trên trang mới, nhấp chuột phải vào video và chọn <bold>Lưu video dưới dạng</bold>",
+            "shortTitle": "Tải xuống / PC",
+            "title": "Tải xuống trên PC"
+          },
+          "title": "Tải xuống"
+        },
+        "playback": {
+          "speedLabel": "Tốc độ phát lại",
+          "title": "Cài đặt phát lại"
+        },
+        "quality": {
+          "automaticLabel": "Chất lượng tự động",
+          "hint": "Bạn có thể thử <0>chuyển đổi nguồn</0> để có các tùy chọn chất lượng khác nhau.",
+          "iosNoQuality": "Do các hạn chế được định rõ bởi Apple, việc chọn chất lượng không khả dụng trên iOS cho nguồn này. Bạn có thể thử <0>chuyển đổi sang một nguồn khác</0> để có các tùy chọn chất lượng khác nhau.",
+          "title": "Chất lượng"
+        }
+      },
+      "metadata": {
+        "failed": {
+          "badge": "Thất bại",
+          "homeButton": "Quay về trang chủ",
+          "text": "Không thể tải metadata của phương tiện từ TMDB. Vui lòng kiểm tra xem TMDB có bị hỏng hoặc bị chặn trên kết nối internet của bạn không.",
+          "title": "Không thể tải metadata"
+        },
+        "notFound": {
+          "badge": "Không tìm thấy",
+          "detailsButton": "Hiển thị chi tiết",
+          "homeButton": "Quay lại trang chủ",
+          "text": "Chúng tôi không thể tìm thấy phương tiện bạn yêu cầu. Hoặc nó đã bị xóa hoặc bạn đã can thiệp vào URL.",
+          "title": "Không thể tìm thấy phương tiện."
+        },
+        "nextEpisode": {
+          "cancel": "Hủy",
+          "next": "Tập tiếp theo"
+        },
+        "playbackError": {
+          "badge": "Lỗi phát lại",
+          "errors": {
+            "errorAborted": "Việc tìm kiếm phương tiện đã bị hủy bởi yêu cầu của người dùng.",
+            "errorDecode": "Mặc dù trước đó đã được xác định là có thể sử dụng, đã xảy ra lỗi trong khi cố giải mã nguồn phương tiện, dẫn đến lỗi.",
+            "errorGenericMedia": "Đã xảy ra lỗi phương tiện không rõ.",
+            "errorNetwork": "Đã xảy ra một loại lỗi mạng nào đó đã ngăn chặn việc tìm kiếm thành công phương tiện, mặc dù trước đó đã có sẵn.",
+            "errorNotSupported": "Phương tiện hoặc đối tượng nhà cung cấp phương tiện không được hỗ trợ."
+          },
+          "homeButton": "Quay về trang chủ",
+          "text": "Đã xảy ra lỗi khi cố gắng phát phương tiện. Vui lòng thử lại.",
+          "title": "Không thể phát video!"
+        },
+        "scraping": {
+          "items": {
+            "failure": "Đã xảy ra lỗi",
+            "notFound": "Không có video",
+            "pending": "Đang kiểm tra video..."
+          },
+          "notFound": {
+            "badge": "Không tìm thấy",
+            "detailsButton": "Hiển thị chi tiết",
+            "homeButton": "Quay lại trang chủ",
+            "text": "Chúng tôi đã tìm kiếm qua các nhà cung cấp của chúng tôi và không thể tìm thấy phương tiện bạn đang tìm kiếm! Chúng tôi không lưu trữ phương tiện và không kiểm soát những gì có sẵn. Vui lòng nhấp 'Hiển thị chi tiết' bên dưới để biết thêm chi tiết.",
+            "title": "Chúng tôi không thể tìm thấy điều đó"
+          }
+        },
+        "time": {
+          "regular": "{{timeWatched}} / {{duration}}",
+          "remaining": "{{timeLeft}} còn lại • Kết thúc lúc {{timeFinished, datetime}}",
+          "shortRegular": "{{timeWatched}}",
+          "shortRemaining": "-{{timeLeft}}"
+        },
+        "screens": {
+          "dmca": {
+            "text": "Chào mừng bạn đến với trang liên hệ DMCA của movie-web! Chúng tôi tôn trọng quyền sở hữu trí tuệ và muốn giải quyết mọi vấn đề về bản quyền một cách nhanh chóng. Nếu bạn tin rằng tác phẩm bản quyền của bạn đã bị sử dụng không đúng cách trên nền tảng của chúng tôi, vui lòng gửi thông báo DMCA chi tiết đến email dưới đây. Vui lòng bao gồm mô tả về tài liệu bản quyền, thông tin liên hệ của bạn và tuyên bố về niềm tin tốt. Chúng tôi cam kết giải quyết những vấn đề này một cách nhanh chóng và đánh giá cao sự hợp tác của bạn trong việc giữ movie-web là một nơi tôn trọng sự sáng tạo và bản quyền.",
+            "title": "DMCA"
+          },
+          "loadingApp": "Đang tải ứng dụng",
+          "loadingUser": "Đang tải hồ sơ của bạn",
+          "loadingUserError": {
+            "logout": "Đăng xuất",
+            "reset": "Đặt lại máy chủ tùy chỉnh",
+            "text": "Không thể tải hồ sơ của bạn",
+            "textWithReset": "Không thể tải hồ sơ của bạn từ máy chủ tùy chỉnh của bạn, bạn muốn đặt lại về máy chủ mặc định không?"
+          },
+          "migration": {
+            "failed": "Không thể di chuyển dữ liệu của bạn.",
+            "inProgress": "Vui lòng chờ, chúng tôi đang di chuyển dữ liệu của bạn. Điều này sẽ không mất nhiều thời gian."
+          }
+        },
+        "settings": {
+          "account": {
+            "accountDetails": {
+              "deviceNameLabel": "Tên thiết bị",
+              "deviceNamePlaceholder": "Điện thoại cá nhân",
+              "editProfile": "Chỉnh sửa",
+              "logoutButton": "Đăng xuất"
+            },
+            "actions": {
+              "delete": {
+                "button": "Xóa tài khoản",
+                "confirmButton": "Xóa tài khoản",
+                "confirmDescription": "Bạn có chắc chắn muốn xóa tài khoản của bạn không? Tất cả dữ liệu của bạn sẽ bị mất!",
+                "confirmTitle": "Bạn có chắc chắn không?",
+                "text": "Hành động này không thể đảo ngược. Tất cả dữ liệu sẽ bị xóa và không có gì có thể được khôi phục.",
+                "title": "Xóa tài khoản"
+              },
+              "title": "Hành động"
+            },
+            "devices": {
+              "deviceNameLabel": "Tên thiết bị",
+              "failed": "Không thể tải phiên",
+              "removeDevice": "Loại bỏ",
+              "title": "Thiết bị"
+            },
+            "profile": {
+              "finish": "Hoàn thành chỉnh sửa",
+              "firstColor": "Màu hồ sơ một",
+              "secondColor": "Màu hồ sơ hai",
+              "title": "Chỉnh sửa hình ảnh hồ sơ",
+              "userIcon": "Biểu tượng người dùng"
+            },
+            "register": {
+              "cta": "Bắt đầu",
+              "text": "Chia sẻ tiến trình xem của bạn giữa các thiết bị và giữ chúng đồng bộ.",
+              "title": "Đồng bộ hóa với đám mây"
+            },
+            "title": "Tài khoản"
+          },
+          "appearance": {
+            "activeTheme": "Đang hoạt động",
+            "themes": {
+              "blue": "Xanh dương",
+              "default": "Mặc định",
+              "gray": "Xám",
+              "red": "Đỏ",
+              "teal": "Xanh ngọc bích"
+            },
+            "title": "Giao diện"
+          },
+          "subtitles": {
+            "title": "Phụ đề",
+            "previewQuote": "Tôi không được phép sợ hãi. Nỗi sợ là kẻ giết chết tâm trí.",
+            "textSizeLabel": "Kích thước văn bản",
+            "backgroundLabel": "Độ mờ nền",
+            "colorLabel": "Màu sắc",
+            "connections": {
+              "server": {
+                "description": "Nếu bạn muốn kết nối với backend tùy chỉnh để lưu trữ dữ liệu của bạn, hãy kích hoạt điều này và cung cấp URL.",
+                "label": "Máy chủ tùy chỉnh",
+                "urlLabel": "URL máy chủ tùy chỉnh"
+              },
+              "title": "Kết nối",
+              "workers": {
+                "addButton": "Thêm công nhân mới",
+                "description": "Để ứng dụng hoạt động, tất cả lưu lượng được định tuyến qua các proxy. Kích hoạt điều này nếu bạn muốn mang lại công nhân của riêng bạn.",
+                "emptyState": "Chưa có công nhân nào, thêm một cái dưới đây",
+                "label": "Sử dụng công nhân proxy tùy chỉnh",
+                "urlLabel": "URL của công nhân",
+                "urlPlaceholder": "https://"
+              }
+            },
+            "locale": {
+              "language": "Ngôn ngữ ứng dụng",
+              "languageDescription": "Ngôn ngữ được áp dụng cho toàn bộ ứng dụng.",
+              "title": "Ngôn ngữ"
+            },
+            "reset": "Đặt lại",
+            "save": "Lưu",
+            "sidebar": {
+              "info": {
+                "appVersion": "Phiên bản ứng dụng",
+                "backendUrl": "URL backend",
+                "backendVersion": "Phiên bản backend",
+                "hostname": "Tên máy chủ",
+                "insecure": "Không an toàn",
+                "notLoggedIn": "Bạn chưa đăng nhập",
+                "secure": "An toàn",
+                "title": "Thông tin ứng dụng",
+                "unknownVersion": "Không rõ",
+                "userId": "ID người dùng"
+              }
+            },
+            "unsaved": "Bạn có những thay đổi chưa được lưu"
+          }
+        }
+      }
     }
   }
 }
