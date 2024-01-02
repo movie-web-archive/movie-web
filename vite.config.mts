@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import loadVersion from "vite-plugin-package-version";
 import { VitePWA } from "vite-plugin-pwa";
 import checker from "vite-plugin-checker";
+import webfontDownload from "vite-plugin-webfont-dl";
 import path from "path";
 import million from 'million/compiler';
 import { handlebars } from "./plugins/handlebars";
@@ -101,6 +102,7 @@ export default defineConfig(({ mode }) => {
           ],
         },
       }),
+      webfontDownload(),
       loadVersion(),
       checker({
         overlay: {
