@@ -1,20 +1,20 @@
 {
   "about": {
-    "description": "movie-web is a web application that searches the internet for streams. The team aims for a mostly minimalistic approach to consuming content.",
+    "description": "Lennyflix is a web application that searches the internet for streams. The team aims for a mostly minimalistic approach to consuming content.",
     "faqTitle": "Common questions",
     "q1": {
-      "body": "movie-web does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by movie-web, everything is through this searching mechanism.",
+      "body": "Lennyflix does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by Lennyflix, everything is through this searching mechanism.",
       "title": "Where does the content come from?"
     },
     "q2": {
-      "body": "It's not possible to request a show or movie, movie-web does not manage any content. All content is viewed through sources on the internet.",
+      "body": "It's not possible to request a show or movie, Lennyflix does not manage any content. All content is viewed through sources on the internet.",
       "title": "Where can I request a show or movie?"
     },
     "q3": {
       "body": "Our search results are powered by The Movie Database (TMDB) and display regardless of whether our sources actually have the content.",
       "title": "The search results display the show or movie, why can't I play it?"
     },
-    "title": "About movie-web"
+    "title": "About Lennyflix"
   },
   "actions": {
     "copied": "Copied",
@@ -80,7 +80,7 @@
   "footer": {
     "legal": {
       "disclaimer": "Disclaimer",
-      "disclaimerText": "movie-web does not host any files, it merely links to 3rd party services. Legal issues should be taken up with the file hosts and providers. movie-web is not responsible for any media files shown by the video providers."
+      "disclaimerText": "Lennyflix does not host any files, it merely links to 3rd party services. Legal issues should be taken up with the file hosts and providers. Lennyflix is not responsible for any media files shown by the video providers."
     },
     "links": {
       "discord": "Discord",
@@ -90,12 +90,12 @@
     "tagline": "Watch your favourite shows and movies with this open source streaming app."
   },
   "global": {
-    "name": "movie-web",
+    "name": "Lennyflix",
     "pages": {
       "about": "About",
       "dmca": "DMCA",
       "login": "Login",
-      "pagetitle": "{{title}} - movie-web",
+      "pagetitle": "{{title}} - Lennyflix",
       "register": "Register",
       "settings": "Settings"
     }
@@ -221,11 +221,11 @@
         "unknownLanguage": "Unknown"
       },
       "downloads": {
-        "disclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.",
+        "disclaimer": "Downloads are taken directly from the provider. Lennyflix does not have control over how the downloads are provided.",
         "downloadSubtitle": "Download current subtitle",
         "downloadPlaylist": "Download playlist",
         "downloadVideo": "Download video",
-        "hlsDisclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided. Please note that you are downloading an HLS playlist, this is intended for users familiar with advanced multimedia streaming.",
+        "hlsDisclaimer": "Downloads are taken directly from the provider. Lennyflix does not have control over how the downloads are provided. Please note that you are downloading an HLS playlist, this is intended for users familiar with advanced multimedia streaming.",
         "onAndroid": {
           "1": "To download on Android, click the download button then, on the new page, <bold>tap and hold</bold> on the video, then select <bold>save</bold>.",
           "shortTitle": "Download / Android",
@@ -308,7 +308,7 @@
   },
   "screens": {
     "dmca": {
-      "text": "Welcome to movie-web's DMCA contact page! We respect intellectual property rights and want to address any copyright concerns swiftly. If you believe your copyrighted work has been improperly used on our platform, please send a detailed DMCA notice to the email below. Please include a description of the copyrighted material, your contact details, and a statement of good faith belief. We're committed to resolving these matters promptly and appreciate your cooperation in keeping movie-web a place that respects creativity and copyrights.",
+      "text": "Welcome to Lennyflix's DMCA contact page! We respect intellectual property rights and want to address any copyright concerns swiftly. If you believe your copyrighted work has been improperly used on our platform, please send a detailed DMCA notice to the email below. Please include a description of the copyrighted material, your contact details, and a statement of good faith belief. We're committed to resolving these matters promptly and appreciate your cooperation in keeping Lennyflix a place that respects creativity and copyrights.",
       "title": "DMCA"
     },
     "loadingApp": "Loading application",

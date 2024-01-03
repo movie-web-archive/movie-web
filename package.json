@@ -1,8 +1,8 @@
 {
-  "name": "movie-web",
+  "name": "lennyflix",
   "version": "4.2.2",
   "private": true,
-  "homepage": "https://movie-web.app",
+  "homepage": "lenny.yayadf",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
