@@ -22,6 +22,7 @@ import tr from "@/assets/locales/tr.json";
 import uk from "@/assets/locales/uk.json";
 import vi from "@/assets/locales/vi.json";
 import zh from "@/assets/locales/zh.json";
+import gal from "@/assets/locales/gal.json";
 
 export const locales = {
   en,
@@ -48,6 +49,7 @@ export const locales = {
   hi,
   pt: ptbr,
   uk,
+  gal,
 };
 export type Locales = keyof typeof locales;
 
