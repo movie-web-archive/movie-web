@@ -1,12 +1,15 @@
-
-<p align="center"><img align="center" width="280" src="./.github/logo-dark.svg#gh-dark-mode-only"/></p>
-<p align="center"><img align="center" width="280" src="./.github/logo-light.svg#gh-light-mode-only"/></p>
+<div align="center">
+<img src="./public/android-chrome-192x192.png" height="125px"/> 
+<h2>
+ MOVIE-WEB
+</h2>
+<p>A small web app for watching movies and shows easily.</p>
+</div>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,vite,ts" />
   <br/>
   <a href="https://discord.movie-web.app"><kbd>🔵 discord</kbd></a> <a href="https://movie-web.app"><kbd>🟢 website</kbd></a>
 </p>
-<br/><br/>
 <div align="center">
     <a href="./.github/CODE_OF_CONDUCT.md" target="_blank">
         Code of Conduct
@@ -24,7 +27,6 @@
         License
     </a>
 </div>
-
 
 # ⚡What is movie-web?
 
