@@ -7,6 +7,24 @@
   <a href="https://discord.movie-web.app"><kbd>🔵 discord</kbd></a> <a href="https://movie-web.app"><kbd>🟢 website</kbd></a>
 </p>
 <br/><br/>
+<div align="center">
+    <a href="./.github/CODE_OF_CONDUCT.md" target="_blank">
+        Code of Conduct
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="./.github/CONTRIBUTING.md">
+        Contributing Guidelines
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="./.github/SECURITY.md">
+        Security Policy
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="./LICENSE.md">
+        License
+    </a>
+</div>
+
 
 # ⚡What is movie-web?
 
