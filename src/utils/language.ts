@@ -12,7 +12,7 @@ const countryPriority: Record<string, string> = {
   nl: "nl",
   fr: "fr",
   de: "de",
-  pt: "pt",
+  pt: "br",
   ar: "sa",
   es: "es",
   zh: "cn",
