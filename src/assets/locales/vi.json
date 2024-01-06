@@ -1,18 +1,18 @@
 {
   "about": {
-    "description": "movie-web là một ứng dụng web tìm kiếm các truyền pháp trực tuyến trên internet. Nhóm phát triển ứng dụng này nhắm đến một cách tiêu thụ nội dung chủ yếu là đơn giản hơn.",
+    "description": "movie-web là một ứng dụng web tìm kiếm các nguồn truyền phát trực tuyến trên Internet. Nhóm phát triển ứng dụng này nhắm đến một cách dễ dàng hơn trong việc tiêu thụ nội dung.",
     "faqTitle": "Các câu hỏi thường gặp",
     "q1": {
-      "body": "movie-web không lưu trữ bất kì nội dung nào. Khi bạn bấm vào một cái gì đó để xem, ứng dụng sẽ tìm kiếm nội dung đó trên internet (Trên màn hình tải và trong tab 'nguồn video' bạn sẽ tìm thấy nguồn đang được dùng). Nội dung không bao giờ được tải lên trên movie-web, mọi thứ đều thông qua cơ chế tìm kiếm này.",
+      "body": "movie-web không lưu trữ bất kì nội dung nào. Khi bạn chọn xem một nội dung nào đó, ứng dụng sẽ tìm kiếm nội dung đó trên Internet (Khi nội dung tải và trong tab 'nguồn video' bạn sẽ tìm thấy nguồn đang được dùng). Nội dung không bao giờ được tải lên trên movie-web, mọi thứ đều được tìm kiếm thông qua phương thức này.",
       "title": "Nội dung đến từ đâu?"
     },
     "q2": {
-      "body": "Việc yêu cầu một chương trình truyền hình hoặc phim là bất khả thi bởi vì movie-web không quản lý nội dung nào. Tất cả nội dung được truyền thông qua các nguồn trên internet.",
-      "title": "Tôi có thể yêu cầu một chương trình truyền hình hoặc phim ở đâu?"
+      "body": "Việc yêu cầu thêm một chương trình truyền hình hoặc phim là điều bất khả thi bởi vì movie-web không quản lý bất kỳ nội dung nào. Tất cả nội dung được truyền thông qua những nguồn trên internet.",
+      "title": "Tôi có thể yêu cầu thêm một chương trình truyền hình hoặc phim ở đâu?"
     },
     "q3": {
-      "body": "Các kết quả tìm kiếm được cung cấp bởi The Movie Database (TMDB) và hiện lên bất kể các nguồn của trang thực sự có lưu trữ nội dung hay không.",
-      "title": "Tại sao kết quả tìm kiếm hiển thị chương trình truyền hình hoặc phim nhưng tôi không thể chơi nó?"
+      "body": "Các kết quả tìm kiếm được cung cấp bởi The Movie Database (TMDB) và hiện lên bất kể các nguồn của trang thực sự có lưu trữ nội dung đó hay không.",
+      "title": "Tại sao kết quả tìm kiếm hiển thị chương trình truyền hình hoặc phim nhưng tôi không thể xem nó?"
     },
     "title": "Về movie-web"
   },
@@ -52,7 +52,8 @@
     },
     "trust": {
       "failed": {
-        "text": "Bạn đã lắp đặt nó một cách chính xác chưa?"
+        "text": "Bạn đã cài đặt nó một cách chính xác chưa?"
+        "title": "Không thể truy nhập máy chủ"
       }
     }
   },
@@ -70,7 +71,7 @@
       "allResults": "Đó là tất cả chúng tôi có!",
       "failed": "Không thể tìm thấy nội dung, hãy thử lại!",
       "loading": "Đang tải...",
-      "noResults": "Chúng tôi không thể tìm thấy gì!",
+      "noResults": "Chúng tôi không thể tìm thấy nội dung nào!",
       "placeholder": "Bạn muốn xem gì?",
       "sectionTitle": "Kết quả tìm kiếm"
     }
@@ -84,14 +85,14 @@
   },
   "navigation": {
     "banner": {
-      "offline": "Hãy kiểm tra kết nối Internet của bạn"
+      "offline": "Hãy kiểm tra đường truyền kết nối Internet của bạn"
     }
   },
   "notFound": {
     "badge": "Không tìm thấy",
     "goHome": "Quay lại trang chính",
     "message": "Chúng tôi đã tìm kiếm khắp nơi: dưới thùng rác, trong tủ quần áo, đằng sau máy chủ proxy nhưng vẫn không thể tìm thấy trang bạn đang tìm kiếm.",
-    "title": "Không thể tìm thấy trang"
+    "title": "Không tìm thấy trang"
   },
   "player": {
     "back": {
@@ -112,12 +113,12 @@
       "notFound": {
         "badge": "Không tìm thấy",
         "homeButton": "Quay lại trang chính",
-        "text": "Chúng tôi không thể tìm thấy nội dung mà bạn yêu cầu. Hoặc là nó đã bị xóa, hoặc bạn đã xáo trộn URL.",
+        "text": "Chúng tôi không thể tìm thấy nội dung mà bạn yêu cầu. Nó có thể đã bị xóa, hoặc bạn đã xáo trộn URL.",
         "title": "Không thể tìm thấy nội dung."
       }
     },
     "playbackError": {
-      "title": "Rất tiếc, đã hỏng!"
+      "title": "Rất tiếc, đã xảy ra lỗi!"
     }
   }
 }
