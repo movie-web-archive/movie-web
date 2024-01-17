@@ -118,7 +118,7 @@ function MediaCardContent({
           ) : null}
 
           <div
-            className={`absolute inset-0 flex items-center justify-center bg-mediaCard-badge bg-opacity-80 transition-opacity duration-200 ${
+            className={`absolute inset-0 flex items-center justify-center bg-mediaCard-badge bg-opacity-70 transition-opacity duration-200 ${
               closable ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
