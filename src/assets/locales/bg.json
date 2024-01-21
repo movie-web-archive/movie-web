@@ -95,6 +95,7 @@
       "about": "За нас",
       "dmca": "DMCA",
       "login": "Вход",
+      "onboarding": "",
       "pagetitle": "{{title}} - movie-web",
       "register": "Регистрация",
       "settings": "Настройки"
@@ -165,6 +166,65 @@
     "message": "Търсихме навсякъде: под кошчетата, в килера, зад проксито, но в крайна сметка не успяхме да намерим страницата, която търсите.",
     "title": "Тази страница не можа да бъде намерена"
   },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "",
+      "confirm": "",
+      "description": "",
+      "title": ""
+    },
+    "extension": {
+      "back": "",
+      "explainer": "",
+      "extensionHelp": "",
+      "link": "",
+      "status": {
+        "disallowed": "",
+        "disallowedAction": "",
+        "failed": "",
+        "loading": "",
+        "outdated": "",
+        "success": ""
+      },
+      "submit": "",
+      "title": ""
+    },
+    "proxy": {
+      "back": "",
+      "explainer": "",
+      "input": {
+        "errorConnection": "",
+        "errorInvalidUrl": "",
+        "errorNotProxy": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "link": "",
+      "submit": "",
+      "title": ""
+    },
+    "start": {
+      "explainer": "",
+      "options": {
+        "default": {
+          "text": ""
+        },
+        "extension": {
+          "action": "",
+          "description": "",
+          "quality": "",
+          "title": ""
+        },
+        "proxy": {
+          "action": "",
+          "description": "",
+          "quality": "",
+          "title": ""
+        }
+      },
+      "title": ""
+    }
+  },
   "overlays": {
     "close": "Затвори"
   },
@@ -206,7 +266,8 @@
         "episodeBadge": "E{{episode}}",
         "loadingError": "Грешка при зареждането на сезона",
         "loadingList": "Зареждане...",
-        "loadingTitle": "Зареждане..."
+        "loadingTitle": "Зареждане...",
+        "unairedEpisodes": ""
       },
       "playback": {
         "speedLabel": "Скорост на възпроизвеждане",
@@ -258,6 +319,21 @@
       }
     },
     "metadata": {
+      "api": {
+        "text": "",
+        "title": ""
+      },
+      "dmca": {
+        "badge": "",
+        "text": "",
+        "title": ""
+      },
+      "extensionPermission": {
+        "badge": "",
+        "button": "",
+        "text": "",
+        "title": ""
+      },
       "failed": {
         "badge": "Провал",
         "homeButton": "Обратно към началото",
@@ -283,7 +359,175 @@
         "errorGenericMedia": "Възникна неизвестна медийна грешка.",
         "errorNetwork": "Възникна някакъв вид мрежова грешка, която попречи на медията да бъде успешно извлечена, въпреки че преди това е била достъпна.",
         "errorNotSupported": "Обектът медия или доставчик на медия не се поддържа."
+      },
+      "homeButton": "",
+      "text": "",
+      "title": ""
+    },
+    "scraping": {
+      "items": {
+        "failure": "",
+        "notFound": "",
+        "pending": ""
+      },
+      "notFound": {
+        "badge": "",
+        "detailsButton": "",
+        "homeButton": "",
+        "text": "",
+        "title": ""
       }
+    },
+    "time": {
+      "regular": "",
+      "remaining": "",
+      "shortRegular": "",
+      "shortRemaining": ""
+    },
+    "turnstile": {
+      "description": "",
+      "error": "",
+      "title": "",
+      "verifyingHumanity": ""
     }
+  },
+  "screens": {
+    "dmca": {
+      "text": "",
+      "title": ""
+    },
+    "loadingApp": "",
+    "loadingUser": "",
+    "loadingUserError": {
+      "logout": "",
+      "reset": "",
+      "text": "",
+      "textWithReset": ""
+    },
+    "migration": {
+      "failed": "",
+      "inProgress": ""
+    }
+  },
+  "settings": {
+    "account": {
+      "accountDetails": {
+        "deviceNameLabel": "",
+        "deviceNamePlaceholder": "",
+        "editProfile": "",
+        "logoutButton": ""
+      },
+      "actions": {
+        "delete": {
+          "button": "",
+          "confirmButton": "",
+          "confirmDescription": "",
+          "confirmTitle": "",
+          "text": "",
+          "title": ""
+        },
+        "title": ""
+      },
+      "devices": {
+        "deviceNameLabel": "",
+        "failed": "",
+        "removeDevice": "",
+        "title": ""
+      },
+      "profile": {
+        "finish": "",
+        "firstColor": "",
+        "secondColor": "",
+        "title": "",
+        "userIcon": ""
+      },
+      "register": {
+        "cta": "",
+        "text": "",
+        "title": ""
+      },
+      "title": ""
+    },
+    "appearance": {
+      "activeTheme": "",
+      "themes": {
+        "blue": "",
+        "default": "",
+        "gray": "",
+        "red": "",
+        "teal": ""
+      },
+      "title": ""
+    },
+    "connections": {
+      "server": {
+        "description": "",
+        "label": "",
+        "urlLabel": ""
+      },
+      "setup": {
+        "doSetup": "",
+        "errorStatus": {
+          "description": "",
+          "title": ""
+        },
+        "itemError": "",
+        "items": {
+          "default": "",
+          "extension": "",
+          "proxy": ""
+        },
+        "redoSetup": "",
+        "successStatus": {
+          "description": "",
+          "title": ""
+        },
+        "unsetStatus": {
+          "description": "",
+          "title": ""
+        }
+      },
+      "title": "",
+      "workers": {
+        "addButton": "",
+        "description": "",
+        "emptyState": "",
+        "label": "",
+        "urlLabel": "",
+        "urlPlaceholder": ""
+      }
+    },
+    "preferences": {
+      "language": "",
+      "languageDescription": "",
+      "thumbnail": "",
+      "thumbnailDescription": "",
+      "thumbnailLabel": "",
+      "title": ""
+    },
+    "reset": "",
+    "save": "",
+    "sidebar": {
+      "info": {
+        "appVersion": "",
+        "backendUrl": "",
+        "backendVersion": "",
+        "hostname": "",
+        "insecure": "",
+        "notLoggedIn": "",
+        "secure": "",
+        "title": "",
+        "unknownVersion": "",
+        "userId": ""
+      }
+    },
+    "subtitles": {
+      "backgroundLabel": "",
+      "colorLabel": "",
+      "previewQuote": "",
+      "textSizeLabel": "",
+      "title": ""
+    },
+    "unsaved": ""
   }
 }
