@@ -95,6 +95,7 @@
       "about": "সম্পর্কিত",
       "dmca": "ডিএমসিএ",
       "login": "প্রবেশ করুন",
+      "onboarding": "",
       "pagetitle": "{{title}} - মুভি-ওয়েব",
       "register": "নিবন্ধন",
       "settings": "সেটিংস"
@@ -164,6 +165,65 @@
     "goHome": "বাড়িতে ফিরে যাও",
     "message": "আমরা সর্বত্র তাকালাম: বিনের নীচে, পায়খানায়, প্রক্সির পিছনে কিন্তু শেষ পর্যন্ত আপনি যে পৃষ্ঠাটি খুঁজছেন তা খুঁজে পাইনি।",
     "title": "সেই পৃষ্ঠাটি খুঁজে পাওয়া যায়নি"
+  },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "",
+      "confirm": "",
+      "description": "",
+      "title": ""
+    },
+    "extension": {
+      "back": "",
+      "explainer": "",
+      "extensionHelp": "",
+      "link": "",
+      "status": {
+        "disallowed": "",
+        "disallowedAction": "",
+        "failed": "",
+        "loading": "",
+        "outdated": "",
+        "success": ""
+      },
+      "submit": "",
+      "title": ""
+    },
+    "proxy": {
+      "back": "",
+      "explainer": "",
+      "input": {
+        "errorConnection": "",
+        "errorInvalidUrl": "",
+        "errorNotProxy": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "link": "",
+      "submit": "",
+      "title": ""
+    },
+    "start": {
+      "explainer": "",
+      "options": {
+        "default": {
+          "text": ""
+        },
+        "extension": {
+          "action": "",
+          "description": "",
+          "quality": "",
+          "title": ""
+        },
+        "proxy": {
+          "action": "",
+          "description": "",
+          "quality": "",
+          "title": ""
+        }
+      },
+      "title": ""
+    }
   },
   "overlays": {
     "close": "বন্ধ"
@@ -263,6 +323,17 @@
         "text": "API মেটাডেটা লোড করা যায়নি, অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।",
         "title": "API মেটাডেটা লোড করতে ব্যর্থ হয়েছে"
       },
+      "dmca": {
+        "badge": "",
+        "text": "",
+        "title": ""
+      },
+      "extensionPermission": {
+        "badge": "",
+        "button": "",
+        "text": "",
+        "title": ""
+      },
       "failed": {
         "badge": "ব্যর্থ",
         "homeButton": "বাড়িতে যেতে",
@@ -272,8 +343,46 @@
       "notFound": {
         "badge": "পাওয়া যায়নি",
         "homeButton": "বাড়িতে ফিরে যাও",
-        "text": "আপনার অনুরোধ করা মিডিয়া আমরা খুঁজে পাইনি। হয় এটি সরানো হয়েছে অথবা আপনি URL-এর সাথে হেরফের করেছেন।"
+        "text": "আপনার অনুরোধ করা মিডিয়া আমরা খুঁজে পাইনি। হয় এটি সরানো হয়েছে অথবা আপনি URL-এর সাথে হেরফের করেছেন।",
+        "title": ""
       }
+    },
+    "nextEpisode": {
+      "cancel": "",
+      "next": ""
+    },
+    "playbackError": {
+      "badge": "",
+      "errors": {
+        "errorAborted": "",
+        "errorDecode": "",
+        "errorGenericMedia": "",
+        "errorNetwork": "",
+        "errorNotSupported": ""
+      },
+      "homeButton": "",
+      "text": "",
+      "title": ""
+    },
+    "scraping": {
+      "items": {
+        "failure": "",
+        "notFound": "",
+        "pending": ""
+      },
+      "notFound": {
+        "badge": "",
+        "detailsButton": "",
+        "homeButton": "",
+        "text": "",
+        "title": ""
+      }
+    },
+    "time": {
+      "regular": "",
+      "remaining": "",
+      "shortRegular": "",
+      "shortRemaining": ""
     },
     "turnstile": {
       "description": "ডানদিকে ক্যাপচা সম্পূর্ণ করে আপনি যে মানুষ তা যাচাই করুন। সিনেমা-ওয়েবকে নিরাপদ রাখতেই এই!",
@@ -281,5 +390,144 @@
       "title": "আপনি যে মানুষ তা আমাদের যাচাই করতে হবে।",
       "verifyingHumanity": "আপনার মানবতা যাচাই করা হচ্ছে..।"
     }
+  },
+  "screens": {
+    "dmca": {
+      "text": "",
+      "title": ""
+    },
+    "loadingApp": "",
+    "loadingUser": "",
+    "loadingUserError": {
+      "logout": "",
+      "reset": "",
+      "text": "",
+      "textWithReset": ""
+    },
+    "migration": {
+      "failed": "",
+      "inProgress": ""
+    }
+  },
+  "settings": {
+    "account": {
+      "accountDetails": {
+        "deviceNameLabel": "",
+        "deviceNamePlaceholder": "",
+        "editProfile": "",
+        "logoutButton": ""
+      },
+      "actions": {
+        "delete": {
+          "button": "",
+          "confirmButton": "",
+          "confirmDescription": "",
+          "confirmTitle": "",
+          "text": "",
+          "title": ""
+        },
+        "title": ""
+      },
+      "devices": {
+        "deviceNameLabel": "",
+        "failed": "",
+        "removeDevice": "",
+        "title": ""
+      },
+      "profile": {
+        "finish": "",
+        "firstColor": "",
+        "secondColor": "",
+        "title": "",
+        "userIcon": ""
+      },
+      "register": {
+        "cta": "",
+        "text": "",
+        "title": ""
+      },
+      "title": ""
+    },
+    "appearance": {
+      "activeTheme": "",
+      "themes": {
+        "blue": "",
+        "default": "",
+        "gray": "",
+        "red": "",
+        "teal": ""
+      },
+      "title": ""
+    },
+    "connections": {
+      "server": {
+        "description": "",
+        "label": "",
+        "urlLabel": ""
+      },
+      "setup": {
+        "doSetup": "",
+        "errorStatus": {
+          "description": "",
+          "title": ""
+        },
+        "itemError": "",
+        "items": {
+          "default": "",
+          "extension": "",
+          "proxy": ""
+        },
+        "redoSetup": "",
+        "successStatus": {
+          "description": "",
+          "title": ""
+        },
+        "unsetStatus": {
+          "description": "",
+          "title": ""
+        }
+      },
+      "title": "",
+      "workers": {
+        "addButton": "",
+        "description": "",
+        "emptyState": "",
+        "label": "",
+        "urlLabel": "",
+        "urlPlaceholder": ""
+      }
+    },
+    "preferences": {
+      "language": "",
+      "languageDescription": "",
+      "thumbnail": "",
+      "thumbnailDescription": "",
+      "thumbnailLabel": "",
+      "title": ""
+    },
+    "reset": "",
+    "save": "",
+    "sidebar": {
+      "info": {
+        "appVersion": "",
+        "backendUrl": "",
+        "backendVersion": "",
+        "hostname": "",
+        "insecure": "",
+        "notLoggedIn": "",
+        "secure": "",
+        "title": "",
+        "unknownVersion": "",
+        "userId": ""
+      }
+    },
+    "subtitles": {
+      "backgroundLabel": "",
+      "colorLabel": "",
+      "previewQuote": "",
+      "textSizeLabel": "",
+      "title": ""
+    },
+    "unsaved": ""
   }
 }
