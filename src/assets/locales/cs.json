@@ -390,14 +390,14 @@
     },
     "connections": {
       "server": {
-        "description": "Pokud se chcete připojit k vlastnímu backendu pr ukládání dat, povolte toto a zadejte URL adresu.",
+        "description": "Pokud se chcete připojit k vlastnímu backendu pro ukládání dat, povolte toto a zadejte URL adresu. <0>Instrukce.</0>",
         "label": "Vlastní server",
         "urlLabel": "URL adresa vlastního serveru"
       },
       "title": "Spojení",
       "workers": {
         "addButton": "Přidat nového pracovníka",
-        "description": "Aby byla aplikace funkční, veškerá trafika prochází přes proxy. Povolte toto, pokud chcete používat svoje vlastní pracovníky.",
+        "description": "Aby byla aplikace funkční, veškerá trafika prochází přes proxy. Povolte toto, pokud chcete používat svoje vlastní pracovníky. <0>Instrukce.</0>",
         "emptyState": "Zatím žádní pracovníci, přidej jednoho dolů",
         "label": "Použít vlastní proxy pracovníky",
         "urlLabel": "URL adresy pracovníků",
