@@ -71,6 +71,7 @@
     }
   },
   "errors": {
+    "badge": "It broke",
     "details": "Подробности ошибки",
     "reloadPage": "Перезагрузить страницу",
     "showError": "Показать сведения об ошибке",
@@ -93,7 +94,9 @@
     "pages": {
       "about": "О",
       "dmca": "DMCA",
+      "login": "Login",
       "pagetitle": "{{title}} - movie-web",
+      "register": "Register",
       "settings": "Настройки"
     }
   },
@@ -109,8 +112,31 @@
     },
     "search": {
       "allResults": "Это все, что у нас есть!",
+      "failed": "Failed to find media, try again!",
       "loading": "Загрузка...",
+      "noResults": "We couldn't find anything!",
+      "placeholder": "What do you want to watch?",
       "sectionTitle": "Результаты поиска"
+    },
+    "titles": {
+      "day": {
+        "default": "What would you like to watch this afternoon?",
+        "extra": [
+          "Feeling adventurous? Jurassic Park might be the perfect choice."
+        ]
+      },
+      "morning": {
+        "default": "What would you like to watch this morning?",
+        "extra": [
+          "I hear Before Sunrise is good"
+        ]
+      },
+      "night": {
+        "default": "What would you like to watch tonight?",
+        "extra": [
+          "Tired? I hear The Exorcist is good."
+        ]
+      }
     }
   },
   "media": {
@@ -128,11 +154,15 @@
       "about": "О нас",
       "donation": "Пожертвовать",
       "logout": "Выйти",
+      "register": "Sync to cloud",
       "settings": "Настройки",
       "support": "Поддержка"
     }
   },
   "notFound": {
+    "badge": "Not found",
+    "goHome": "Back to home",
+    "message": "We looked everywhere: under the bins, in the closet, behind the proxy but ultimately couldn't find the page you are looking for.",
     "title": "Не удалось найти эту страницу"
   },
   "overlays": {
@@ -140,11 +170,34 @@
   },
   "player": {
     "back": {
-      "default": "Вернуться на главную"
+      "default": "Вернуться на главную",
+      "short": "Back"
+    },
+    "casting": {
+      "enabled": "Casting to device..."
     },
     "menus": {
       "downloads": {
+        "disclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.",
+        "downloadPlaylist": "Download playlist",
         "downloadSubtitle": "Скачать текущие субтитры",
+        "downloadVideo": "Download video",
+        "hlsDisclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.<br /><br />Please note that you are downloading an HLS playlist, it is <bold>not recommended to download if you are not familiar with advanced streaming formats</bold>. Try different sources for different formats.",
+        "onAndroid": {
+          "1": "To download on Android, click the download button then, on the new page, <bold>tap and hold</bold> on the video, then select <bold>save</bold>.",
+          "shortTitle": "Download / Android",
+          "title": "Downloading on Android"
+        },
+        "onIos": {
+          "1": "To download on iOS, click the download button then, on the new page, click <bold><ios_share /></bold>, then <bold>Save to Files <ios_files /></bold>.",
+          "shortTitle": "Download / iOS",
+          "title": "Downloading on iOS"
+        },
+        "onPc": {
+          "1": "On PC, click the download button then, on the new page, right click the video and select <bold>Save video as</bold>",
+          "shortTitle": "Download / PC",
+          "title": "Downloading on PC"
+        },
         "title": "Скачать"
       },
       "episodes": {
@@ -153,18 +206,23 @@
         "episodeBadge": "Э{{episode}}",
         "loadingError": "Ошибка при загрузке сезона",
         "loadingList": "Загрузка...",
-        "loadingTitle": "Загрузка..."
+        "loadingTitle": "Загрузка...",
+        "unairedEpisodes": "One or more episodes in this season have been disabled because they haven't been aired yet."
       },
       "playback": {
         "speedLabel": "Скорость воспроизведения",
         "title": "Настройки воспроизведения"
       },
       "quality": {
-        "automaticLabel": "Автоматическое качество"
+        "automaticLabel": "Автоматическое качество",
+        "hint": "You can try <0>switching source</0> to get different quality options.",
+        "iosNoQuality": "Due to Apple-defined limitations, quality selection is not available on iOS for this source. You can try <0>switching to another source</0> to get different quality options.",
+        "title": "Quality"
       },
       "settings": {
         "downloadItem": "Скачать",
         "enableSubtitles": "Включить субтитры",
+        "experienceSection": "Viewing experience",
         "playbackItem": "Настройки воспроизведения",
         "qualityItem": "Качество",
         "sourceItem": "Видео источники",
@@ -173,7 +231,8 @@
       },
       "sources": {
         "failed": {
-          "text": "При попытке найти видео произошла ошибка, пожалуйста, попробуйте использовать другой источник."
+          "text": "При попытке найти видео произошла ошибка, пожалуйста, попробуйте использовать другой источник.",
+          "title": "Failed to scrape"
         },
         "noEmbeds": {
           "text": "Мы не смогли найти ни одной вставки, пожалуйста, попробуйте использовать другой источник.",
@@ -188,11 +247,33 @@
       },
       "subtitles": {
         "customChoice": "Выбрать субтитры из файла",
+        "customizeLabel": "Customize",
         "offChoice": "Выключить",
         "settings": {
-          "backlink": "Пользовательские субтитры"
+          "backlink": "Пользовательские субтитры",
+          "delay": "Subtitle delay",
+          "fixCapitals": "Fix capitalization"
         },
-        "title": "Субтитры"
+        "title": "Субтитры",
+        "unknownLanguage": "Unknown"
+      }
+    },
+    "metadata": {
+      "api": {
+        "text": "Could not load API metadata, please check your internet connection.",
+        "title": "Failed to load API metadata"
+      },
+      "failed": {
+        "badge": "Failed",
+        "homeButton": "Go home",
+        "text": "Could not load the media's metadata from TMDB. Please check whether TMDB is down or blocked on your internet connection.",
+        "title": "Failed to load metadata"
+      },
+      "notFound": {
+        "badge": "Not found",
+        "homeButton": "Back to home",
+        "text": "We couldn't find the media you requested. Either it's been removed or you tampered with the URL.",
+        "title": "Couldn't find that media."
       }
     },
     "nextEpisode": {
@@ -202,30 +283,66 @@
     "playbackError": {
       "badge": "Ошибка воспроизведения",
       "errors": {
-        "errorDecode": "Несмотря на то, что ранее этот медиаресурс был пригодным для использования, при попытке его декодирования произошла ошибка."
+        "errorAborted": "The fetching of the media was aborted by the user's request.",
+        "errorDecode": "Несмотря на то, что ранее этот медиаресурс был пригодным для использования, при попытке его декодирования произошла ошибка.",
+        "errorGenericMedia": "Unknown media error occurred.",
+        "errorNetwork": "Some kind of network error occurred which prevented the media from being successfully fetched, despite having previously been available.",
+        "errorNotSupported": "The media or media provider object is not supported."
       },
+      "homeButton": "Go home",
       "text": "При попытке воспроизвести медиа файл произошла ошибка. Пожалуйста, попробуйте ещё раз.",
       "title": "Не удалось воспроизвести видео!"
     },
     "scraping": {
+      "items": {
+        "failure": "Error occurred",
+        "notFound": "Doesn't have the video",
+        "pending": "Checking for videos..."
+      },
       "notFound": {
+        "badge": "Not found",
         "detailsButton": "Показать детали",
+        "homeButton": "Go home",
+        "text": "We have searched through our providers and cannot find the media you are looking for! We do not host the media and have no control over what is available. Please click 'Show details' below for more details.",
         "title": "Мы не смогли найти"
       }
     },
     "time": {
-      "regular": "{{timeWatched}} / {{duration}}"
+      "regular": "{{timeWatched}} / {{duration}}",
+      "remaining": "{{timeLeft}} left • Finish at {{timeFinished, datetime}}",
+      "shortRegular": "{{timeWatched}}",
+      "shortRemaining": "-{{timeLeft}}"
+    },
+    "turnstile": {
+      "description": "Please verify that you are human by completing the Captcha on the right. This is to keep movie-web safe!",
+      "error": "Failed to verify your humanity. Please try again.",
+      "title": "We need to verify that you're human.",
+      "verifyingHumanity": "Verifying your humanity..."
     }
   },
   "screens": {
     "dmca": {
+      "text": "Welcome to movie-web's DMCA contact page! We respect intellectual property rights and want to address any copyright concerns swiftly. If you believe your copyrighted work has been improperly used on our platform, please send a detailed DMCA notice to the email below. Please include a description of the copyrighted material, your contact details, and a statement of good faith belief. We're committed to resolving these matters promptly and appreciate your cooperation in keeping movie-web a place that respects creativity and copyrights.",
       "title": "DMCA"
+    },
+    "loadingApp": "Loading application",
+    "loadingUser": "Loading your profile",
+    "loadingUserError": {
+      "logout": "Logout",
+      "reset": "Reset custom server",
+      "text": "Failed to load your profile",
+      "textWithReset": "Failed to load your profile from your custom server, want to reset back to the default server?"
+    },
+    "migration": {
+      "failed": "Failed to migrate your data.",
+      "inProgress": "Please hold, we are migrating your data. This shouldn't take long."
     }
   },
   "settings": {
     "account": {
       "accountDetails": {
         "deviceNameLabel": "Имя устройства",
+        "deviceNamePlaceholder": "Personal phone",
         "editProfile": "Редактировать",
         "logoutButton": "Выйти"
       },
