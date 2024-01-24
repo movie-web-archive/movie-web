@@ -93,7 +93,7 @@ export function CaptionsPart(props: {
             textTransformer={(s) => `${s}%`}
           />
           <CaptionSetting
-            label={t("Background blur")}
+            label={t("settings.subtitles.backgroundBlurLabel")}
             max={100}
             min={0}
             onChange={(v) =>

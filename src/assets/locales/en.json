@@ -401,6 +401,7 @@
       "previewQuote": "I must not fear. Fear is the mind-killer.",
       "textSizeLabel": "Text size",
       "backgroundLabel": "Background opacity",
+      "backgroundBlurLabel": "Background blur",
       "colorLabel": "Color"
     },
     "connections": {
