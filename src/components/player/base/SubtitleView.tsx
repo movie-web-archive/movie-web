@@ -55,6 +55,7 @@ export function CaptionCue({
         color: styling.color,
         fontSize: `${(1.5 * styling.size).toFixed(2)}em`,
         backgroundColor: `rgba(0,0,0,${styling.backgroundOpacity.toFixed(2)})`,
+        backdropFilter: `blur(${styling.backgroundBlur}px)`,
       }}
     >
       <span
