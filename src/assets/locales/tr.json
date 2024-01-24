@@ -95,6 +95,7 @@
       "about": "Hakkında",
       "dmca": "DMCA",
       "login": "Giriş yap",
+      "onboarding": "Kurulum",
       "pagetitle": "{{title}} - movie-web",
       "register": "Kayıt ol",
       "settings": "Ayarlar"
@@ -165,6 +166,64 @@
     "message": "Her yere baktık: bazanın altına, dolabın içine hatta ara sunucuya ama maalesef aradığınız sayfayı bulamadık.",
     "title": "Sayfa bulunamadı"
   },
+  "onboarding": {
+    "defaultConfirm": {
+      "cancel": "İptal",
+      "confirm": "Varsayılan yapıyı kullan",
+      "description": "Varsayılan yapı en iyi akışları sunmaz ve dayanılmaz derecede yavaş olabilir.",
+      "title": "Emin misin?"
+    },
+    "extension": {
+      "back": "Geri",
+      "explainer": "Tarayıcı uzantısını kullanarak sunabileceğimiz en iyi akışlara ulaşabilirsiniz. Sadece basit bir kurulumla.",
+      "extensionHelp": "Eğer uzantıyı kurduysanız ancak algılanmıyorsa, <bold>Tarayıcınızın uzantı menüsünden uzantıyı açın</bold> ve ekrandaki adımları takip edin.",
+      "status": {
+        "disallowed": "Uzantı bu sayfa için etkin değil",
+        "disallowedAction": "Uzantıyı Etkinleştir",
+        "failed": "Durum talebi başarısız oldu",
+        "loading": "Uzantıyı kurmanız bekleniyor",
+        "outdated": "Uzantı sürümü çok eski",
+        "success": "Uzantı beklenildiği gibi çalışıyor!"
+      },
+      "submit": "Devam Et",
+      "title": "Uzantı ile Başlayalım"
+    },
+    "proxy": {
+      "back": "Geri",
+      "explainer": "Proxy yöntemi ile kendi proxy'nizi oluşturarak kaliteli akışlar elde edebilirsiniz.",
+      "input": {
+        "errorConnection": "Proxy'ye bağlanılamıyor",
+        "errorInvalidUrl": "Geçersiz URL",
+        "errorNotProxy": "Bir proxy bekliyordum ancak bir web sitesi aldım",
+        "label": "Proxy URL'si",
+        "placeholder": "https://"
+      },
+      "link": "Bir proxy oluşturmayı öğrenin",
+      "submit": "Proxy'yi Gönder",
+      "title": "Yeni bir proxy oluşturalım"
+    },
+    "start": {
+      "explainer": "En iyi akışları almak için, kullanmak istediğiniz akış yöntemini seçmeniz gerekecek.",
+      "options": {
+        "default": {
+          "text": "Yüksek kaliteli akış istemiyorum, <0 /> <1>varsayılan yapıyı kullan</1>"
+        },
+        "extension": {
+          "action": "Uzantıyı Yükle",
+          "description": "Tarayıcı uzantısını yükleyin ve en iyi kaynaklara erişim sağlayın.",
+          "quality": "En iyi kalite",
+          "title": "Tarayıcı Uzantısı"
+        },
+        "proxy": {
+          "action": "Proxy'yi Yapılandır",
+          "description": "Yalnızca 5 dakikada bir proxy yapılandırın ve mükemmel kaynaklara erişim sağlayın.",
+          "quality": "İyi kalite",
+          "title": "Özel Proxy"
+        }
+      },
+      "title": "Movie-web'i yapılandırmaya başlayalım"
+    }
+  },  
   "overlays": {
     "close": "Kapat"
   },
@@ -263,6 +322,17 @@
         "text": "API üstverisi yüklenemedi, lütfen internet bağlantınızı kontrol edin.",
         "title": "API üstverisi yüklenemedi"
       },
+      "dmca": {
+        "badge": "Kaldırıldı",
+        "text": "Bu medya, telif hakkı ihlali bildirimi veya talebi nedeniyle artık kullanılamıyor.",
+        "title": "Medya Kaldırıldı"
+      },
+      "extensionPermission": {
+        "badge": "İzin Eksik",
+        "button": "Uzantıyı Kullan",
+        "text": "Tarayıcı uzantısına sahipsiniz, ancak uzantıyı kullanmaya başlamak için izninize ihtiyacımız var.",
+        "title": "Uzantıyı Yapılandır"
+      },      
       "failed": {
         "badge": "Başarısız oldu",
         "homeButton": "Ana sayfaya dön",
@@ -394,6 +464,28 @@
         "label": "Özel sunucu",
         "urlLabel": "Özel sunucu URL'si"
       },
+      "setup": {
+        "doSetup": "Yapılandırmayı Yap",
+        "errorStatus": {
+          "description": "Bu yapılandırmanın bir veya daha fazla öğesiyle ilgili dikkatinizi çeken bir durum var gibi görünüyor.",
+          "title": "Dikkatinizi Çeken Bir Sorun Var"
+        },
+        "itemError": "Bu ayar bir sorun içeriyor. Sorunu çözmek için yapılandırmayı yeniden başlatın.",
+        "items": {
+          "default": "Varsayılan Yapılandırma",
+          "extension": "Uzantı",
+          "proxy": "Özel Proxy"
+        },
+        "redoSetup": "Yapılandırmayı Yeniden Yap",
+        "successStatus": {
+          "description": "Favori medya içeriklerinizi izlemeye başlamak için her şey hazır.",
+          "title": "Her Şey Hazır!"
+        },
+        "unsetStatus": {
+          "description": "Yapılandırma sürecini başlatmak için lütfen sağdaki düğmeye tıklayın.",
+          "title": "Yapılandırmayı Yapmadınız"
+        }
+      },      
       "title": "Bağlantılar",
       "workers": {
         "addButton": "Yeni işleyici ekle",
@@ -404,6 +496,14 @@
         "urlPlaceholder": "https://"
       }
     },
+    "preferences": {
+      "language": "Uygulama Dili",
+      "languageDescription": "Uygulama genelinde uygulanan dil.",
+      "thumbnail": "Küçük Resim Oluştur",
+      "thumbnailDescription": "Genellikle videoların küçük resimleri yoktur. Bu ayarı etkinleştirerek anlık olarak oluşturabilirsiniz, ancak videoyu yavaşlatabilirler.",
+      "thumbnailLabel": "Küçük Resim Oluşturmayı Etkinleştir",
+      "title": "Tercihler"
+    },    
     "reset": "Sıfırla",
     "save": "Kaydet",
     "sidebar": {
