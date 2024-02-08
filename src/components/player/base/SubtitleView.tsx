@@ -30,12 +30,21 @@ export function CaptionCue({
       textToUse = text.slice(0, 1) + text.slice(1).toLowerCase();
     }
 
+    let curLength = 0;
+
     const textWithNewlines = (textToUse || "")
       .split(" ")
-      .map((word) => wordOverrides[word] ?? word)
+      .map((word) => {
+        curLength += word.length + 1;
+        word = wordOverrides[word] ?? word;
+        if (curLength > 40) {
+          word = `<br />${word}`;
+          curLength = 0;
+        }
+        return word;
+      })
       .join(" ")
-      .replaceAll(/ i'/g, " I'")
-      .replaceAll(/\r?\n/g, "<br />");
+      .replaceAll(/ i'/g, " I'");
 
     // https://www.w3.org/TR/webvtt1/#dom-construction-rules
     // added a <br /> for newlines
@@ -50,7 +59,7 @@ export function CaptionCue({
 
   return (
     <p
-      className="pointer-events-none mb-1 select-none rounded px-4 py-1 text-center leading-normal [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]"
+      className="pointer-events-none mb-1 select-none rounded px-8 py-1 text-center leading-normal [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]"
       style={{
         color: styling.color,
         fontSize: `${(1.5 * styling.size).toFixed(2)}em`,
