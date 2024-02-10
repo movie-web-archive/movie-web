@@ -6,6 +6,10 @@ import { Heading1 } from "@/components/utils/Text";
 
 const availableThemes = [
   {
+    id: "default",
+    key: "settings.appearance.themes.default",
+  },
+  {
     id: "blue",
     key: "settings.appearance.themes.blue",
   },
@@ -125,13 +129,6 @@ export function ThemePart(props: {
     <div>
       <Heading1 border>{t("settings.appearance.title")}</Heading1>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-6 max-w-[700px]">
-        {/* default theme */}
-        <ThemePreview
-          name={t("settings.appearance.themes.default")}
-          selector="theme-default"
-          active={props.active === null}
-          onClick={() => props.setTheme(null)}
-        />
         {availableThemes.map((v) => (
           <ThemePreview
             selector={`theme-${v.id}`}

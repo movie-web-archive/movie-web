@@ -102,7 +102,6 @@ export function AccountSettings(props: {
 export function SettingsPage() {
   const { t } = useTranslation();
   const activeTheme = useThemeStore((s) => s.theme);
-  const previewTheme = useThemeStore((s) => s.setTheme);
   const setTheme = useThemeStore((s) => s.setTheme);
 
   const appLanguage = useLanguageStore((s) => s.language);
