@@ -15,7 +15,7 @@ import { PageTitle } from "@/pages/parts/util/PageTitle";
 
 function CaptchaProvider(props: {
   siteKey: string | null;
-  children: JSX.Element;
+  children: React.ReactNode;
 }) {
   if (!props.siteKey) return props.children;
   return (
