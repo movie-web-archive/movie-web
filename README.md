@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,vite,ts" />
   <br/>
-  <a href="https://movie-web.github.io/links/discord"><kbd>🔵 discord</kbd></a> <a href="https://movie-web.github.io/docs"><kbd>🟢 docs</kbd></a>
+  <a href="https://discord.gg/btRkVBF2b6"><kbd>🔵 discord</kbd></a> <a href="https://movie-web.github.io/docs"><kbd>🟢 docs</kbd></a>
 </p>
 <br/><br/>
 
@@ -63,5 +63,5 @@ A simple guide has been written to assist in hosting your own instance of movie-
 ## 🤝 Thanks to all Contributors
 This project would not be possible without our amazing contributors and the community. Thanks a lot! Keep rocking 🍻.
 
-[![Contributors](https://contrib.rocks/image?repo=movie-web/movie-web)](https://github.com/movie-web/movie-web/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=movie-web/movie-web)](https://github.com/thehairy/movie-web/graphs/contributors)
 
