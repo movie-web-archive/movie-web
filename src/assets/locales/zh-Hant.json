@@ -90,7 +90,7 @@
     "tagline": "使用這個開源流媒體應用程序觀看您最喜歡的節目和電影。"
   },
   "global": {
-    "name": "movie-web",
+    "name": "zmov",
     "pages": {
       "about": "關於",
       "dmca": "DMCA",

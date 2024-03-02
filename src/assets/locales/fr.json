@@ -90,7 +90,7 @@
     "tagline": "Regardez vos séries et films préférés avec cette application de streaming open source."
   },
   "global": {
-    "name": "movie-web",
+    "name": "zmov",
     "pages": {
       "about": "À propos",
       "dmca": "DMCA",

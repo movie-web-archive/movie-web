@@ -90,7 +90,7 @@
     "tagline": "Mireu els vostres programes i pel·lícules preferits amb aquesta aplicació de codi obert de reproducció en temps real."
   },
   "global": {
-    "name": "movie-web",
+    "name": "zmov",
     "pages": {
       "about": "Quant a",
       "dmca": "DMCA",
