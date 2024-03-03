@@ -1,0 +1,543 @@
+{
+	"about": {
+		"description": "movie-web është një aplikacion ueb që kërkon në internet për transmetime. Ekipi ynë synon për një qasje kryesisht minimaliste për konsumimin e përmbajtjes media.",
+		"faqTitle": "Pyetje të zakonshme",
+		"q1": {
+			"body": "movie-web nuk ruan asnjë përmbajtje. Kur klikoni diçka për të parë, interneti kërkohet për median e zgjedhur (Në ekranin e ngarkimit dhe në skedën 'video burimet' mund të shihni se cilin burim po përdorni). Media nuk ngarkohet kurrë nga movie-web, gjithçka është përmes këtij mekanizmi kërkimi.",
+			"title": "Nga vjen përmbajtja?"
+		},
+		"q2": {
+			"body": "Nuk është e mundur të bësh kërkesë për një shfaqje ose film, movie-web nuk menaxhon asnjë përmbajtje. E gjithë përmbajtja shikohet përmes burimeve në internet.",
+			"title": "Ku mund të bëj kërkesë për një shfaqje ose film?"
+		},
+		"q3": {
+			"body": "Rezultatet e kërkimit tonë funksionojnë përmes The Movie Database (TMDB) dhe shfaqen pavarësisht nëse burimet tona aktualisht e kanë përmbajtjen.",
+			"title": "Rezultatet e kërkimit e shfaqin shfaqjen ose filmin, pse nuk mund ta shoh atë?"
+		},
+		"title": "Rreth movie-web"
+	},
+	"actions": {
+		"copied": "U kopjua",
+		"copy": "Kopjo"
+	},
+	"auth": {
+		"createAccount": "Nuk keni llogari ende? <0>Krijo një llogari.</0>",
+		"deviceNameLabel": "Emri i pajisjes",
+		"deviceNamePlaceholder": "Telefon personal",
+		"generate": {
+			"description": "Fraza e kalimit vepron si emri dhe fjalëkalimi juaj. Sigurohuni që ta mbani të sigurt pasi do t'ju duhet ta shkruani për t'u futur në llogarinë tuaj",
+			"next": "E kam ruajtur frazëkalimin tim",
+			"passphraseFrameLabel": "Frazëkalim",
+			"title": "Frazëkalimi juaj"
+		},
+		"hasAccount": "Keni tashmë një llogari? <0>Hyni këtu.</0>",
+		"login": {
+			"description": "Ju lutemi shkruani frazëkalimin tuaj për t'u futur në llogarinë tuaj",
+			"deviceLengthError": "Ju lutem vendosni një emër pajisjeje",
+			"passphraseLabel": "Frazëkalim me 12 fjalë",
+			"passphrasePlaceholder": "Frazëkalim",
+			"submit": "Hyrje",
+			"title": "Hyni në llogarinë tuaj",
+			"validationError": "Fraza e fjalëkalimit është e pasaktë ose e paplotë"
+		},
+		"register": {
+			"information": {
+				"color1": "Ngjyra e parë e profilit",
+				"color2": "Ngjyra e dytë e profilit",
+				"header": "Vendosni një emër për pajisjen tuaj dhe zgjidhni ngjyrën dhe një ikonë përdoruesi sipas dëshirës suaj",
+				"icon": "Ikona e përdoruesit",
+				"next": "Tjetra",
+				"title": "Informacioni i llogarisë"
+			}
+		},
+		"trust": {
+			"failed": {
+				"text": "A e konfiguruat saktë?",
+				"title": "Dështoi të arrijë në server"
+			},
+			"noHostTitle": "Serveri nuk është konfiguruar!",
+			"noHost": "Serveri nuk është konfiguruar, prandaj nuk mund të krijoni një llogari",
+			"host": "Ju jeni duke u lidhur me <0>{{hostname}}</0> - ju lutem konfirmoni që keni besim para se të krijoni një llogari",
+			"no": "Shko mbrapa",
+			"title": "A keni besim në këtë server?",
+			"yes": "Kam besim në këtë server"
+		},
+		"verify": {
+			"description": "Ju lutem futni frazëkalimin tuaj nga më parë për të konfirmuar që e keni ruajtur atë dhe për të krijuar llogarinë tuaj",
+			"invalidData": "Të dhënat nuk janë të vlefshme",
+			"noMatch": "Fraza e fjalëkalimit nuk përputhet",
+			"passphraseLabel": "Fraza juaj e fjalëkalimit me 12 fjalë",
+			"recaptchaFailed": "Validimi i ReCaptcha dështoi",
+			"register": "Krijo llogari",
+			"title": "Konfirmoni frazëkalimin tuaj"
+		}
+	},
+	"errors": {
+		"badge": "U prish",
+		"details": "Detajet e problemit",
+		"reloadPage": "Rifresko faqen",
+		"showError": "Shfaq detajet e problemit",
+		"title": "Hasëm në një problem!"
+	},
+	"footer": {
+		"legal": {
+			"disclaimer": "Mohim përgjegjësie",
+			"disclaimerText": "movie-web nuk strehon asnjë skedar, por thjesht lidhet me shërbimet e palëve të treta. Çështjet ligjore duhet të merren me strehuesit e skedarëve dhe ofruesit. movie-web nuk është përgjegjës për asnjë skedar media të shfaqur nga ofruesit e videos."
+		},
+		"links": {
+			"discord": "Discord",
+			"dmca": "DMCA",
+			"github": "GitHub"
+		},
+		"tagline": "Shikoni shfaqjet dhe filmat tuaj të preferuar me këtë aplikacion të hapur burim për transmetim."
+	},
+	"global": {
+		"name": "movie-web",
+		"pages": {
+			"about": "Rreth nesh",
+			"dmca": "DMCA",
+			"login": "Hyr",
+			"onboarding": "Konfigurimi",
+			"pagetitle": "{{title}} - movie-web",
+			"register": "Regjistrohu",
+			"settings": "Cilësimet"
+		}
+	},
+	"home": {
+		"bookmarks": {
+			"sectionTitle": "Favoritët"
+		},
+		"continueWatching": {
+			"sectionTitle": "Vazhdo shikimin"
+		},
+		"mediaList": {
+			"stopEditing": "Ndalo redaktimin"
+		},
+		"search": {
+			"allResults": "Kaq ishin të gjitha rezultatet!",
+			"failed": "Dështuam të gjejmë median, provoni përsëri!",
+			"loading": "Duke u ngarkuar...",
+			"noResults": "S'mundëm të gjejmë asgjë!",
+			"placeholder": {
+				"default": "Çfarë doni të shikoni?",
+				"extra": [
+          "Çfarë doni të eksploroni?", 
+          "Çfarë keni në listën tuaj të shikimit?", 
+          "Cili është filmi juaj i preferuar?", 
+          "Cili është seriali juaj i preferuar?"
+        ]
+			},
+			"sectionTitle": "Rezultatet e kërkimit"
+		},
+		"titles": {
+			"day": {
+				"default": "Çfarë do të dëshironit të shihnit këtë pasdite?",
+				"extra": [
+          "Ndihesh aventuresk? Parku Jurassic mund të jetë zgjedhja e përsosur."
+        ]
+			},
+			"morning": {
+				"default": "Çfarë do të dëshironit të shihnit këtë mëngjes?",
+				"extra": ["Kam dëgjuar që 'Before Sunrise' është film i bukur"]
+			},
+			"night": {
+				"default": "Çfarë do të dëshironit të shihnit sonte?",
+				"extra": ["Je i lodhur? Kam dëgjuar që Ekzorcisti është film i bukur."]
+			}
+		}
+	},
+	"media": {
+		"episodeDisplay": "S{{season}} E{{episode}}",
+		"types": {
+			"movie": "Film",
+			"show": "Shfaqje"
+		}
+	},
+	"navigation": {
+		"banner": {
+			"offline": "Kontrolloni lidhjen tuaj me internetin"
+		},
+		"menu": {
+			"about": "Rreth nesh",
+			"donation": "Dhuro",
+			"logout": "Dil",
+			"register": "Sinkronizo me cloud",
+			"settings": "Cilësimet",
+			"support": "Mbështetje"
+		}
+	},
+	"notFound": {
+		"badge": "S'u gjet gjë",
+		"goHome": "Kthehu te faqja kryesore",
+		"message": "E kërkuam gjithkund: nën kazana, në dollap, pas proxy-it por në fund nuk arritëm të gjejmë faqen që po kërkonit.",
+		"title": "S'arrijmë të gjejmë këtë faqe"
+	},
+	"onboarding": {
+		"defaultConfirm": {
+			"cancel": "Anulo",
+			"confirm": "Përdor konfigurimin e parazgjedhur",
+			"description": "Konfigurimi parazgjedhur nuk ka transmetimet më të mira dhe mund të jetë shumë i ngadaltë.",
+			"title": "Jeni i sigurt?"
+		},
+		"extension": {
+			"back": "Shko prapa",
+			"explainer": "Duke përdorur extension-in e shfletuesit, mund të merrni transmetimet më të mira që kemi për t'ju ofruar. Vetëm me një instalim të thjeshtë.",
+			"explainerIos": "Fatkeqësisht, extension-i nuk mbështet iOS, shtypni <bold>Shko prapa</bold> për të zgjedhur një opsion tjetër.",
+			"extensionHelp": "Nëse e keni instaluar extension-in por nuk është zbuluar, <bold>hapni extension-in nëpërmjet menusë së extension-ve të shfletuesit</bold> dhe ndiqni hapat në ekran.",
+			"linkChrome": "Instaloni extension për Chrome",
+			"linkFirefox": "Instaloni extension për Firefox",
+			"notDetecting": "U instalua në Chrome, por faqja nuk po e zbulon atë? Provoni të rifreskoni faqen!",
+			"notDetectingAction": "Rifresko faqen",
+			"status": {
+				"disallowed": "Extension-i nuk ka akses në këtë faqe",
+				"disallowedAction": "Lejo extension-in",
+				"failed": "Dështoi të kërkojë statusin",
+				"loading": "Duke pritur që ju ta instaloni extension-in",
+				"outdated": "Version i vjetër i extension",
+				"success": "Extension-i po funksionon siç duhet!"
+			},
+			"submit": "Vazhdo",
+			"title": "Ta fillojmë me një extension"
+		},
+		"proxy": {
+			"back": "Shko prapa",
+			"explainer": "Me metodën e proxy, mund të merrni transmetime me cilësi të mirë duke bërë një proxy të vetë-menaxhuar.",
+			"input": {
+				"errorConnection": "S'mundi të lidhet me proxy-n",
+				"errorInvalidUrl": "URL jo e vlefshme",
+				"errorNotProxy": "Pritej një proxy por mora një faqe uebi",
+				"label": "URL proxy",
+				"placeholder": "https://"
+			},
+			"link": "Mësoni si të bëni një proxy",
+			"submit": "Paraqit proxy-in",
+			"title": "Ta bëjmë një proxy të ri"
+		},
+		"start": {
+			"explainer": "Për të marrë transmetimet më të mira të mundshme, do t'ju duhet të zgjidhni metodën e transmetimit që doni të përdorni.",
+			"options": {
+				"default": { 
+          "text": "Nuk dua transmetime me cilësi të mirë,<0 /> <1>përdor konfigurimin e parazgjedhur</1>" 
+        },
+				"extension": {
+					"action": "Instalo extension",
+					"description": "Instalo extension-in e shfletuesit dhe fito qasje në burimet më të mira.",
+					"quality": "Cilësia më e mirë",
+					"title": "Extension i shfletuesit"
+				},
+				"proxy": {
+					"action": "Konfiguro proxy",
+					"description": "Konfiguro një proxy vetëm për 5 minuta dhe fito qasje në burime të mëdha.",
+					"quality": "Cilësi e mirë",
+					"title": "Ndërmjetës i personalizuar"
+				}
+			},
+			"title": "Të konfigurojmë movie-web"
+		}
+	},
+	"overlays": { 
+    "close": "Mbyll" 
+  },
+	"player": {
+		"back": { 
+      "default": "Kthehu te faqja kryesore", 
+      "short": "Kthehu" 
+    },
+		"casting": { 
+      "enabled": "Po transmetohet në pajisje..." 
+    },
+		"menus": {
+			"downloads": {
+				"disclaimer": "Shkarkimet merren drejtpërsëdrejti nga siguruesit. movie-web nuk ka kontroll mbi mënyrën se si sigurohen shkarkimet.",
+				"copyHlsPlaylist": "Kopjo lidhjen e listeve të luajtjes HLS",
+				"downloadSubtitle": "Shkarko titrat aktuale",
+				"downloadVideo": "Shkarko videon",
+				"hlsDisclaimer": "Shkarkimet merren drejtpërsëdrejti nga siguruesit. movie-web nuk ka kontroll mbi mënyrën se si sigurohen shkarkimet.<br /><br />Ju lutemi vini re që po shkarkoni një listë me luajtje HLS, <bold>nuk rekomandohet të shkarkoni nëse nuk i njihni format e avancuara të transmetimit</bold>. Provoni burime të ndryshme për formate të ndryshme.",
+				"onAndroid": {
+					"1": "Për të shkarkuar në Android, klikoni butonin e shkarkimit pastaj, në faqen e re, <bold>shtypni dhe mbajeni</bold> mbi videon, pastaj zgjidhni <bold>ruaj</bold>.",
+					"shortTitle": "Shkarkim / Android",
+					"title": "Si të shkarkosh në Android"
+				},
+				"onIos": {
+					"1": "Për të shkarkuar në iOS, klikoni butonin e shkarkimit pastaj, në faqen e re, klikoni <bold><ios_share /></bold>, pastaj <bold>Ruaj në Skedarë <ios_files /></bold>.",
+					"shortTitle": "Shkarkim / iOS",
+					"title": "Si të shkarkosh në iOS"
+				},
+				"onPc": {
+					"1": "Në kompjuter, klikoni butonin e shkarkimit pastaj, në faqen e re, klikoni të djathten mbi videon dhe zgjidhni <bold>Ruaj videon si</bold>",
+					"shortTitle": "Shkarkim / PC",
+					"title": "Si të shkarkosh në PC"
+				},
+				"title": "Shkarkim"
+			},
+			"episodes": {
+				"button": "Episodet",
+				"emptyState": "S'ka episode për këtë sezon, kontrollo përsëri më vonë!",
+				"episodeBadge": "E{{episode}}",
+				"loadingError": "Gabim gjatë ngarkimit të sezonit",
+				"loadingList": "Po ngarkohet...",
+				"loadingTitle": "Po ngarkohet...",
+				"unairedEpisodes": "Një ose më shumë episode në këtë sezon janë çaktivizuar pasi ende nuk kanë dalë në televizion."
+			},
+			"playback": {
+				"speedLabel": "Shpejtësia e luajtjes",
+				"title": "Rregullimet e luajtjes"
+			},
+			"quality": {
+				"automaticLabel": "Cilësi automatike",
+				"hint": "Mund të provoni <0>të ndryshoni burimin</0> për të marrë opsione të ndryshme cilësie.",
+				"iosNoQuality": "Për shkak të kufizimeve të përcaktuara nga Apple, zgjedhja e cilësisë nuk është e disponueshme në iOS për këtë burim. Mund të provoni <0>të kaloni në një burim tjetër</0> për të marrë opsione të ndryshme cilësie.",
+				"title": "Cilësi"
+			},
+			"settings": {
+				"downloadItem": "Shkarkim",
+				"enableSubtitles": "Aktivizo titrat",
+				"experienceSection": "Eksperienca e shikimit",
+				"playbackItem": "Rregullimet e luajtjes",
+				"qualityItem": "Cilësi",
+				"sourceItem": "Burimet e videos",
+				"subtitleItem": "Rregullimet e titrave",
+				"videoSection": "Rregullimet e videos"
+			},
+			"sources": {
+				"failed": {
+					"text": "Ndodhi një gabim gjatë tentativës për të gjetur videon, ju lutem provoni një burim tjetër.",
+					"title": "Kërkimi dështoi"
+				},
+				"noEmbeds": {
+					"text": "S'mundëm të gjejmë ndonjë embedim, ju lutem provoni një burim tjetër.",
+					"title": "S'u gjet asnjë embedim"
+				},
+				"noStream": {
+					"text": "Ky burim nuk ka transmetime për këtë film apo shfaqje.",
+					"title": "S'ka transmetim"
+				},
+				"title": "Burimet",
+				"unknownOption": "I panjohur"
+			},
+			"subtitles": {
+				"customChoice": "Zgjidh titra nga një skedar",
+				"customizeLabel": "Personalizo",
+				"offChoice": "Joaktiv",
+				"settings": {
+					"backlink": "Titra të personalizuara",
+					"delay": "Vonesa e titrave",
+					"fixCapitals": "Rregullo madhësinë e shkronjave"
+				},
+				"title": "Titrat",
+				"unknownLanguage": "E panjohur"
+			}
+		},
+		"metadata": {
+			"api": {
+				"text": "S'mund të ngarkohen metadata nga API, ju lutem kontrolloni lidhjen tuaj me internetin.",
+				"title": "Dështoi të ngarkohet metadata nga API"
+			},
+			"dmca": {
+				"badge": "U hoq",
+				"text": "Kjo media nuk është më e disponueshme për shkak të një njoftimi heqjeje apo pretendimi për të drejtën e autorit.",
+				"title": "Media është hequr"
+			},
+			"extensionPermission": {
+				"badge": "Leja Mungoi",
+				"button": "Përdor extension",
+				"text": "Keni extension-in e shfletuesit, por na duhet leja juaj për të filluar ta përdorim atë.",
+				"title": "Konfiguro extension"
+			},
+			"failed": {
+				"badge": "Dështoi",
+				"homeButton": "Kthehu tek faqja kryesore",
+				"text": "S'u arrit të ngarkoheshin të dhënat e medias nga TMDB. Ju lutem kontrolloni nëse TMDB-ja është poshtë ose e bllokuar lidhjen tuaj me internet.",
+				"title": "Dështoi të ngarkojë të dhënat"
+			},
+			"notFound": {
+				"badge": "S'u gjet",
+				"homeButton": "Prapa tek faqja kryesore",
+				"text": "S'mundëm të gjejmë median që kërkuat. Ose është hequr ose ju manipulatuat URL-në.",
+				"title": "S'mund të gjejmë atë media."
+			}
+		},
+		"nextEpisode": {
+			"cancel": "Anulo",
+			"next": "Episodi tjetër"
+		},
+		"playbackError": {
+			"badge": "Gabim transmetimi",
+			"errors": {
+				"errorAborted": "Marrja e medias u ndërpre nga kërkesa e përdoruesit.",
+				"errorDecode": "Pavarësisht se më parë u përcaktua si e përdorshme, ndodhi një gabim gjatë tentativës për të dekoduar burimin e medias, çka rezultoi në një gabim.",
+				"errorGenericMedia": "Ndodhi një gabim i panjohur me median.",
+				"errorNetwork": "Ndodhi ndonjë lloj gabimi në rrjet që e pengoi median të merrej me sukses, megjithëse më parë ishte e disponueshme.",
+				"errorNotSupported": "Media ose siguruesi i medias nuk mbështetet."
+			},
+			"homeButton": "Kthehu tek faqja kryesore",
+			"text": "Ndodhi një gabim gjatë tentativës për të luajtur mediën. Ju lutem provoni përsëri.",
+			"title": "Dështoi të luante videon!"
+		},
+		"scraping": {
+			"items": {
+				"failure": "Ndodhi një gabim",
+				"notFound": "S'ka videon",
+				"pending": "Po kontrollohet për video..."
+			},
+			"notFound": {
+				"badge": "S'u gjet",
+				"detailsButton": "Shfaq detajet",
+				"homeButton": "Kthehu te faqja kryesore",
+				"text": "I kërkuam të gjithë transmetuesit tanë dhe nuk mund të gjejmë median për të cilën po kërkoni! Ne nuk e strehojmë median dhe nuk kemi kontroll mbi atë që është e disponueshme. Ju lutemi klikoni 'Shfaq detajet' më poshtë për më shumë detaje.",
+				"title": "S'mundëm ta gjenim"
+			}
+		},
+		"time": {
+			"regular": "{{timeWatched}} / {{duration}}",
+			"remaining": "{{timeLeft}} mbeten • Mbaron në {{timeFinished, datetime}}",
+			"shortRegular": "{{timeWatched}}",
+			"shortRemaining": "-{{timeLeft}}"
+		},
+		"turnstile": {
+			"description": "Ju lutem verifikoni që jeni njeri duke plotësuar Captcha-n në të djathtë. Kjo është për të mbajtur movie-web të sigurtë!",
+			"error": "Dështoi të verifikojë që jeni njeri. Ju lutemi provoni përsëri.",
+			"title": "Na duhet të verifikojmë që jeni njeri.",
+			"verifyingHumanity": "Po verifikoj që je njeri..."
+		}
+	},
+	"screens": {
+		"dmca": {
+			"text": "Mirë se vini në faqen e kontaktit të DMCA-së të movie-web! Ne respektojmë të drejtat e pronësisë intelektuale dhe duam t'i adresojmë shpejt shqetësimet për të drejtat e autorit. Nëse besoni se puna juaj me të drejta të autorit është përdorur në mënyrë të parregullt në platformën tonë, ju lutemi dërgoni një njoftim të detajuar DMCA në email-in më poshtë. Ju lutemi përfshini një përshkrim të materialit me të drejta të autorit, detajet e kontaktit tuaj dhe një deklaratë të besimit të mirë. Jemi të përkushtuar të zgjidhim shpejt këto çështje dhe vlerësojmë bashkëpunimin tuaj në mbajtjen e movie-web si një vend që respekton kreativitetin dhe të drejtat e autorit.",
+			"title": "DMCA"
+		},
+		"loadingApp": "Po ngarkohet aplikacioni",
+		"loadingUser": "Po ngarkohet profili juaj",
+		"loadingUserError": {
+			"logout": "Dil",
+			"reset": "Rivendos serverin",
+			"text": "Dështoi të ngarkohet profili juaj",
+			"textWithReset": "Dështoi të ngarkohet profili juaj nga serveri juaj i personalizuar, doni ta rivendosni te serveri i parazgjedhur?"
+		},
+		"migration": {
+			"failed": "Dështoi të migrohen të dhënat tuaja.",
+			"inProgress": "Ju lutem prisni, po migrojmë të dhënat tuaja. Kjo s'duhet të zgjasë shumë."
+		}
+	},
+	"settings": {
+		"account": {
+			"accountDetails": {
+				"deviceNameLabel": "Emri i pajisjes",
+				"deviceNamePlaceholder": "Telefon personal",
+				"editProfile": "Redakto",
+				"logoutButton": "Dil"
+			},
+			"actions": {
+				"delete": {
+					"button": "Fshi llogarinë",
+					"confirmButton": "Fshije llogarinë",
+					"confirmDescription": "Jeni i sigurt që doni ta fshini llogarinë tuaj? Të gjitha të dhënat tuaja do të humbasin!",
+					"confirmTitle": "Jeni i sigurt?",
+					"text": "Ky veprim është i parikthyeshëm. Të gjitha të dhënat do të fshihen dhe asgjë nuk mund të rikuperohet.",
+					"title": "Fshi llogarinë"
+				},
+				"title": "Veprimet"
+			},
+			"devices": {
+				"deviceNameLabel": "Emri i pajisjes",
+				"failed": "Dështoi të ngarkojë pajisjet tuaja",
+				"removeDevice": "Hiq",
+				"title": "Pajisjet"
+			},
+			"profile": {
+				"finish": "Mbaro redaktimin",
+				"firstColor": "Ngjyra e parë e profilit",
+				"secondColor": "Ngjyra e dytë e profilit",
+				"title": "Redakto fotografinë e profilit",
+				"userIcon": "Ikona e përdoruesit"
+			},
+			"register": {
+				"cta": "Fillo",
+				"text": "Ndaj përparimin e shikimit tuaj mes pajisjeve dhe mbaji të sinkronizuara.",
+				"title": "Sinkronizo në cloud"
+			},
+			"title": "Llogaria"
+		},
+		"appearance": {
+			"activeTheme": "Aktiv",
+			"themes": {
+				"blue": "Blu",
+				"default": "Zgjidh për mua",
+				"gray": "Gri",
+				"red": "Kuqe",
+				"teal": "Bojeqiell"
+			},
+			"title": "Paraqitja"
+		},
+		"connections": {
+			"server": {
+				"description": "Nëse doni të lidheni me një server të personalizuar për të ruajtur të dhënat tuaja, aktivizojeni këtë dhe jepni URL-në. <0>Udhëzimet.</0>",
+				"label": "Server i personalizuar",
+				"urlLabel": "URL e serverit të personalizuar"
+			},
+			"setup": {
+				"doSetup": "Bëj konfigurimin",
+				"errorStatus": {
+					"description": "Duket se një ose më shumë elementë në këtë konfigurim kanë nevojë për vëmendjen tuaj.",
+					"title": "Diçka ka nevojë për vëmendjen tuaj"
+				},
+				"itemError": "Ka diçka të gabuar me këtë cilësim. Përsërit konfigurimin për ta rregulluar.",
+				"items": {
+					"default": "Konfigurim parazgjedhur",
+					"extension": "Shtesa",
+					"proxy": "Proxy i personalizuar"
+				},
+				"redoSetup": "Ribëj konfigurimin",
+				"successStatus": {
+					"description": "Çdo gjë është në rregull për të filluar të shikoni filmin tuaj të preferuar.",
+					"title": "Gjithçka është konfiguruar!"
+				},
+				"unsetStatus": {
+					"description": "Ju lutemi klikoni butonin në të djathtë për të filluar procesin e konfigurimit.",
+					"title": "S'e keni kaluar ende konfigurimin"
+				}
+			},
+			"title": "Lidhjet",
+			"workers": {
+				"addButton": "Shto punëtor proxy të ri",
+				"description": "Që aplikacioni të funksionojë, gjithë trafiku drejtohet përmes proxy-ve. Aktivizo këtë nëse doni të vendosni proxy-n tuaj personal. <0>Udhëzimet.</0>",
+				"emptyState": "Ende pa ndonjë punëtor proxy, shtoni një më poshtë",
+				"label": "Përdor proxy personalë",
+				"urlLabel": "URL e proxy-it",
+				"urlPlaceholder": "https://"
+			}
+		},
+		"preferences": {
+			"language": "Gjuha e aplikacionit",
+			"languageDescription": "Gjuha e aplikuar në të gjithë aplikacionin.",
+			"thumbnail": "Gjenero posterat",
+			"thumbnailDescription": "Shumicën e herëve, videot s'kanë postera. Mund ta aktivizoni këtë opsion për t'i gjeneruar pa pushim por mund t'i ngadalësojnë videot tuaja.",
+			"thumbnailLabel": "Gjenero posterat",
+			"title": "Preferencat"
+		},
+		"reset": "Rivendos",
+		"save": "Ruaj",
+		"sidebar": {
+			"info": {
+				"appVersion": "Versioni i app",
+				"backendUrl": "URL e serverit mbështetës",
+				"backendVersion": "Versioni i serverit mbështetës",
+				"hostname": "Emri i pajisjes",
+				"insecure": "I pasigurt",
+				"notLoggedIn": "S'jeni të kyçur",
+				"secure": "I sigurt",
+				"title": "Info mbi aplikacionin",
+				"unknownVersion": "E panjohur",
+				"userId": "ID e përdoruesit"
+			}
+		},
+		"subtitles": {
+			"backgroundLabel": "Transparenca e sfondit",
+			"colorLabel": "Ngjyra",
+			"previewQuote": "Vani, po qenkan thyer vezët mor i uruar! - Po jo moj Liri, ishin ca si të buta vetë.",
+			"textSizeLabel": "Madhësia e shkronjave",
+			"title": "Titrat"
+		},
+		"unsaved": "Keni ndryshime të paruajtura"
+	}
+}

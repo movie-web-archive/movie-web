@@ -34,6 +34,7 @@ import ptpt from "@/assets/locales/pt-PT.json";
 import ro from "@/assets/locales/ro.json";
 import ru from "@/assets/locales/ru.json";
 import sl from "@/assets/locales/sl.json";
+import sq from "@/assets/locales/sq.json";
 import sv from "@/assets/locales/sv.json";
 import ta from "@/assets/locales/ta.json";
 import th from "@/assets/locales/th.json";
@@ -81,6 +82,7 @@ export const locales = {
   ja,
   ko,
   sl,
+  sq,
   ta,
   "zh-HANT": zhhant,
   is,
