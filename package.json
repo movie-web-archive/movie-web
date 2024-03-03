@@ -1,8 +1,8 @@
 {
-  "name": "movie-web",
+  "name": "zmov",
   "version": "4.5.1",
   "private": true,
-  "homepage": "https://github.com/movie-web/movie-web",
+  "homepage": "https://github.com/hero-gg/movie-web",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
