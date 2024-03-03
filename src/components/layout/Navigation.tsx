@@ -19,6 +19,11 @@ export interface NavigationProps {
   doBackground?: boolean;
 }
 
+const links = [
+  { href: conf().DISCORD_LINK, icon: Icons.DISCORD, name: "Discord" },
+  { href: conf().GITHUB_LINK, icon: Icons.GITHUB, name: "Github" },
+];
+
 export function Navigation(props: NavigationProps) {
   const bannerHeight = useBannerSize();
   const { loggedIn } = useAuth();
@@ -86,22 +91,17 @@ export function Navigation(props: NavigationProps) {
               >
                 <BrandPill clickable />
               </Link>
-              <a
-                href={conf().DISCORD_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full"
-              >
-                <IconPatch icon={Icons.DISCORD} clickable downsized />
-              </a>
-              <a
-                href={conf().GITHUB_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full"
-              >
-                <IconPatch icon={Icons.GITHUB} clickable downsized />
-              </a>
+              {links.map(({ href, icon }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xl text-white tabbable rounded-full"
+                >
+                  <IconPatch icon={icon} clickable downsized />
+                </a>
+              ))}
             </div>
             <div className="relative pointer-events-auto">
               <LinksDropdown>
