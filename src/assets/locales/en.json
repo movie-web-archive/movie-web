@@ -169,6 +169,7 @@
   "notFound": {
     "badge": "Not found",
     "goHome": "Back to home",
+    "reloadButton": "Try again",
     "message": "We looked everywhere: under the bins, in the closet, behind the proxy but ultimately couldn't find the page you are looking for.",
     "title": "Couldn't find that page"
   },
@@ -383,8 +384,10 @@
       "notFound": {
         "badge": "Not found",
         "detailsButton": "Show details",
+        "reloadButton": "Try again",
         "homeButton": "Go home",
         "text": "We have searched through our providers and cannot find the media you are looking for! We do not host the media and have no control over what is available. Please click 'Show details' below for more details.",
+        "text2": "We have searched through our providers and cannot find the media you are looking for! We do not host the media and have no control over what is available. Please click 'Show details' below for more details... <bold>Did you enable the extension for this site?</bold>",
         "title": "We couldn't find that"
       }
     },
