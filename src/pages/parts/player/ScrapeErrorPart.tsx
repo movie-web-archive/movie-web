@@ -114,14 +114,7 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
       <ErrorContainer>
         <IconPill icon={icon}>{t("player.scraping.notFound.badge")}</IconPill>
         <Title>{title}</Title>
-        <Paragraph>
-          <Trans
-            i18nKey="player.scraping.notFound.text"
-            components={{
-              bold: <span className="font-bold" style={{ color: "#cfcfcf" }} />,
-            }}
-          />
-        </Paragraph>
+        <Paragraph>{t("player.scraping.notFound.text")}</Paragraph>
         <div className="flex gap-3">
           <Button
             href="/"
