@@ -29,8 +29,6 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
   const location = useLocation();
   const [extensionState, setExtensionState] =
     useState<ExtensionStatus>("unknown");
-  const [title, setTitle] = useState(t("player.scraping.notFound.title"));
-  const [icon, setIcon] = useState(Icons.WAND);
 
   const error = useMemo(() => {
     const data = props.data;
@@ -58,8 +56,10 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
     return (
       <ErrorLayout>
         <ErrorContainer>
-          <IconPill icon={Icons.LOCK}>{t("player.scraping.notFound.badge")}</IconPill>
-          <Title>t("player.scraping.extensionFailure.disabledTitle")</Title>
+          <IconPill icon={Icons.LOCK}>
+            {t("player.scraping.notFound.badge")}
+          </IconPill>
+          <Title>{t("player.scraping.extensionFailure.disabledTitle")}</Title>
           <Paragraph>
             <Trans
               i18nKey="player.scraping.extensionFailure.text"
@@ -101,7 +101,9 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
   return (
     <ErrorLayout>
       <ErrorContainer>
-        <IconPill icon={Icons.WAND}>{t("player.scraping.notFound.badge")}</IconPill>
+        <IconPill icon={Icons.WAND}>
+          {t("player.scraping.notFound.badge")}
+        </IconPill>
         <Title>{t("player.scraping.notFound.title")}</Title>
         <Paragraph>{t("player.scraping.notFound.text")}</Paragraph>
         <div className="flex gap-3">
