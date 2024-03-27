@@ -11,7 +11,8 @@ import { Paragraph } from "@/components/text/Paragraph";
 import { Title } from "@/components/text/Title";
 import { ScrapingItems, ScrapingSegment } from "@/hooks/useProviderScrape";
 import { ErrorContainer, ErrorLayout } from "@/pages/layouts/ErrorLayout";
-import { ExtensionStatus, getExtensionState } from "@/utils/onboarding";
+import { getExtensionState } from "@/utils/extension";
+import type { ExtensionStatus } from "@/utils/extension";
 import { getProviderApiUrls } from "@/utils/proxyUrls";
 
 import { ErrorCardInModal } from "../errors/ErrorCard";
