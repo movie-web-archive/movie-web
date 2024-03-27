@@ -98,13 +98,6 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
             </Button>
           </div>
         </ErrorContainer>
-        {error ? (
-          <ErrorCardInModal
-            id={modal.id}
-            onClose={() => modal.hide()}
-            error={error}
-          />
-        ) : null}
       </ErrorLayout>
     );
   }
