@@ -51,10 +51,6 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
   useEffect(() => {
     getExtensionState().then((state: ExtensionStatus) => {
       setExtensionState(state);
-      if (state === "disallowed") {
-        setTitle(t("player.scraping.extensionFailure.disabledTitle"));
-        setIcon(Icons.LOCK);
-      }
     });
   }, [t]);
 
