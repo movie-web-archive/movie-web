@@ -112,8 +112,8 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
   return (
     <ErrorLayout>
       <ErrorContainer>
-        <IconPill icon={icon}>{t("player.scraping.notFound.badge")}</IconPill>
-        <Title>{title}</Title>
+        <IconPill icon={Icons.WAND}>{t("player.scraping.notFound.badge")}</IconPill>
+        <Title>{t("player.scraping.notFound.title")}</Title>
         <Paragraph>{t("player.scraping.notFound.text")}</Paragraph>
         <div className="flex gap-3">
           <Button
