@@ -81,7 +81,7 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
               padding="md:px-12 p-2.5"
               className="mt-6"
             >
-              {t("player.scraping.notFound.homeButton")}
+              {t("player.scraping.extensionFailure.homeButton")}
             </Button>
             <Button
               onClick={() => {
