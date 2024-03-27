@@ -132,12 +132,7 @@ export function ScrapeErrorPart(props: ScrapeErrorPartProps) {
             {t("player.scraping.notFound.homeButton")}
           </Button>
           <Button
-            onClick={() => {
-              sendPage({
-                page: "PermissionGrant",
-                redirectUrl: window.location.href,
-              });
-            }}
+            onClick={() => modal.show()}
             theme="purple"
             padding="md:px-12 p-2.5"
             className="mt-6"
