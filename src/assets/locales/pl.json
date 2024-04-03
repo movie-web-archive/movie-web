@@ -57,6 +57,8 @@
       },
       "host": "Łączysz się z <0>{{hostname}}</0> - przed utworzeniem konta potwierdź że ufasz temu serwerowi",
       "no": "Wstecz",
+      "noHost": "Serwer nie został skonfigurowany, więc nie można utworzyć konta",
+      "noHostTitle": "Serwer nie skonfigurowany!",
       "title": "Ufasz temu serwerowi?",
       "yes": "Ufam temu serwerowi"
     },
@@ -116,7 +118,15 @@
       "failed": "Nie udało się znaleźć mediów, Spróbuj ponownie!",
       "loading": "Wczytywanie...",
       "noResults": "Nie mogliśmy niczego znaleźć!",
-      "placeholder": "Co chciałbyś obejrzeć?",
+      "placeholder": {
+        "default": "Co chciałbyś obejrzeć?",
+        "extra": [
+          "Co chcesz odkryć?",
+          "Co znajduje się na Twojej liście do obejrzenia?",
+          "Jaki jest twój ulubiony film?",
+          "Jaki jest twój ulubiony serial?"
+        ]
+      },
       "sectionTitle": "Wyniki wyszukiwania"
     },
     "titles": {
@@ -177,10 +187,10 @@
       "back": "Wstecz",
       "explainer": "Korzystając z rozszerzenia przeglądarki, możesz uzyskać najlepsze strumienie. Wystarczy prosta instalacja.",
       "explainerIos": "Niestety, rozszerzenie przeglądarki nie jest obsługiwane w systemie iOS, naciśnij <bold>Wstecz</bold>, aby wybrać inną opcję.",
-      "extensionHelp": "Jeżeli zainstalowałeś rozszerzenie, ale nie zostało ono wykryte. <bold>Otwórz rozszerzenie za pomocą menu rozszerzeń przeglądarki</bold> i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie.",
+      "extensionHelp": "Jeżeli zainstalowałeś rozszerzenie, ale nie zostało ono wykryte, <bold>otwórz rozszerzenie za pomocą menu rozszerzeń przeglądarki</bold> i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie.",
       "linkChrome": "Zainstaluj rozszerzenie na Chrome",
       "linkFirefox": "Zainstaluj rozszerzenie na Firefox",
-      "notDetecting": "Zainstalowano na Chrome, ale się nie wyświetla? Spróbuj odświeżyć stronę!",
+      "notDetecting": "Zainstalowano w Chrome, ale strona go nie wykrywa? Spróbuj odświeżyć stronę!",
       "notDetectingAction": "Odśwież stronę",
       "status": {
         "disallowed": "Rozszerzenie nie jest włączone dla tej strony",
@@ -208,7 +218,7 @@
       "title": "Stwórzmy nowe proxy"
     },
     "start": {
-      "explainer": "Aby uzyskać najlepsze transmisje strumieniowe. Będziesz musiał wybrać metodę strumieniowania, której chcesz użyć.",
+      "explainer": "Aby uzyskać najlepsze transmisje strumieniowe, będziesz musiał wybrać metodę strumieniowania której chcesz użyć.",
       "options": {
         "default": {
           "text": "Nie chcę dobrej jakości strumieni, <0 /> <1>użyj domyślnej konfiguracji</1>"
@@ -242,8 +252,8 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "Kopiuj link do listy odtwarzania HLS",
         "disclaimer": "Pliki do pobrania są pobierane bezpośrednio od dostawcy. movie-web nie ma kontroli nad sposobem dostarczania plików do pobrania.",
-        "downloadPlaylist": "Pobierz playlistę",
         "downloadSubtitle": "Pobierz aktualne napisy",
         "downloadVideo": "Pobierz wideo",
         "hlsDisclaimer": "Pliki do pobrania są pobierane bezpośrednio od dostawcy. movie-web nie ma kontroli nad sposobem dostarczania plików do pobrania.<br /><br />Należy pamiętać, że pobierasz playlistę HLS, <bold>nie zaleca się pobierania, jeśli nie jesteś zaznajomiony z zaawansowanymi formatami przesyłania strumieniowego</bold>. Wypróbuj różne źródła dla innych formatów.",
@@ -284,6 +294,7 @@
         "title": "Jakość"
       },
       "settings": {
+        "audioItem": "Dźwięk",
         "downloadItem": "Pobierz",
         "enableSubtitles": "Włącz napisy",
         "experienceSection": "Odtwarzanie",
@@ -310,8 +321,9 @@
         "unknownOption": "Nieznany"
       },
       "subtitles": {
-        "customChoice": "Wybierz napisy z pliku",
+        "customChoice": "Wrzuć lub prześlij plik",
         "customizeLabel": "Dostosuj",
+        "dropSubtitleFile": "Przeciągnij i upuść plik z napisami tutaj",
         "offChoice": "Wyłączone",
         "settings": {
           "backlink": "Własne napisy",
@@ -526,6 +538,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Rozmycie tła",
       "backgroundLabel": "Krycie tła",
       "colorLabel": "Kolor",
       "previewQuote": "Nie wolno mi się bać. Strach zabija myślenie.",

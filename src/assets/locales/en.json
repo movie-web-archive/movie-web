@@ -55,6 +55,8 @@
         "text": "Did you configure it correctly?",
         "title": "Failed to reach server"
       },
+      "noHostTitle": "Server not configured!",
+      "noHost": "The server has not been configured, therefore you cannot create an account",
       "host": "You are connecting to <0>{{hostname}}</0> - please confirm you trust it before making an account",
       "no": "Go back",
       "title": "Do you trust this server?",
@@ -116,7 +118,15 @@
       "failed": "Failed to find media, try again!",
       "loading": "Loading...",
       "noResults": "We couldn't find anything!",
-      "placeholder": "What do you want to watch?",
+      "placeholder": {
+        "default": "What do you want to watch?",
+        "extra": [
+          "What do you want to explore?",
+          "What's on your watchlist?",
+          "What's your favorite movie?",
+          "What's your favorite series?"
+        ]
+      },
       "sectionTitle": "Search results"
     },
     "titles": {
@@ -128,20 +138,17 @@
       },
       "morning": {
         "default": "What would you like to watch this morning?",
-        "extra": [
-          "I hear Before Sunrise is good"
-        ]
+        "extra": ["I hear Before Sunrise is good"]
       },
       "night": {
         "default": "What would you like to watch tonight?",
-        "extra": [
-          "Tired? I hear The Exorcist is good."
-        ]
+        "extra": ["Tired? I hear The Exorcist is good."]
       }
     }
   },
   "media": {
     "episodeDisplay": "S{{season}} E{{episode}}",
+    "unreleased": "Unreleased",
     "types": {
       "movie": "Movie",
       "show": "Show"
@@ -243,7 +250,7 @@
     "menus": {
       "downloads": {
         "disclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.",
-        "downloadPlaylist": "Download playlist",
+        "copyHlsPlaylist": "Copy HLS playlist link",
         "downloadSubtitle": "Download current subtitle",
         "downloadVideo": "Download video",
         "hlsDisclaimer": "Downloads are taken directly from the provider. movie-web does not have control over how the downloads are provided.<br /><br />Please note that you are downloading an HLS playlist, <bold>it is not recommended to download if you are not familiar with advanced streaming formats</bold>. Try different sources for different formats.",
@@ -288,6 +295,7 @@
         "enableSubtitles": "Enable Subtitles",
         "experienceSection": "Viewing experience",
         "playbackItem": "Playback settings",
+        "audioItem": "Audio",
         "qualityItem": "Quality",
         "sourceItem": "Video sources",
         "subtitleItem": "Subtitle settings",
@@ -310,7 +318,7 @@
         "unknownOption": "Unknown"
       },
       "subtitles": {
-        "customChoice": "Select subtitle from file",
+        "customChoice": "Drop or upload file",
         "customizeLabel": "Customize",
         "offChoice": "Off",
         "settings": {
@@ -319,7 +327,8 @@
           "fixCapitals": "Fix capitalization"
         },
         "title": "Subtitles",
-        "unknownLanguage": "Unknown"
+        "unknownLanguage": "Unknown",
+        "dropSubtitleFile": "Drop subtitle file here"
       }
     },
     "metadata": {
@@ -380,6 +389,13 @@
         "homeButton": "Go home",
         "text": "We have searched through our providers and cannot find the media you are looking for! We do not host the media and have no control over what is available. Please click 'Show details' below for more details.",
         "title": "We couldn't find that"
+      },
+      "extensionFailure": {
+        "badge": "Extension disabled",
+        "homeButton": "Go home",
+        "enableExtension": "Enable extension",
+        "title": "Please enable the extension",
+        "text": "You've installed the movie-web extension. To start using it, you need to enable the extension for this site."
       }
     },
     "time": {
@@ -527,6 +543,7 @@
     },
     "subtitles": {
       "backgroundLabel": "Background opacity",
+      "backgroundBlurLabel": "Background blur",
       "colorLabel": "Color",
       "previewQuote": "I must not fear. Fear is the mind-killer.",
       "textSizeLabel": "Text size",

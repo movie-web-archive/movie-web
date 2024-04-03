@@ -57,6 +57,8 @@
       },
       "host": "Estaste a conectar a <0>{{hostname}}</0> - por favor, confirma se confías antes de crear a conta",
       "no": "Regresar",
+      "noHost": "O servidor non está configurado, polo que non podes crear unha conta",
+      "noHostTitle": "O servidor non está configurado!",
       "title": "Confías neste servidor?",
       "yes": "Si, si que confío neste servidor"
     },
@@ -116,7 +118,15 @@
       "failed": "Error ao encontrar contido... intentao de novo!",
       "loading": "Cargando...",
       "noResults": "Non atopamos nada!",
-      "placeholder": "Que che gustaría ver?",
+      "placeholder": {
+        "default": "Que che gustaría ver?",
+        "extra": [
+          "Qué queres explorar?",
+          "Que está na túa lista se seguimiento?",
+          "Cal é a túa película favorita?",
+          "Cal é a túa serie favorita?"
+        ]
+      },
       "sectionTitle": "Resultados da busca"
     },
     "titles": {
@@ -242,11 +252,11 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "Copiar a ligazón da lista HLS",
         "disclaimer": "As descargas proveñen do provedor. movie-web non ten control sobre as descargas e a súa procedencia.",
-        "downloadPlaylist": "Descargar lista",
         "downloadSubtitle": "Descargar subtítulos actuais",
         "downloadVideo": "Descargar video",
-        "hlsDisclaimer": "As descargas realizanse directamente dende o proovedor. movie-web non ten control sobre como se xestionan as descargas. Ten en conta que estás a descargar unha lista de reproducción HLS, dirixidos a usuarios familiarizados coa transmisión multimedia avanzada.",
+        "hlsDisclaimer": "As descargas realizanse directamente dende o proovedor. movie-web non ten control sobre como se xestionan as descargas. <br /><br />Ten en conta que estás a descargar unha lista de reproducción HLS, <bold>non está recomendado instalalos se non estás familiarizado con estos sistemas de contidos avanzados</bold> Proba fontes diferentes ou formatos diferentes.",
         "onAndroid": {
           "1": "Para descargar en Android, fai click no botón de descarga e despois, na nova páxina, <bold>mantén presionado</bold>o vídeo e selecciona <bold>gardar</bold>.",
           "shortTitle": "Descargar / Android",
@@ -284,6 +294,7 @@
         "title": "Calidade"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Descargar",
         "enableSubtitles": "Activar subtítulos",
         "experienceSection": "Configuración de experiencia",
@@ -310,8 +321,9 @@
         "unknownOption": "Descoñecido"
       },
       "subtitles": {
-        "customChoice": "Seleccionar subtítulos dende o arquivo",
+        "customChoice": "Sube ou arrastra o arquivo",
         "customizeLabel": "Personalizar",
+        "dropSubtitleFile": "Solta o arquivo de subtítulos aquí",
         "offChoice": "Apagar",
         "settings": {
           "backlink": "Subtítulos personalizados",
@@ -526,6 +538,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Desenfoque do fondo",
       "backgroundLabel": "Opacidade do fondo",
       "colorLabel": "Cór",
       "previewQuote": "Non debo temer. O medo é o asasino da mente.",

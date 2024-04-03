@@ -231,7 +231,7 @@ export function CaptionSettingsView({ id }: { id: string }) {
       <Menu.BackLink onClick={() => router.navigate("/captions")}>
         {t("player.menus.subtitles.settings.backlink")}
       </Menu.BackLink>
-      <Menu.Section className="space-y-6">
+      <Menu.Section className="space-y-6 pb-5">
         <CaptionSetting
           label={t("player.menus.subtitles.settings.delay")}
           max={10}
@@ -260,6 +260,14 @@ export function CaptionSettingsView({ id }: { id: string }) {
           min={0}
           onChange={(v) => updateStyling({ backgroundOpacity: v / 100 })}
           value={styling.backgroundOpacity * 100}
+          textTransformer={(s) => `${s}%`}
+        />
+        <CaptionSetting
+          label={t("settings.subtitles.backgroundBlurLabel")}
+          max={100}
+          min={0}
+          onChange={(v) => updateStyling({ backgroundBlur: v / 100 })}
+          value={styling.backgroundBlur * 100}
           textTransformer={(s) => `${s}%`}
         />
         <CaptionSetting

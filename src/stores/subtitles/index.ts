@@ -1,3 +1,4 @@
+import merge from "lodash.merge";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
@@ -17,6 +18,11 @@ export interface SubtitleStyling {
    * background opacity, ranges between 0 and 1
    */
   backgroundOpacity: number;
+
+  /**
+   * background blur, ranges between 0 and 1
+   */
+  backgroundBlur: number;
 }
 
 export interface SubtitleStore {
@@ -51,6 +57,7 @@ export const useSubtitleStore = create(
         color: "#ffffff",
         backgroundOpacity: 0.5,
         size: 1,
+        backgroundBlur: 0.5,
       },
       resetSubtitleSpecificSettings() {
         set((s) => {
@@ -61,11 +68,19 @@ export const useSubtitleStore = create(
       updateStyling(newStyling) {
         set((s) => {
           if (newStyling.backgroundOpacity !== undefined)
-            s.styling.backgroundOpacity = newStyling.backgroundOpacity;
+            s.styling.backgroundOpacity = Math.min(
+              1,
+              Math.max(0, newStyling.backgroundOpacity),
+            );
+          if (newStyling.backgroundBlur !== undefined)
+            s.styling.backgroundBlur = Math.min(
+              1,
+              Math.max(0, newStyling.backgroundBlur),
+            );
           if (newStyling.color !== undefined)
             s.styling.color = newStyling.color.toLowerCase();
           if (newStyling.size !== undefined)
-            s.styling.size = Math.min(2, Math.max(0.01, newStyling.size));
+            s.styling.size = Math.min(10, Math.max(0.01, newStyling.size));
         });
       },
       setLanguage(lang) {
@@ -99,6 +114,7 @@ export const useSubtitleStore = create(
     })),
     {
       name: "__MW::subtitles",
+      merge: (persisted, current) => merge({}, current, persisted),
     },
   ),
 );

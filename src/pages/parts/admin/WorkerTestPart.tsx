@@ -52,14 +52,18 @@ export function WorkerTestPart() {
     { id: string; status: "error" | "success"; error?: Error }[]
   >([]);
 
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+
   const [testState, runTests] = useAsyncFn(async () => {
+    setButtonDisabled(true);
     function updateWorker(id: string, data: (typeof workerState)[number]) {
       setWorkerState((s) => {
         return [...s.filter((v) => v.id !== id), data];
       });
     }
     setWorkerState([]);
-    for (const worker of workerList) {
+
+    const workerPromises = workerList.map(async (worker) => {
       try {
         if (worker.url.endsWith("/")) {
           updateWorker(worker.id, {
@@ -67,7 +71,7 @@ export function WorkerTestPart() {
             status: "error",
             error: new Error("URL ends with slash"),
           });
-          continue;
+          return;
         }
         await singularProxiedFetch(
           worker.url,
@@ -79,13 +83,18 @@ export function WorkerTestPart() {
           status: "success",
         });
       } catch (err) {
+        const error = err as Error;
+        error.message = error.message.replace(worker.url, "WORKER_URL");
         updateWorker(worker.id, {
           id: worker.id,
           status: "error",
-          error: err as Error,
+          error,
         });
       }
-    }
+    });
+
+    await Promise.all(workerPromises);
+    setTimeout(() => setButtonDisabled(false), 5000);
   }, [workerList, setWorkerState]);
 
   return (
@@ -112,7 +121,12 @@ export function WorkerTestPart() {
         })}
         <Divider />
         <div className="flex justify-end">
-          <Button theme="purple" loading={testState.loading} onClick={runTests}>
+          <Button
+            theme="purple"
+            loading={testState.loading}
+            onClick={buttonDisabled ? undefined : runTests}
+            disabled={buttonDisabled}
+          >
             Test workers
           </Button>
         </div>

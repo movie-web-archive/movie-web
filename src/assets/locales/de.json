@@ -57,6 +57,8 @@
       },
       "host": "Du verbindest dich mit <0>{{hostname}}</0> - stelle sicher das du dem Server vertraust, bevor du ein Konto erstellst",
       "no": "Zurück",
+      "noHost": "Da der Server nicht eingerichtet wurde, kannst du keinen Account erstellen",
+      "noHostTitle": "Server nicht eingerichtet!",
       "title": "Vertraust du diesem Server?",
       "yes": "Ich vertraue diesem Server"
     },
@@ -116,7 +118,15 @@
       "failed": "Das Medium wurde nicht gefunden, bitte versuchen Sie es erneut!",
       "loading": "Wird geladen...",
       "noResults": "Wir haben nichts gefunden!",
-      "placeholder": "Was möchtest du schauen?",
+      "placeholder": {
+        "default": "Was möchtest du schauen?",
+        "extra": [
+          "Was möchtest du entdecken?",
+          "Was ist auf deiner Merkliste?",
+          "Was ist dein Lieblingsfilm?",
+          "Was ist deine Lieblingsserie?"
+        ]
+      },
       "sectionTitle": "Suchergebnisse"
     },
     "titles": {
@@ -190,7 +200,8 @@
         "outdated": "Erweiterungsversion zu alt",
         "success": "Die Browser-Erweiterung funktioniert wie erwartet!"
       },
-      "submit": "Weiter"
+      "submit": "Weiter",
+      "title": "Lass uns mit einer Erweiterung starten"
     },
     "proxy": {
       "back": "Zurück gehen",
@@ -203,7 +214,8 @@
         "placeholder": "https://"
       },
       "link": "Erfahre, wie man einen Proxy einstellt",
-      "submit": "Proxy einreichen"
+      "submit": "Proxy einreichen",
+      "title": "Lass uns eine neue Proxy erstellen"
     },
     "start": {
       "explainer": "Um die bestmöglichen Streams zu erhalten, müssen Sie auswählen, welche Streaming-Methode Sie verwenden möchten.",
@@ -223,7 +235,8 @@
           "quality": "Gute Qualität",
           "title": "Eigene Proxy"
         }
-      }
+      },
+      "title": "Lass uns mit der Einrichtung von movie-web starten"
     }
   },
   "overlays": {
@@ -239,8 +252,8 @@
     },
     "menus": {
       "downloads": {
+        "copyHlsPlaylist": "HLS-Playlist Link kopieren",
         "disclaimer": "Videos werden direkt vom Provider heruntergeladen. movie-web hat keinen Einfluss darauf, wie Downloads bereitgestellt werden.",
-        "downloadPlaylist": "Playlist herunterladen",
         "downloadSubtitle": "Aktuelle Untertitel herunterladen",
         "downloadVideo": "Video herunterladen",
         "hlsDisclaimer": "movie-web hat keinen Einfluss darauf, wie Downloads bereitgestellt werden. Downloads werden direkt vom Anbieter bezogen. <br /><br />Bitte beachte, dass du eine HLS-Wiedergabeliste herunterlädst, <bold>dies ist nicht empfohlen für Nutzer die nicht mit Erweiterten Streaming Formaten vertraut sind</bold>. Probiere andere Anbieter für andere Formate.",
@@ -281,6 +294,7 @@
         "title": "Qualität"
       },
       "settings": {
+        "audioItem": "Audio",
         "downloadItem": "Download",
         "enableSubtitles": "Untettitel aktivieren",
         "experienceSection": "Anzeigeerlebnis",
@@ -307,8 +321,9 @@
         "unknownOption": "Unbekannt"
       },
       "subtitles": {
-        "customChoice": "Untertitel aus Datei wählen",
+        "customChoice": "Untertiteldatei auswählen oder hier ablegen",
         "customizeLabel": "Anpassen",
+        "dropSubtitleFile": "Untertiteldatei hier ablegen",
         "offChoice": "Aus",
         "settings": {
           "backlink": "Eigene Untertitel",
@@ -366,6 +381,13 @@
       "title": "Hoppla, etwas ist schiefgegangen!"
     },
     "scraping": {
+      "extensionFailure": {
+        "badge": "Erweiterung deaktiviert",
+        "enableExtension": "Erweiterung aktivieren",
+        "homeButton": "Zur Startseite",
+        "text": "Du hast die movie-webe Erweiterung installiert. Um die Erweiterung zu benutzen, musst du sie für diese Seite aktivieren.",
+        "title": "Bitte aktiviere die Erweiterung"
+      },
       "items": {
         "failure": "Ein Fehler ist aufgetreten",
         "notFound": "Video nicht gefunden",
@@ -523,6 +545,7 @@
       }
     },
     "subtitles": {
+      "backgroundBlurLabel": "Hintergrundunschärfe",
       "backgroundLabel": "Hintergrunddeckkraft",
       "colorLabel": "Farbe",
       "previewQuote": "Das Gras wächst nicht schneller, wenn man daran zieht.",

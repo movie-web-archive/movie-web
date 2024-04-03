@@ -7,7 +7,9 @@ import { Spinner } from "@/components/layout/Spinner";
 
 interface Props {
   icon?: Icons;
-  onClick?: () => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>,
+  ) => void;
   children?: ReactNode;
   theme?: "white" | "purple" | "secondary" | "danger";
   padding?: string;
@@ -21,11 +23,25 @@ interface Props {
 export function Button(props: Props) {
   const navigate = useNavigate();
   const { onClick, href, loading } = props;
-  const cb = useCallback(() => {
-    if (loading) return;
-    if (href) navigate(href);
-    else onClick?.();
-  }, [onClick, href, navigate, loading]);
+  const cb = useCallback(
+    (
+      event: React.MouseEvent<
+        HTMLAnchorElement | HTMLButtonElement,
+        MouseEvent
+      >,
+    ) => {
+      if (loading) return;
+      if (href && !onClick) {
+        event.preventDefault();
+        if (!href.includes("http")) {
+          navigate(href);
+        } else {
+          window.open(href, "_blank", "noreferrer");
+        }
+      } else onClick?.(event);
+    },
+    [loading, href, onClick, navigate],
+  );
 
   let colorClasses = "bg-white hover:bg-gray-200 text-black";
   if (props.theme === "purple")
@@ -80,6 +96,7 @@ export function Button(props: Props) {
         target="_blank"
         rel="noreferrer"
         download={props.download}
+        onClick={cb}
       >
         {content}
       </a>
