@@ -7,6 +7,7 @@ import { useModal } from "@/components/overlays/Modal";
 import { Paragraph } from "@/components/text/Paragraph";
 import { Title } from "@/components/text/Title";
 import { ErrorContainer, ErrorLayout } from "@/pages/layouts/ErrorLayout";
+import { playerStatus } from "@/stores/player/slices/source";
 import { usePlayerStore } from "@/stores/player/store";
 
 import { ErrorCardInModal } from "../errors/ErrorCard";
@@ -14,6 +15,8 @@ import { ErrorCardInModal } from "../errors/ErrorCard";
 export function PlaybackErrorPart() {
   const { t } = useTranslation();
   const playbackError = usePlayerStore((s) => s.interface.error);
+  const setStatus = usePlayerStore((s) => s.setStatus);
+  const setPlay = usePlayerStore((s) => s.play);
   const modal = useModal("error");
 
   return (
@@ -30,6 +33,18 @@ export function PlaybackErrorPart() {
             className="mt-6"
           >
             {t("player.playbackError.homeButton")}
+          </Button>
+          <Button
+            onClick={() => {
+              setStatus(playerStatus.PLAYING);
+              setPlay();
+            }}
+            href="secondary"
+            theme="secondary"
+            padding="md:px-12 p-2.5"
+            className="mt-6"
+          >
+            {t("player.playbackError.retryButton")}
           </Button>
           <Button
             onClick={() => modal.show()}
