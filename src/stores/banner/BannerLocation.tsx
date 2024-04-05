@@ -32,7 +32,7 @@ export function Banner(props: {
           "flex items-center justify-center p-4",
         ].join(" ")}
       >
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 text-lg">
           <Icon icon={icons[props.type]} />
           <div>{props.children}</div>
         </div>
