@@ -73,7 +73,6 @@ export function BannerLocation(props: { location?: string }) {
   const [appLink, setAppLink] = useState("");
 
   useEffect(() => {
-    console.log(meta);
     if (meta) {
       setAppLink(getMobileAppLink(meta));
     } else {
@@ -104,7 +103,7 @@ export function BannerLocation(props: { location?: string }) {
         <LinkedBanner
           id="open_app"
           type="open_app"
-          href={meta ? appLink : "movieweb://home"}
+          href={meta ? appLink : "movieweb://"}
         >
           {t("navigation.banner.mobile")}
         </LinkedBanner>

@@ -3,7 +3,7 @@ import { PlayerMeta } from "@/stores/player/slices/source";
 export function getMobileAppLink(meta: PlayerMeta) {
   const url = new URL("movieweb://videoPlayer");
 
-  url.searchParams.set("type", meta.type);
+  url.searchParams.set("type", meta.type === "movie" ? "movie" : "tv");
   url.searchParams.set("id", meta.tmdbId);
 
   const isShow = meta.type === "show";
