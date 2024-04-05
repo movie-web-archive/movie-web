@@ -24,7 +24,14 @@ export function useIsMobile(horizontal?: boolean) {
     };
   }, [horizontal]);
 
+  const userAgent = window.navigator.userAgent;
+  const hasMobileUserAgent =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      userAgent,
+    );
+
   return {
     isMobile,
+    hasMobileUserAgent,
   };
 }
