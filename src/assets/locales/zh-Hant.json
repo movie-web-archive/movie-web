@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "取消",
-      "next": "下一集"
+      "next": "下一集",
+      "nextSeason": "下一季"
     },
     "playbackError": {
       "badge": "播放錯誤",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "自動播放",
+      "autoplayDescription": "當你看完一集後，下一集會自動播放。使用瀏覽器擴充功能或代理伺服器的用戶可以使用這功能。",
+      "autoplayLabel": "自動播放",
       "language": "應用程式語言",
       "languageDescription": "語言已應用於整個應用程式。",
       "thumbnail": "生成縮圖",
