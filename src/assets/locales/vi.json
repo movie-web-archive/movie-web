@@ -379,7 +379,7 @@
         "errorNotSupported": "Đối tượng phương tiện hoặc nhà cung cấp phương tiện không được hỗ trợ."
       },
       "homeButton": "Về trang chủ",
-      "text": "Đã xảy ra lỗi khi phát phương tiện. Vui lòng thử lại",
+      "text": "Đã xảy ra lỗi khi phát phương tiện. Vui lòng thử lại.",
       "title": "Rất tiếc, đã hỏng!"
     },
     "scraping": {
@@ -552,7 +552,11 @@
     "subtitles": {
       "backgroundBlurLabel": "Làm mờ nền",
       "backgroundLabel": "Độ mờ nền",
-      "colorLabel": "Màu sắc"
-    }
+      "colorLabel": "Màu sắc",
+      "previewQuote": "Tôi không được sợ hãi. Sợ hãi thường giết chết tư duy.",
+      "textSizeLabel": "Cỡ chữ",
+      "title": "Phụ đề"
+    },
+    "unsaved": "Bạn có các thay đổi chưa lưu"
   }
 }
