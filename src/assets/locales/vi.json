@@ -57,6 +57,8 @@
       },
       "host": "Bạn đang kết nối đến máy chủ <0>{{hostname}}</0> - vui lòng chắc chắn rằng bạn tin tưởng máy chủ này trước khi tạo tài khoản",
       "no": "Quay lại",
+      "noHost": "Máy chủ chưa được cấu hình nên bạn không thể tạo tài khoản",
+      "noHostTitle": "Máy chủ chưa được cấu hình!",
       "title": "Bạn có tin tưởng máy chủ này không?",
       "yes": "Tôi tin tưởng máy chủ này"
     },
@@ -118,7 +120,12 @@
       "noResults": "Chúng tôi không thể tìm thấy gì!",
       "placeholder": {
         "default": "Bạn muốn xem gì?",
-        "extra": []
+        "extra": [
+          "Bạn muốn khám phá điều gì?",
+          "Danh sách theo dõi của bạn có gì?",
+          "Phim yêu thích của bạn là gì?",
+          "Bộ phim yêu thích của bạn là gì?"
+        ]
       },
       "sectionTitle": "Kết quả tìm kiếm"
     },
@@ -148,7 +155,8 @@
     "types": {
       "movie": "Phim",
       "show": "Chương trình truyền hình"
-    }
+    },
+    "unreleased": "Chưa phát hành"
   },
   "navigation": {
     "banner": {
@@ -178,7 +186,54 @@
     },
     "extension": {
       "back": "Trở lại",
-      "explainer": "Bạn có thể sử dụng các nguồn tốt nhất mà chúng tôi cung cấp bằng cách sử dụng tiện ích mở rộng trình duyệt. Đơn giản chỉ cần cài đặt."
+      "explainer": "Bạn có thể sử dụng các nguồn tốt nhất mà chúng tôi cung cấp bằng cách sử dụng tiện ích mở rộng trình duyệt. Đơn giản chỉ cần cài đặt.",
+      "explainerIos": "Rất tiếc, tiện ích mở rộng trình duyệt không được hỗ trợ trên iOS, Nhấn <bold>Quay lại</bold> để chọn tùy chọn khác.",
+      "extensionHelp": "Nếu bạn đã cài đặt tiện ích mở rộng nhưng không được phát hiện, <bold>mở tiện ích mở rộng thông qua menu tiện ích mở rộng của trình duyệt</bold> và làm theo các bước trên màn hình.",
+      "linkChrome": "Cài đặt tiện ích mở rộng của Chrome",
+      "linkFirefox": "Cài đặt tiện ích mở rộng Firefox",
+      "notDetecting": "Đã cài đặt trên Chrome nhưng trang web không phát hiện ra nó? Hãy thử tải lại trang!",
+      "notDetectingAction": "Tải lại trang",
+      "status": {
+        "disallowed": "Tiện ích mở rộng không được bật cho trang này",
+        "disallowedAction": "Bật tiện ích mở rộng",
+        "failed": "Không thể yêu cầu trạng thái",
+        "loading": "Đang chờ bạn cài đặt tiện ích mở rộng",
+        "outdated": "Phiên bản tiện ích mở rộng quá cũ",
+        "success": "Tiện ích mở rộng đang hoạt động như mong đợi!"
+      },
+      "submit": "Tiếp tục",
+      "title": "Hãy bắt đầu với một tiện ích mở rộng"
+    },
+    "proxy": {
+      "back": "Quay lại",
+      "explainer": "Với phương pháp proxy, bạn có thể nhận được luồng chất lượng tuyệt vời bằng cách tạo proxy tự phục vụ.",
+      "input": {
+        "errorConnection": "Không thể kết nối với proxy",
+        "errorInvalidUrl": "Không phải là một URL hợp lệ",
+        "errorNotProxy": "Dự kiến có proxy nhưng lại có trang web",
+        "label": "Proxy URL",
+        "placeholder": "https://"
+      },
+      "link": "Tìm hiểu cách tạo proxy",
+      "submit": "Gửi proxy",
+      "title": "Hãy tạo một proxy mới"
+    },
+    "start": {
+      "explainer": "Để có được luồng tốt nhất có thể, bạn sẽ cần chọn phương thức phát trực tuyến nào bạn muốn sử dụng.",
+      "options": {
+        "default": {
+          "text": "Tôi không muốn luồng chất lượng tốt,<0 /> <1>hãy sử dụng thiết lập mặc định</1>"
+        },
+        "extension": {
+          "action": "Cài đặt tiện ích mở rộng",
+          "description": "Cài đặt tiện ích mở rộng trình duyệt và có quyền truy cập vào các nguồn tốt nhất.",
+          "quality": "Chất lượng tốt nhất",
+          "title": "Tiện ích mở rộng trình duyệt"
+        },
+        "proxy": {
+          "action": "Thiết lập proxy"
+        }
+      }
     }
   },
   "player": {
