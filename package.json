@@ -5,7 +5,7 @@
   "homepage": "https://github.com/movie-web/movie-web",
   "engines": {
     "node": ">= 20",
-    "pnpm": "~8"
+    "pnpm": "^8"
   },
   "scripts": {
     "dev": "vite",
