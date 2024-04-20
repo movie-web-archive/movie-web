@@ -156,7 +156,8 @@
   },
   "navigation": {
     "banner": {
-      "offline": "Check your internet connection"
+      "offline": "Check your internet connection",
+      "mobile": "Open in app"
     },
     "menu": {
       "about": "About us",
