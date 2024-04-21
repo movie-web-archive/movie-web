@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Abbrechen",
-      "next": "Nächste Folge"
+      "next": "Nächste Folge",
+      "nextSeason": "Nächste Staffel"
     },
     "playbackError": {
       "badge": "Wiedergabefehler",
@@ -522,6 +523,7 @@
       }
     },
     "preferences": {
+      "autoplay": "Autoplay",
       "language": "App-Sprache",
       "languageDescription": "Sprache für die ganze App.",
       "thumbnail": "Miniaturansichten generieren",
