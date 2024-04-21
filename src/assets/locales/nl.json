@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Annuleren",
-      "next": "Volgende aflevering"
+      "next": "Volgende aflevering",
+      "nextSeason": "Het volgende seizoen"
     },
     "playbackError": {
       "badge": "Afspeelfout",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "Automatisch afspelen",
+      "autoplayDescription": "Automatisch het volgende aflevering afspelen in een serie nadat het einde is bereikt. Kan worden ingeschakeld door gebruikers met de browserextensie, een aangepaste proxy of met de standaardinstellingen als toegestaan door de host.",
+      "autoplayLabel": "Automatisch afspelen",
       "language": "Applicatietaal",
       "languageDescription": "Taal toegepast op de gehele applicatie.",
       "thumbnail": "Genereer miniaturen",
