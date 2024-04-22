@@ -376,6 +376,7 @@
         "errorNotSupported": "The media or media provider object is not supported."
       },
       "homeButton": "Go home",
+      "retryButton": "Retry",
       "text": "There was an error trying to play the media. Please try again.",
       "title": "Failed to play video!"
     },

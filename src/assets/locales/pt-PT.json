@@ -288,6 +288,7 @@
         "errorNotSupported": "O objeto multimédia ou do fornecedor de multimédia não é suportado."
       },
       "homeButton": "Ir para casa",
+      "retryButton": "Tentar novamente",
       "text": "Ocorreu um erro ao tentar reproduzir o conteúdo multimédia. Por favor, tente novamente.",
       "title": "Falha ao reproduzir o vídeo!"
     },
