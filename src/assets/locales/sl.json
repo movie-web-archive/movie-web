@@ -257,7 +257,7 @@
         "disclaimer": "Prenosi se opravijo neposredno pri ponudniku vsebin. movie-web nima nadzora nad načinom zagotavljanja prenosov.",
         "downloadSubtitle": "Prenesi trenutne podnapise",
         "downloadVideo": "Prenesi video",
-        "hlsDisclaimer": "Prenosi se opravijo neposredno pri ponudniku vsebin. movie-web nima nadzora nad načinom zagotavljanja prenosov. Upoštevajte, da prenašate seznam predvajanja tipa \"HLS\" namenjen uporabnikom, ki poznajo napredno pretakanje večpredstavnostnih vsebin.",
+        "hlsDisclaimer": "Prenosi potekajo neposredno od ponudnika. movie-web nima nadzora nad načinom zagotavljanja prenosov.<br /><br />Upoštevajte, da prenašate seznam predvajanja HLS, <bold>prenos ni priporočljiv, če niste seznanjeni z naprednimi formati pretakanja </bold>. Preizkusite različne vire za različne formate.",
         "onAndroid": {
           "1": "Če želite prenesti v sistemu Android, kliknite gumb za prenos, nato na novi strani <bold>tipnite in držite</bold> videoposnetek ter izberite <bold>shrani</bold>.",
           "shortTitle": "Prenesi / Android",
@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Prekliči",
-      "next": "Naslednja epizoda"
+      "next": "Naslednja epizoda",
+      "nextSeason": "Naslednja sezona"
     },
     "playbackError": {
       "badge": "Napaka v predvajanju",
@@ -513,16 +514,19 @@
       },
       "title": "Povezave",
       "workers": {
-        "addButton": "Dodaj novega \"workerja\"",
+        "addButton": "Dodaj novega delovalca",
         "description": "Za delovanje aplikacije je ves promet usmerjen prek posredniških strežnikov. To nastavitev omogočite, če želite pripeljati lastne delavce. <0>Navodila</0>",
-        "emptyState": "Niste dodali \"workerja\", dodajte ga spodaj",
+        "emptyState": "Niste dodali delovalca, dodajte ga spodaj",
         "label": "Uporaba posrednikov po meri",
-        "urlLabel": "Naslov Workerja (URL)",
+        "urlLabel": "Naslov delovalca (URL)",
         "urlPlaceholder": "https://"
       }
     },
     "preferences": {
-      "language": "Jezik",
+      "autoplay": "Samodejno predvajanje",
+      "autoplayDescription": "Samodejno predvaja naslednjo epizodo v seriji, ko dosežete konec. Uporabniki lahko to omogočijo z razširitvijo brskalnika, proxyjem po meri ali s privzeto nastavitvijo, če to dovoljuje gostitelj.",
+      "autoplayLabel": "Samodejno predvajanje",
+      "language": "Jezik aplikacije",
       "languageDescription": "Jezik, ki se uporablja za celotno aplikacijo.",
       "thumbnail": "Naloži predoglede",
       "thumbnailDescription": "Videoposnetki večinoma nimajo predogledov. To nastavitev lahko omogočite in jih ustvarite sproti, vendar lahko zaradi tega videoposnetek postane počasnejši.",
@@ -536,7 +540,7 @@
         "appVersion": "Verzija aplikacije",
         "backendUrl": "Naslov zaledja",
         "backendVersion": "Verzija zaledja",
-        "hostname": "Hostname",
+        "hostname": "Gostiteljsko ime",
         "insecure": "\"Nevarna povezava\"",
         "notLoggedIn": "Niste prijavljeni",
         "secure": "Varna povezava",

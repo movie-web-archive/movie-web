@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Abbrechen",
-      "next": "Nächste Folge"
+      "next": "Nächste Folge",
+      "nextSeason": "Nächste Staffel"
     },
     "playbackError": {
       "badge": "Wiedergabefehler",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "Autoplay",
+      "autoplayDescription": "Spielen Sie nach Erreichen des Endes automatisch die nächste Episode einer Serie ab. Kann von Benutzern mit der Browsererweiterung, einem benutzerdefinierten Proxy oder mit der Standardeinrichtung aktiviert werden, sofern der Host dies zulässt.",
+      "autoplayLabel": "Automatisches Abspielen",
       "language": "App-Sprache",
       "languageDescription": "Sprache für die ganze App.",
       "thumbnail": "Miniaturansichten generieren",

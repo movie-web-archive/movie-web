@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Cancelar",
-      "next": "Próximo episódio"
+      "next": "Próximo episódio",
+      "nextSeason": "Próxima temporada"
     },
     "playbackError": {
       "badge": "Erro de reprodução",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "Reprodução automática",
+      "autoplayDescription": "Reproduz automaticamente o próximo episódio de uma série após chegar ao fim. Pode ser ativado pelos usuários através da extensão de navegador, um proxy personalizado, ou pela configuração padrão, se permitido pelo provedor.",
+      "autoplayLabel": "Reprodução automática",
       "language": "Idioma do aplicativo",
       "languageDescription": "Idioma aplicado para todo o aplicativo.",
       "thumbnail": "Gerar miniaturas",

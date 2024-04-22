@@ -1,6 +1,6 @@
 {
   "about": {
-    "description": "movie-web 是一款在互联网上搜寻流媒体的网络应用程序。团队致力于让用户采取最简约的方式消费内容。",
+    "description": "movie-web 是一款在互联网上搜寻流媒体的网络应用程序。团队致力于让用户采取最简易的方式观览内容。",
     "faqTitle": "常见问题",
     "q1": {
       "body": "movie-web 不托管任何内容。您点选观看内容时，系统均从互联网搜寻（在加载提示页和“视频源”选项卡中，您可以看到正在使用的源）。媒体从未在 movie-web 中上传，所有内容均通过搜索机制而得。",
@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "取消",
-      "next": "下一集"
+      "next": "下一集",
+      "nextSeason": "下一季"
     },
     "playbackError": {
       "badge": "播放错误",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "自动播放",
+      "autoplayDescription": "每集播放结束后自动启播下一集。使用浏览器扩展程序或自定义后端代理服务的用户可以手动启用此功能。若使用默认设置，则应在服务器允许的情况下启用。",
+      "autoplayLabel": "自动播放",
       "language": "应用程序语言",
       "languageDescription": "作用于整个应用程序的语言。",
       "thumbnail": "生成缩略图",

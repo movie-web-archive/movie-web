@@ -366,7 +366,8 @@
     },
     "nextEpisode": {
       "cancel": "Annuler",
-      "next": "Prochain épisode"
+      "next": "Prochain épisode",
+      "nextSeason": "Prochaine saison"
     },
     "playbackError": {
       "badge": "Erreur de lecture",
@@ -522,6 +523,9 @@
       }
     },
     "preferences": {
+      "autoplay": "Lecture automatique",
+      "autoplayDescription": "Lire automatiquement le prochain épisode d'une série après avoir atteint la fin. Peut être activé par les utilisateurs avec l'extension du navigateur, un proxy personnalisé ou avec la configuration par défaut si autorisé par l'hôte.",
+      "autoplayLabel": "Lecture automatique",
       "language": "Langage de l'application",
       "languageDescription": "Langue appliquée à l’ensemble de l’application.",
       "thumbnail": "Générer les miniatures",
