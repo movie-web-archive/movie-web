@@ -10,6 +10,7 @@ import { MediaItem } from "@/utils/mediaTypes";
 
 import { IconPatch } from "../buttons/IconPatch";
 import { Icons } from "../Icon";
+import { MediaCardBookmarkButton } from "../player/Player";
 
 export interface MediaCardProps {
   media: MediaItem;
@@ -22,6 +23,7 @@ export interface MediaCardProps {
   };
   percentage?: number;
   closable?: boolean;
+  shouldShowBookMark?: boolean;
   onClose?: () => void;
 }
 
@@ -45,6 +47,7 @@ function MediaCardContent({
   series,
   percentage,
   closable,
+  shouldShowBookMark = true,
   onClose,
 }: MediaCardProps) {
   const { t } = useTranslation();
@@ -153,6 +156,19 @@ function MediaCardContent({
               icon={Icons.X}
             />
           </div>
+
+          {shouldShowBookMark && (
+            <div
+              className={classNames(
+                `absolute left-2 top-2 rounded-md transition-opacity opacity-0 group-hover:opacity-100 duration-300`,
+                {
+                  "opacity-100": closable,
+                },
+              )}
+            >
+              <MediaCardBookmarkButton media={media} />
+            </div>
+          )}
         </div>
         <h1 className="mb-1 line-clamp-3 max-h-[4.5rem] text-ellipsis break-words font-bold text-white">
           <span>{media.title}</span>

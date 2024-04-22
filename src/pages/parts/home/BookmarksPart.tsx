@@ -58,6 +58,7 @@ export function BookmarksPart() {
             media={v}
             closable={editing}
             onClose={() => removeBookmark(v.id)}
+            shouldShowBookMark={false}
           />
         ))}
       </MediaGrid>
