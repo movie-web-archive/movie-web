@@ -22,6 +22,7 @@ function formatSeries(series?: ShowProgressResult | null) {
 export interface WatchedMediaCardProps {
   media: MediaItem;
   closable?: boolean;
+  shouldShowBookMark?: boolean;
   onClose?: () => void;
 }
 
@@ -46,6 +47,7 @@ export function WatchedMediaCard(props: WatchedMediaCardProps) {
       percentage={percentage}
       onClose={props.onClose}
       closable={props.closable}
+      shouldShowBookMark={props.shouldShowBookMark}
     />
   );
 }

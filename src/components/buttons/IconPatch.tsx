@@ -2,7 +2,7 @@ import { Icon, Icons } from "@/components/Icon";
 
 export interface IconPatchProps {
   active?: boolean;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   clickable?: boolean;
   className?: string;
   icon: Icons;
