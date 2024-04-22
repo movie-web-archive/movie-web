@@ -75,7 +75,7 @@ export default createTheme({
       },
 
       lightBar: {
-        light: tokens.black,
+        light: tokens.shade.c700,
       },
 
       search: {
@@ -107,13 +107,13 @@ export default createTheme({
 
         sidebar: {
           ...gray.extend.colors.settings.sidebar,
-          activeLink: tokens.shade.c900
+          activeLink: tokens.shade.c800
         },
 
         card: {
-          border: tokens.shade.c700,
-          background: tokens.shade.c700,
-          altBackground: tokens.shade.c700,
+          border: tokens.shade.c500,
+          background: tokens.shade.c500,
+          altBackground: tokens.shade.c500,
         },
         
         saveBar: {
