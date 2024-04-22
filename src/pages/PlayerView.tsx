@@ -1,6 +1,5 @@
 import { RunOutput } from "@movie-web/providers";
 import { useCallback, useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Navigate,
   useLocation,
@@ -93,13 +92,6 @@ export function RealPlayerView() {
 
   return (
     <PlayerPart backUrl={backUrl} onMetaChange={metaChange}>
-      <Helmet>
-        <style type="text/css">{`
-          html, body {
-            scrollbar-gutter: auto;
-          }
-        `}</style>
-      </Helmet>
       {status === playerStatus.IDLE ? (
         <MetaPart onGetMeta={setPlayerMeta} />
       ) : null}
