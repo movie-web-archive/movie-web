@@ -95,10 +95,10 @@ export function RealPlayerView() {
     <PlayerPart backUrl={backUrl} onMetaChange={metaChange}>
       <Helmet>
         <style type="text/css">{`
-    html, body {
-      scrollbar-gutter: auto;
-    }
-  `}</style>
+          html, body {
+            scrollbar-gutter: auto;
+          }
+        `}</style>
       </Helmet>
       {status === playerStatus.IDLE ? (
         <MetaPart onGetMeta={setPlayerMeta} />
