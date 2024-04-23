@@ -3,6 +3,15 @@ import { createTheme } from "../types";
 
 const tokens = {
   black: "#000000",
+  white: "#FFFFFF",
+  semantic: {
+    silver: {
+      c100: "#DEDEDE",
+      c200: "#B6CAD7",
+      c300: "#8EA3B0",
+      c400: "#617A8A",
+    },
+  },
   purple: {
     c50: "#aaafff",
     c100: "#8288fe",
@@ -57,16 +66,18 @@ export default createTheme({
   name: "amoled",
   extend: {
     colors: {
-      ...gray.extend.colors,
       pill: {
-        ...gray.extend.colors.pill,
         background: tokens.black,
         backgroundHover: tokens.shade.c500,
         highlight: tokens.blue.c200,
       },
 
+      global: {
+        accentA: tokens.blue.c200,
+        accentB: tokens.blue.c300
+      },
+
       background: {
-        ...gray.extend.colors.background,
         main: tokens.black,
         secondary: tokens.black,
         secondaryHover: tokens.black,
@@ -75,11 +86,10 @@ export default createTheme({
       },
 
       lightBar: {
-        light: tokens.shade.c700,
+        light: tokens.shade.c900,
       },
 
       search: {
-        ...gray.extend.colors.search,
         background: tokens.shade.c800,
         hoverBackground: tokens.shade.c900,
         focused: tokens.shade.c700,
@@ -88,14 +98,12 @@ export default createTheme({
       },
 
       mediaCard: {
-        ...gray.extend.colors.mediaCard,
         hoverBackground: tokens.shade.c900,
         hoverShadow: tokens.black,
         shadow: tokens.shade.c800,
       },
 
       dropdown: {
-        ...gray.extend.colors.dropdown,
         background: tokens.shade.c800,
         altBackground: tokens.black,
         hoverBackground: tokens.shade.c700,
@@ -103,17 +111,14 @@ export default createTheme({
       },
 
       settings: {
-        ...gray.extend.colors.settings,
-
         sidebar: {
-          ...gray.extend.colors.settings.sidebar,
           activeLink: tokens.shade.c800
         },
 
         card: {
-          border: tokens.shade.c500,
-          background: tokens.shade.c500,
-          altBackground: tokens.shade.c500,
+          border: tokens.shade.c700,
+          background: tokens.shade.c700,
+          altBackground: tokens.shade.c700,
         },
         
         saveBar: {
@@ -122,13 +127,10 @@ export default createTheme({
       },
 
       errors: {
-        ...gray.extend.colors.errors,
         card: tokens.black,
       },
 
       video: {
-        ...gray.extend.colors.video,
-
         scraping: {
           card: tokens.black,
           loading: tokens.purple.c200,
@@ -136,8 +138,11 @@ export default createTheme({
         },
 
         context: {
-          ...gray.extend.colors.video.context,
           background: tokens.black,
+
+          type: {
+            main: tokens.semantic.silver.c300,
+          }
         }
       },
     },
